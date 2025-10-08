@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food for Diabetics — Scientifically Curated Teaching & Exam Notes</title>
+  <meta name="description" content="Single‑file, print‑ready teaching notes on diabetic diet: principles, foods to choose/limit, patterns, nutrient highlights, examples, tips, and exam focus." />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --panel:#ffffff; --accent:#10b981; --accent-ink:#064e3b; --warn:#ef4444; --ok:#22c55e; --info:#0ea5e9; --shadow:0 10px 30px rgba(2,6,23,.08);
+      --veg:#22c55e; --carb:#eab308; --protein:#ef4444; --water:#60a5fa; --fat:#f97316;
+    }
+    [data-theme="dark"]{
+      --bg:#0b0f14; --ink:#e5edf7; --muted:#9aa7bc; --line:#1f2937; --panel:#0f141b; --accent:#22c55e; --accent-ink:#052e1f; --warn:#f87171; --ok:#34d399; --info:#38bdf8; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+    .wrapper{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 80%,transparent);backdrop-filter:saturate(1.2) blur(2px);border-bottom:1px solid var(--line)}
+    .hero{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0}
+    .title{font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:.2px}
+    .subtitle{color:var(--muted);font-weight:500}
+    .buttons{display:flex;gap:8px;flex-wrap:wrap}
+    button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 12px;border-radius:999px;cursor:pointer;box-shadow:var(--shadow)}
+    .btn-accent{background:var(--accent);color:white;border-color:transparent}
+    .grid{display:grid;grid-template-columns:260px 1fr;gap:24px}
+    nav{position:sticky;top:76px;align-self:start;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
+    nav h3{margin:.8rem 1rem .4rem;font-size:14px;color:var(--muted)}
+    nav a{display:block;padding:.55rem 1rem;color:var(--ink);text-decoration:none;border-top:1px dashed var(--line)}
+    nav a:first-of-type{border-top:none}
+    nav a:hover{background:rgba(2,6,23,.04)}
+    section{scroll-margin-top:84px}
+    .card{border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow);padding:18px}
+    .card h2{margin:0 0 .5rem}
+    .label{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .callout{border-left:4px solid var(--info);padding:.6rem .9rem;border-radius:8px;background:linear-gradient(180deg,rgba(14,165,233,.08),transparent)}
+    .warn{border-left-color:var(--warn);background:linear-gradient(180deg,rgba(239,68,68,.08),transparent)}
+    .ok{border-left-color:var(--ok);background:linear-gradient(180deg,rgba(34,197,94,.08),transparent)}
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:12px;border:1px solid var(--line)}
+    thead th{background:linear-gradient(180deg,rgba(16,185,129,.12),transparent);text-align:left;padding:.7rem .8rem;border-bottom:1px solid var(--line)}
+    tbody td{padding:.7rem .8rem;border-top:1px solid var(--line)}
+    tbody tr:nth-child(odd){background:rgba(2,6,23,.03)}
+    .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .badge{display:inline-flex;align-items:center;gap:6px;padding:.18rem .5rem;border-radius:999px;border:1px dashed var(--line);font-size:12px;color:var(--muted)}
+    .foot{margin-top:28px;color:var(--muted);font-size:13px}
+    .tag{display:inline-block;margin:.15rem .25rem 0 0;padding:.1rem .5rem;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-size:12px}
+    .mt{margin-top:16px}
+    .mt2{margin-top:24px}
+    .mt3{margin-top:36px}
+
+    /* Visual: Diabetes Plate Method */
+    .plate{position:relative;width:280px;height:280px;border-radius:50%;margin:auto;background:
+      radial-gradient(closest-side,var(--panel) 80%,transparent 81%),
+      conic-gradient(var(--veg) 0 180deg, var(--protein) 180deg 270deg, var(--carb) 270deg 360deg);
+      box-shadow:var(--shadow);border:6px solid var(--line)}
+    .plate::after{content:"";position:absolute;inset:20px;border-radius:50%;border:1px dashed var(--line)}
+    .plate-label{position:absolute;font-size:12px;font-weight:700;text-shadow:0 1px 0 rgba(255,255,255,.6)}
+    .l-veg{top:20%;left:18%;color:#064e3b}
+    .l-protein{top:60%;left:58%;color:#7f1d1d}
+    .l-carb{top:60%;left:18%;color:#7c5e00}
+    .drink{width:72px;height:72px;border-radius:16px;background:var(--water);position:absolute;right:-18px;bottom:18px;border:6px solid var(--line);display:grid;place-items:center;font-weight:800;color:#0b3b77}
+
+    /* Small screens */
+    @media (max-width: 920px){
+      .grid{grid-template-columns:1fr}
+      nav{position:relative;top:0}
+      .twocol{grid-template-columns:1fr}
+      .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+
+    /* Print */
+    @media print{
+      header,nav,.noprint{display:none!important}
+      body{font-size:12pt}
+      .wrapper{max-width:unset}
+      .card{box-shadow:none}
+      a[href]:after{content:" (" attr(href) ")";font-size:10pt;color:#666}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper hero">
+      <div>
+        <div class="title">Food for Diabetics</div>
+        <div class="subtitle">Scientifically Curated Teaching & Exam Notes — undergraduate level</div>
+      </div>
+      <div class="buttons noprint">
+        <button class="btn-accent" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button id="themeBtn" title="Toggle theme">🌗 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper grid">
+    <nav class="noprint" aria-label="On this page">
+      <h3>Contents</h3>
+      <a href="#overview">Overview</a>
+      <a href="#principles">Key Principles</a>
+      <a href="#beneficial">Beneficial Foods</a>
+      <a href="#limit">Foods to Limit or Avoid</a>
+      <a href="#patterns">Special Dietary Patterns</a>
+      <a href="#nutrients">Nutrient Highlights</a>
+      <a href="#examples">Food Examples with Benefits</a>
+      <a href="#teaching">Practical Teaching Tips</a>
+      <a href="#exam">Exam Focus Points</a>
+      <a href="#refs">References & Notes</a>
+    </nav>
+
+    <main>
+      <!-- Overview -->
+      <section id="overview" class="card">
+        <div class="label">Section 1</div>
+        <h2>Overview</h2>
+        <p>A diabetic diet aims to control blood glucose by eating healthy meals at regular times and prioritising nutrient‑dense foods that support glucose control, healthy weight, and cardiovascular risk reduction.</p>
+        <div class="twocol mt">
+          <figure style="text-align:center">
+            <div class="plate" role="img" aria-label="Diabetes Plate: 1/2 non‑starchy vegetables, 1/4 lean protein, 1/4 high‑fibre carbs; water as beverage.">
+              <div class="plate-label l-veg">½ Non‑starchy veg</div>
+              <div class="plate-label l-protein">¼ Lean protein</div>
+              <div class="plate-label l-carb">¼ High‑fibre carbs</div>
+              <div class="drink">Water</div>
+            </div>
+            <figcaption class="mt" style="color:var(--muted)">Diabetes Plate Method: simple meal‑building visual.</figcaption>
+          </figure>
+          <div class="callout ok">
+            Regular physical activity (aerobic + resistance) improves insulin sensitivity and complements dietary management.
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Principles -->
+      <section id="principles" class="card mt2">
+        <div class="label">Section 2</div>
+        <h2>Key Principles</h2>
+        <ul>
+          <li><strong>Balance carbohydrate intake</strong>: Prefer complex, low‑GI carbohydrates to blunt glucose spikes.</li>
+          <li><strong>Regular meal timing</strong>: Helps optimise insulin action and blood glucose control.</li>
+          <li><strong>Increase fibre</strong>: Soluble and insoluble fibre slow absorption and support heart health.</li>
+          <li><strong>Choose healthy fats</strong>: Emphasise MUFA/PUFA from nuts, seeds, fish, and plant oils.</li>
+          <li><strong>Limit added sugars & refined grains</strong>: Reduce rapid post‑meal rises.</li>
+          <li><strong>Moderate protein</strong>: Lean sources support satiety and muscle; adjust if kidney disease.</li>
+          <li><strong>Hydrate with water</strong>: Avoid sugar‑sweetened beverages.</li>
+        </ul>
+      </section>
+
+      <!-- Beneficial Foods -->
+      <section id="beneficial" class="card mt2">
+        <div class="label">Section 3</div>
+        <h2>Beneficial Foods for Diabetes</h2>
+        <div class="twocol">
+          <ul>
+            <li><strong>Fruits & vegetables</strong>: Prefer whole fruits for fibre; rich in micronutrients & antioxidants.</li>
+            <li><strong>Whole grains</strong>: Brown rice, oats, barley—higher fibre, typically lower GI vs refined.</li>
+            <li><strong>Legumes</strong>: Beans, lentils—high fibre/protein, low GI.</li>
+            <li><strong>Lean protein</strong>: Fish (omega‑3s), skinless poultry, tofu, paneer (in moderation), eggs.</li>
+            <li><strong>Nuts & seeds</strong>: Almonds, walnuts, chia, flax—healthy fats and fibre.</li>
+            <li><strong>Low‑fat dairy/alternatives</strong>: Milk, curd, Greek yogurt; unsweetened soy/almond beverages.</li>
+            <li><strong>Non‑starchy vegetables</strong>: Leafy greens, broccoli, gourds, peppers, mushrooms.</li>
+          </ul>
+          <div class="callout">
+            Cook with methods that reduce added fat and glycaemic impact: steaming, grilling, pressure‑cooking, sautéing with minimal oil.
+          </div>
+        </div>
+      </section>
+
+      <!-- Foods to Limit -->
+      <section id="limit" class="card mt2">
+        <div class="label">Section 4</div>
+        <h2>Foods to Limit or Avoid</h2>
+        <ul>
+          <li>Sugary drinks and fruit juices</li>
+          <li>Processed snacks and sweets</li>
+          <li>Refined carbohydrates (white bread, white rice)</li>
+          <li>Saturated and trans fats (fried foods, fatty cuts of meat, hydrogenated oils)</li>
+          <li>Excess salt (manage blood pressure)</li>
+        </ul>
+      </section>
+
+      <!-- Patterns -->
+      <section id="patterns" class="card mt2">
+        <div class="label">Section 5</div>
+        <h2>Special Dietary Patterns</h2>
+        <ul>
+          <li><strong>Low‑carbohydrate patterns</strong>: May improve glycaemia and support weight management—monitor medication needs.</li>
+          <li><strong>DASH diet</strong>: Fruits, vegetables, whole grains, low‑fat dairy—supports BP and glucose control.</li>
+          <li><strong>Mediterranean diet</strong>: Plant‑forward, healthy fats, moderate protein—evidence for diabetes benefits.</li>
+        </ul>
+      </section>
+
+      <!-- Nutrient Highlights -->
+      <section id="nutrients" class="card mt2">
+        <div class="label">Section 6</div>
+        <h2>Nutrient Highlights</h2>
+        <table>
+          <thead><tr><th>Nutrient</th><th>Guidance</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Fibre</td><td>≈ <strong>14 g per 1000 kcal</strong></td><td>Increase soluble fibre (oats, legumes, chia) to slow glucose absorption.</td></tr>
+            <tr><td>Carbohydrates</td><td><strong>Individualise</strong></td><td>Teach carb counting/net carbs; consider GI/GL and distribute across meals.</td></tr>
+            <tr><td>Fats</td><td>Replace <strong>SFA → MUFA/PUFA</strong></td><td>Use plant oils; include nuts, seeds, and fatty fish to improve lipids.</td></tr>
+            <tr><td>Protein</td><td>~<strong>15–20% of energy</strong></td><td>Tailor with clinician if kidney disease; emphasise lean sources.</td></tr>
+            <tr><td>Sodium</td><td><strong>Limit</strong></td><td>Support BP control; favour herbs/spices over salt.</td></tr>
+          </tbody>
+        </table>
+        <p class="mt" style="color:var(--muted);font-size:13px">Always personalise with a healthcare professional, especially with insulin/medication or kidney disease.</p>
+      </section>
+
+      <!-- Examples Table -->
+      <section id="examples" class="card mt2">
+        <div class="label">Section 7</div>
+        <h2>Food Examples with Benefits</h2>
+        <table>
+          <thead><tr><th>Food</th><th>Benefit</th></tr></thead>
+          <tbody>
+            <tr><td>Chia seeds</td><td>High fibre & omega‑3; may reduce post‑meal spikes</td></tr>
+            <tr><td>Beans & lentils</td><td>Low GI; rich in minerals and fibre</td></tr>
+            <tr><td>Greek yogurt (unsweetened)</td><td>Protein‑rich, lower carbohydrate; supports fullness</td></tr>
+            <tr><td>Garlic</td><td>May support glucose and lipid profiles</td></tr>
+            <tr><td>Squash (e.g., pumpkin, ash gourd)</td><td>Low GI, antioxidants; may improve insulin tolerance</td></tr>
+            <tr><td>Shirataki noodles</td><td>Glucomannan fibre; can lower post‑meal glucose</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Teaching Tips -->
+      <section id="teaching" class="card mt2">
+        <div class="label">Section 8</div>
+        <h2>Practical Tips for Teaching</h2>
+        <ul>
+          <li>Encourage meal planning with portion control (use the Diabetes Plate visual).</li>
+          <li>Teach carbohydrate counting and glycaemic index/load.</li>
+          <li>Discuss weight management and the role of physical activity.</li>
+          <li>Use culturally relevant foods and cooking methods.</li>
+          <li>Address label reading: total carbs, fibre, added sugars, sodium, fats.</li>
+        </ul>
+      </section>
+
+      <!-- Exam Focus -->
+      <section id="exam" class="card mt2">
+        <div class="label">Section 9</div>
+        <h2>Exam Focus Points</h2>
+        <ul>
+          <li>Define diabetic diet principles and rationale.</li>
+          <li>Contrast high vs low GI foods and give examples.</li>
+          <li>Classify beneficial vs limiting foods for diabetes.</li>
+          <li>Describe evidence‑based dietary patterns (low‑carb, DASH, Mediterranean).</li>
+          <li>Explain how nutrition influences diabetes complications (micro/macrovascular).</li>
+          <li>Role of fibre, healthy fats, and regular meal timing.</li>
+        </ul>
+      </section>
+
+      <!-- References -->
+      <section id="refs" class="card mt2">
+        <div class="label">Appendix</div>
+        <h2>References & Notes</h2>
+        <p style="color:var(--muted)">This concise guide draws upon established guidance (e.g., diabetes associations), peer‑reviewed studies, and international nutrition recommendations. For clinical use, consult the latest local/ADA/IDF guidance and coordinate with healthcare providers.</p>
+        <p>
+          <span class="tag">Low‑GI carbs</span>
+          <span class="tag">Plate method</span>
+          <span class="tag">Carb counting</span>
+          <span class="tag">Fibre ≥14 g/1000 kcal</span>
+          <span class="tag">MUFA/PUFA</span>
+        </p>
+        <div class="foot">Last updated: <span id="updated"></span>. Educational resource; not a substitute for medical advice.</div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle with persistence
+    (function(){
+      const root=document.documentElement;
+      const btn=document.getElementById('themeBtn');
+      const saved=localStorage.getItem('dm_theme');
+      if(saved){ root.setAttribute('data-theme', saved); }
+      btn?.addEventListener('click',()=>{
+        const now=root.getAttribute('data-theme')==='dark'?'light':'dark';
+        root.setAttribute('data-theme', now);
+        localStorage.setItem('dm_theme', now);
+      });
+    })();
+
+    // Updated timestamp
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>
+

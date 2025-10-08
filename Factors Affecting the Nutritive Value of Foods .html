@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Factors Affecting the Nutritive Value of Foods — Teaching & Exam Notes</title>
+  <meta name="description" content="Print‑ready single‑file notes: physiological, environmental/agricultural, processing/storage, socioeconomic/cultural, psychological, and genetic/pathological factors that influence food nutritive value; plus cooking effects, summary table, exam points, and references." />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --panel:#ffffff; --accent:#10b981; --accent-ink:#064e3b; --warn:#ef4444; --ok:#22c55e; --info:#0ea5e9; --shadow:0 10px 30px rgba(2,6,23,.08);
+      --heat:#f97316; --water:#38bdf8; --light:#fde047; --oxygen:#94a3b8;
+    }
+    [data-theme="dark"]{
+      --bg:#0b0f14; --ink:#e5edf7; --muted:#9aa7bc; --line:#1f2937; --panel:#0f141b; --accent:#22c55e; --accent-ink:#052e1f; --warn:#f87171; --ok:#34d399; --info:#38bdf8; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+    .wrapper{max-width:1150px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 80%,transparent);backdrop-filter:saturate(1.2) blur(2px);border-bottom:1px solid var(--line)}
+    .hero{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0}
+    .title{font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:.2px}
+    .subtitle{color:var(--muted);font-weight:500}
+    .buttons{display:flex;gap:8px;flex-wrap:wrap}
+    button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 12px;border-radius:999px;cursor:pointer;box-shadow:var(--shadow)}
+    .btn-accent{background:var(--accent);color:white;border-color:transparent}
+
+    .grid{display:grid;grid-template-columns:280px 1fr;gap:24px}
+    nav{position:sticky;top:76px;align-self:start;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
+    nav h3{margin:.8rem 1rem .4rem;font-size:14px;color:var(--muted)}
+    nav a{display:block;padding:.55rem 1rem;color:var(--ink);text-decoration:none;border-top:1px dashed var(--line)}
+    nav a:first-of-type{border-top:none}
+    nav a:hover{background:rgba(2,6,23,.04)}
+
+    section{scroll-margin-top:84px}
+    .card{border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow);padding:18px}
+    .card h2{margin:0 0 .5rem}
+    .label{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .threecol{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .callout{border-left:4px solid var(--info);padding:.6rem .9rem;border-radius:8px;background:linear-gradient(180deg,rgba(14,165,233,.08),transparent)}
+    .warn{border-left-color:var(--warn);background:linear-gradient(180deg,rgba(239,68,68,.08),transparent)}
+
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:12px;border:1px solid var(--line)}
+    thead th{background:linear-gradient(180deg,rgba(16,185,129,.12),transparent);text-align:left;padding:.7rem .8rem;border-bottom:1px solid var(--line)}
+    tbody td{padding:.7rem .8rem;border-top:1px solid var(--line)}
+    tbody tr:nth-child(odd){background:rgba(2,6,23,.03)}
+
+    .foot{margin-top:28px;color:var(--muted);font-size:13px}
+    .tag{display:inline-block;margin:.15rem .25rem 0 0;padding:.1rem .5rem;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-size:12px}
+    .mt{margin-top:16px}
+    .mt2{margin-top:24px}
+    .mt3{margin-top:36px}
+
+    /* Visuals */
+    .hazards{display:flex;gap:12px;flex-wrap:wrap}
+    .chip{display:inline-flex;align-items:center;gap:8px;border:1px dashed var(--line);border-radius:999px;padding:.25rem .6rem;font-size:12px}
+    .dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+    .retbar{height:14px;border-radius:9px;background:#e5e7eb;border:1px solid var(--line);overflow:hidden}
+    .low{width:30%;height:100%;background:linear-gradient(90deg,#fecaca,var(--warn));}
+    .med{width:60%;height:100%;background:linear-gradient(90deg,#fde68a,#f59e0b);} 
+    .high{width:85%;height:100%;background:linear-gradient(90deg,#bbf7d0,var(--ok));}
+    .retrow{display:grid;grid-template-columns:180px 1fr;gap:12px;align-items:center}
+    .mini{font-size:12px;color:var(--muted)}
+
+    .sun{width:52px;height:52px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff 0,#fde047 40%,#f59e0b 70%);box-shadow:0 0 20px #facc15}
+    .drop{width:14px;height:14px;border-radius:50%;background:var(--water);display:inline-block}
+    .flame{width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:22px solid var(--heat);filter:drop-shadow(0 2px 4px rgba(0,0,0,.2))}
+
+    /* Small screens */
+    @media (max-width: 980px){
+      .grid{grid-template-columns:1fr}
+      nav{position:relative;top:0}
+      .twocol,.threecol{grid-template-columns:1fr}
+    }
+    /* Print */
+    @media print{
+      header,nav,.noprint{display:none!important}
+      body{font-size:12pt}
+      .wrapper{max-width:unset}
+      .card{box-shadow:none}
+      a[href]:after{content:" (" attr(href) ")";font-size:10pt;color:#666}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper hero">
+      <div>
+        <div class="title">Factors Affecting the Nutritive Value of Foods</div>
+        <div class="subtitle">Teaching & Exam Notes — undergraduate level</div>
+      </div>
+      <div class="buttons noprint">
+        <button class="btn-accent" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button id="themeBtn" title="Toggle theme">🌗 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper grid">
+    <nav class="noprint" aria-label="On this page">
+      <h3>Contents</h3>
+      <a href="#intro">Introduction</a>
+      <a href="#physio">1. Physiological Factors</a>
+      <a href="#agri">2. Environmental & Agricultural Factors</a>
+      <a href="#processing">3. Food Processing & Storage</a>
+      <a href="#socio">4. Socioeconomic & Cultural Factors</a>
+      <a href="#psych">5. Psychological & Lifestyle Factors</a>
+      <a href="#genetic">6. Genetic & Pathological Factors</a>
+      <a href="#summary">Summary Table of Nutrient Loss</a>
+      <a href="#exam">Exam Focus Points</a>
+      <a href="#refs">References</a>
+    </nav>
+
+    <main>
+      <!-- Intro -->
+      <section id="intro" class="card">
+        <div class="label">Section 1</div>
+        <h2>Introduction</h2>
+        <p>The <strong>nutritive value</strong> of foods refers to their content of essential nutrients—proteins, carbohydrates, fats, vitamins, and minerals. This value is influenced by multiple factors from production through preparation and consumption.</p>
+      </section>
+
+      <!-- Physiological -->
+      <section id="physio" class="card mt2">
+        <div class="label">Section 2</div>
+        <h2>1. Physiological Factors</h2>
+        <ul>
+          <li><strong>Age, sex, growth stage</strong>: Requirements differ (children vs adults; pregnancy/lactation).</li>
+          <li><strong>Genetics</strong>: Influences metabolism, absorption, and needs.</li>
+          <li><strong>Health status</strong>: Infections, chronic diseases can alter absorption/utilisation.</li>
+          <li><strong>Physical activity</strong>: Higher activity raises energy and micronutrient needs.</li>
+        </ul>
+      </section>
+
+      <!-- Agricultural -->
+      <section id="agri" class="card mt2">
+        <div class="label">Section 3</div>
+        <h2>2. Environmental & Agricultural Factors</h2>
+        <ul>
+          <li><strong>Soil quality & fertilisers</strong>: Soil nutrient richness affects crop content; excessive nitrogen may <em>reduce vitamin C</em> in some crops.</li>
+          <li><strong>Climate & geography</strong>: Determine crop types and nutrient density.</li>
+          <li><strong>Harvest timing</strong>: Nutrient levels vary with maturity; peak ripeness often maximises vitamins.</li>
+        </ul>
+        <div class="hazards mt">
+          <span class="chip"><i class="dot" style="background:var(--light)"></i>Sun/Light</span>
+          <span class="chip"><i class="dot" style="background:var(--oxygen)"></i>Oxygen</span>
+          <span class="chip"><i class="dot" style="background:var(--heat)"></i>Heat</span>
+          <span class="chip"><i class="dot" style="background:var(--water)"></i>Water</span>
+        </div>
+      </section>
+
+      <!-- Processing & Storage -->
+      <section id="processing" class="card mt2">
+        <div class="label">Section 4</div>
+        <h2>3. Food Processing & Storage</h2>
+        <div class="twocol">
+          <div>
+            <h3>Milling & Refining</h3>
+            <p>Refining (e.g., white flour) removes bran and germ, lowering <strong>fibre</strong> and <strong>B‑vitamins</strong> compared with whole grains.</p>
+            <h3 class="mt">Cooking Methods</h3>
+            <div class="retrow mt"><div>Boiling</div><div class="retbar" title="Relative retention: low"><div class="low"></div></div></div>
+            <div class="mini">Water‑soluble vitamins (C, B‑complex) can leach into cooking water—use minimal water or use the broth.</div>
+            <div class="retrow mt"><div>Steaming</div><div class="retbar" title="Relative retention: high"><div class="high"></div></div></div>
+            <div class="retrow mt"><div>Microwaving</div><div class="retbar" title="Relative retention: high"><div class="high"></div></div></div>
+            <div class="retrow mt"><div>Stir‑frying/Sauté</div><div class="retbar" title="Relative retention: medium"><div class="med"></div></div></div>
+            <div class="retrow mt"><div>Pressure cooking</div><div class="retbar" title="Relative retention: medium"><div class="med"></div></div></div>
+            <p class="mini mt">Retention bars are <em>illustrative</em> and vary with food, cut size, time, temperature, and pH.</p>
+          </div>
+          <div>
+            <h3>Heating & Blanching</h3>
+            <p>High heat and long duration degrade sensitive vitamins (e.g., <strong>vitamin C</strong>, <strong>folate</strong>). Quick blanching can reduce enzyme activity before freezing while limiting losses.</p>
+            <h3 class="mt">Storage Conditions</h3>
+            <ul>
+              <li><strong>Light</strong>: degrades riboflavin; store dairy/fortified milks in opaque containers.</li>
+              <li><strong>Oxygen</strong>: promotes oxidation of fats and some vitamins; seal containers.</li>
+              <li><strong>Heat</strong>: accelerates nutrient loss; prefer cool, dark storage.</li>
+            </ul>
+            <h3 class="mt">Preservation</h3>
+            <ul>
+              <li><strong>Pasteurisation</strong>: mild vitamin loss; safety benefit outweighs small reductions.</li>
+              <li><strong>Freezing</strong>: <em>minimal losses</em> when quickly blanched and kept cold.</li>
+              <li><strong>Dehydration</strong>: concentrates nutrients by weight; some heat‑sensitive vitamins decrease.</li>
+              <li><strong>Canning</strong>: heat‑induced losses but long shelf‑life; retention of minerals/fibre is good.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Socioeconomic -->
+      <section id="socio" class="card mt2">
+        <div class="label">Section 5</div>
+        <h2>4. Socioeconomic & Cultural Factors</h2>
+        <ul>
+          <li><strong>Economic status</strong>: Affects access to diverse, nutrient‑rich foods.</li>
+          <li><strong>Food habits, religion, culture</strong>: Shape dietary patterns and nutrient intake.</li>
+          <li><strong>Availability & affordability</strong>: Influence seasonal variety and quality.</li>
+        </ul>
+      </section>
+
+      <!-- Psychological -->
+      <section id="psych" class="card mt2">
+        <div class="label">Section 6</div>
+        <h2>5. Psychological & Lifestyle Factors</h2>
+        <ul>
+          <li><strong>Mental health</strong> (stress, depression) can alter appetite and choices.</li>
+          <li><strong>Eating behaviour & knowledge</strong>: Preferences, cooking skills, label literacy affect nutrition.</li>
+        </ul>
+      </section>
+
+      <!-- Genetic & Pathological -->
+      <section id="genetic" class="card mt2">
+        <div class="label">Section 7</div>
+        <h2>6. Genetic & Pathological Factors</h2>
+        <ul>
+          <li><strong>Genetic disorders</strong> (e.g., cystic fibrosis) can impair digestion/absorption.</li>
+          <li><strong>Infections & chronic disease</strong>: Increase needs; may cause malabsorption and losses.</li>
+        </ul>
+      </section>
+
+      <!-- Summary table -->
+      <section id="summary" class="card mt2">
+        <div class="label">Section 8</div>
+        <h2>Summary Table of Nutrient Loss During Food Handling</h2>
+        <table>
+          <thead><tr><th>Factor</th><th>Effect on Nutrients</th></tr></thead>
+          <tbody>
+            <tr><td>Milling / refining</td><td>Loss of fibre and B‑vitamins</td></tr>
+            <tr><td>Boiling</td><td>Water‑soluble vitamins lost into cooking water</td></tr>
+            <tr><td>Prolonged heating</td><td>Degradation of vitamin C and folate</td></tr>
+            <tr><td>Storage (light/heat)</td><td>Loss of light‑/heat‑sensitive vitamins</td></tr>
+            <tr><td>Freezing</td><td>Minimal nutrient loss if blanched & kept cold</td></tr>
+          </tbody>
+        </table>
+        <div class="threecol mt">
+          <div class="card">
+            <div class="label">Light</div>
+            <div class="sun" aria-hidden="true"></div>
+            <p class="mini">Protect riboflavin and some vitamins by using opaque containers.</p>
+          </div>
+          <div class="card">
+            <div class="label">Heat</div>
+            <div class="flame" aria-hidden="true"></div>
+            <p class="mini">Reduce time/temperature; prefer steaming/microwaving to retain heat‑sensitive vitamins.</p>
+          </div>
+          <div class="card">
+            <div class="label">Water</div>
+            <span class="drop" aria-hidden="true"></span>
+            <span class="drop" aria-hidden="true"></span>
+            <span class="drop" aria-hidden="true"></span>
+            <p class="mini">Use minimal water; reuse cooking liquid in soups/gravies.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Exam Focus -->
+      <section id="exam" class="card mt2">
+        <div class="label">Section 9</div>
+        <h2>Exam Focus Points</h2>
+        <ul>
+          <li>Define factors affecting nutritive value.</li>
+          <li>Explain how processing (milling, cooking, preservation) affects nutrients.</li>
+          <li>Describe physiological influences on nutrient needs.</li>
+          <li>Discuss environmental/agricultural impacts on food quality.</li>
+          <li>Illustrate effects of cooking and storage (light, oxygen, heat, water).</li>
+          <li>Recognise socioeconomic, cultural, and psychological influences.</li>
+        </ul>
+      </section>
+
+      <!-- References -->
+      <section id="refs" class="card mt2">
+        <div class="label">Appendix</div>
+        <h2>References</h2>
+        <ul>
+          <li>Nutritional assessments & factors: <em>Kesari et al.</em>, 2023.</li>
+          <li>Food processing impact: Better Health Victoria, 2000.</li>
+          <li>Environmental & genetic factors: StatPearls, NCBI.</li>
+        </ul>
+        <p class="foot">Last updated: <span id="updated"></span>. Educational resource; patterns vary by food, cultivar, and method—consult latest local guidelines for specifics.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle with persistence
+    (function(){
+      const root=document.documentElement;
+      const btn=document.getElementById('themeBtn');
+      const saved=localStorage.getItem('nutritive_theme');
+      if(saved){ root.setAttribute('data-theme', saved); }
+      btn?.addEventListener('click',()=>{
+        const now=root.getAttribute('data-theme')==='dark'?'light':'dark';
+        root.setAttribute('data-theme', now);
+        localStorage.setItem('nutritive_theme', now);
+      });
+    })();
+
+    // Updated timestamp
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>
+

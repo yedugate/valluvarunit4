@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Balanced Diet — Scientifically Curated Teaching & Exam Notes</title>
+  <meta name="description" content="Single‑file, print‑ready teaching notes on Balanced Diet: definitions, features, components, visual guides, planning steps, examples, and exam tips." />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --panel:#ffffff; --accent:#10b981; --accent-ink:#064e3b; --warn:#ef4444; --ok:#22c55e; --info:#0ea5e9; --shadow:0 10px 30px rgba(2,6,23,.08);
+      --veg:#22c55e; --grain:#eab308; --protein:#ef4444; --fruit:#f97316; --dairy:#60a5fa;
+    }
+    [data-theme="dark"]{
+      --bg:#0b0f14; --ink:#e5edf7; --muted:#9aa7bc; --line:#1f2937; --panel:#0f141b; --accent:#22c55e; --accent-ink:#052e1f; --warn:#f87171; --ok:#34d399; --info:#38bdf8; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+    .wrapper{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 80%,transparent);backdrop-filter:saturate(1.2) blur(2px);border-bottom:1px solid var(--line)}
+    .hero{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0}
+    .title{font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:.2px}
+    .subtitle{color:var(--muted);font-weight:500}
+    .buttons{display:flex;gap:8px;flex-wrap:wrap}
+    button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 12px;border-radius:999px;cursor:pointer;box-shadow:var(--shadow)}
+    .btn-accent{background:var(--accent);color:white;border-color:transparent}
+    .grid{display:grid;grid-template-columns:260px 1fr;gap:24px}
+    nav{position:sticky;top:76px;align-self:start;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
+    nav h3{margin:.8rem 1rem .4rem;font-size:14px;color:var(--muted)}
+    nav a{display:block;padding:.55rem 1rem;color:var(--ink);text-decoration:none;border-top:1px dashed var(--line)}
+    nav a:first-of-type{border-top:none}
+    nav a:hover{background:rgba(2,6,23,.04)}
+    section{scroll-margin-top:84px}
+    .card{border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow);padding:18px}
+    .card h2{margin:0 0 .5rem}
+    .label{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .callout{border-left:4px solid var(--info);padding:.6rem .9rem;border-radius:8px;background:linear-gradient(180deg,rgba(14,165,233,.08),transparent)}
+    .warn{border-left-color:var(--warn);background:linear-gradient(180deg,rgba(239,68,68,.08),transparent)}
+    .ok{border-left-color:var(--ok);background:linear-gradient(180deg,rgba(34,197,94,.08),transparent)}
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:12px;border:1px solid var(--line)}
+    thead th{background:linear-gradient(180deg,rgba(16,185,129,.12),transparent);text-align:left;padding:.7rem .8rem;border-bottom:1px solid var(--line)}
+    tbody td{padding:.7rem .8rem;border-top:1px solid var(--line)}
+    tbody tr:nth-child(odd){background:rgba(2,6,23,.03)}
+    .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .badge{display:inline-flex;align-items:center;gap:6px;padding:.18rem .5rem;border-radius:999px;border:1px dashed var(--line);font-size:12px;color:var(--muted)}
+    .foot{margin-top:28px;color:var(--muted);font-size:13px}
+    .tag{display:inline-block;margin:.15rem .25rem 0 0;padding:.1rem .5rem;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-size:12px}
+    .mt{margin-top:16px}
+    .mt2{margin-top:24px}
+    .mt3{margin-top:36px}
+
+    /* Visuals */
+    .bar{height:14px;border-radius:10px;background:linear-gradient(90deg, var(--grain) 0 56%, var(--protein) 56% 70%, var(--protein) 70% 86%, var(--protein) 86% 86%, var(--protein) 86% 86%, var(--fruit) 86% 86%);}
+    .legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .legend span{display:inline-flex;align-items:center;gap:6px}
+    .dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+    .plate{position:relative;width:260px;height:260px;border-radius:50%;margin:auto;background:
+      radial-gradient(closest-side,var(--panel) 79%,transparent 80%),
+      conic-gradient(var(--veg) 0 144deg, var(--grain) 144deg 252deg, var(--protein) 252deg 324deg, var(--fruit) 324deg 360deg);
+      box-shadow:var(--shadow);border:6px solid var(--line)}
+    .plate::after{content:"";position:absolute;inset:20px;border-radius:50%;border:1px dashed var(--line)}
+    .plate-label{position:absolute;font-size:12px;font-weight:700;text-shadow:0 1px 0 rgba(255,255,255,.6)}
+    .l-veg{top:22%;left:14%;color:#064e3b}
+    .l-grain{top:56%;left:12%;color:#7c5e00}
+    .l-protein{top:58%;left:60%;color:#7f1d1d}
+    .l-fruit{top:20%;left:66%;color:#7c2d12}
+    .dairy{width:68px;height:68px;border-radius:50%;background:var(--dairy);position:absolute;right:-14px;bottom:22px;border:6px solid var(--line)}
+    .dairy::after{content:"Dairy";position:absolute;inset:0;display:grid;place-items:center;color:#0b3b77;font-size:12px;font-weight:700}
+
+    .pyramid{display:grid;grid-template-rows:repeat(4,1fr);gap:6px;max-width:420px;margin:auto}
+    .pyr-row{display:grid;place-items:center;height:46px;border-radius:10px;border:1px solid var(--line)}
+    .pyr-1{background:linear-gradient(90deg,var(--grain),#facc15)}
+    .pyr-2{background:linear-gradient(90deg,var(--veg),#86efac)}
+    .pyr-3{background:linear-gradient(90deg,var(--protein),#fca5a5)}
+    .pyr-4{background:linear-gradient(90deg,#f59e0b,#fed7aa)}
+
+    /* Print */
+    @media print{
+      header,nav,.noprint{display:none!important}
+      body{font-size:12pt}
+      .wrapper{max-width:unset}
+      .card{box-shadow:none}
+      a[href]:after{content:" (" attr(href) ")";font-size:10pt;color:#666}
+    }
+    @media (max-width: 920px){
+      .grid{grid-template-columns:1fr}
+      nav{position:relative;top:0}
+      .twocol{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper hero">
+      <div>
+        <div class="title">Balanced Diet</div>
+        <div class="subtitle">Scientifically Curated Teaching & Exam Notes — undergraduate level</div>
+      </div>
+      <div class="buttons noprint">
+        <button class="btn-accent" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button id="themeBtn" title="Toggle theme">🌗 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper grid">
+    <nav class="noprint" aria-label="On this page">
+      <h3>Contents</h3>
+      <a href="#definition">Definition</a>
+      <a href="#features">Key Features</a>
+      <a href="#components">Components of a Balanced Diet</a>
+      <a href="#groups">Food Groups (Examples)</a>
+      <a href="#visuals">Visual Guides & Proportions</a>
+      <a href="#planning">Steps for Planning</a>
+      <a href="#example-meal">Example Balanced Meal</a>
+      <a href="#importance">Importance</a>
+      <a href="#exam-notes">Exam Notes</a>
+      <a href="#references">References</a>
+    </nav>
+
+    <main>
+      <!-- Definition -->
+      <section id="definition" class="card">
+        <div class="label">Section 1</div>
+        <h2>Definition</h2>
+        <p>A <strong>balanced diet</strong> provides all essential nutrients — carbohydrates, proteins, fats, vitamins, minerals, fibre, and water — in appropriate quantities and proportions to meet an individual's needs for maintaining health, vitality, and well‑being.</p>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="card mt2">
+        <div class="label">Section 2</div>
+        <h2>Key Features</h2>
+        <ul>
+          <li>Includes all major food groups: grains, fruits, vegetables, protein foods, and dairy (or suitable alternatives for intolerances/vegan diets).</li>
+          <li><strong>Correct proportions</strong> (general guidance): Carbohydrates <strong>50–60%</strong> of total calories; Proteins <strong>10–15%</strong>; Fats <strong>20–30%</strong>.</li>
+          <li><strong>Sufficient energy</strong>: Meets requirements by age, sex, activity, and physiological state.</li>
+          <li><strong>Variety & moderation</strong>: Wide range of foods; limit added sugars, salt, saturated/trans fats, ultra‑processed foods, and alcohol.</li>
+        </ul>
+        <div class="mt">
+          <div class="label">Guideline ranges (visual)</div>
+          <div class="bar" aria-label="Macronutrient guideline bar"></div>
+          <div class="legend">
+            <span><i class="dot" style="background:var(--grain)"></i> Carbohydrates 50–60%</span>
+            <span><i class="dot" style="background:var(--protein)"></i> Proteins 10–15%</span>
+            <span><i class="dot" style="background:var(--fruit)"></i> Fats 20–30%</span>
+          </div>
+          <p class="mt" style="color:var(--muted);font-size:13px">Note: Percentages are of total daily energy. Target within ranges based on goals (e.g., athletes, clinical needs) per qualified guidance.</p>
+        </div>
+      </section>
+
+      <!-- Components -->
+      <section id="components" class="card mt2">
+        <div class="label">Section 3</div>
+        <h2>Components of a Balanced Diet</h2>
+        <div class="twocol">
+          <div>
+            <ul>
+              <li><strong>Carbohydrates</strong>: Energy source. <em>Foods:</em> grains, rice, bread, pasta, fruits, vegetables.</li>
+              <li><strong>Proteins</strong>: Growth, repair, enzymes/hormones. <em>Foods:</em> pulses, legumes, meat, eggs, dairy, tofu, nuts.</li>
+              <li><strong>Fats (mostly unsaturated)</strong>: Energy, cell function, absorption of fat‑soluble vitamins. <em>Foods:</em> vegetable oils, nuts, fatty fish, seeds.</li>
+              <li><strong>Vitamins</strong>: Regulation of metabolic processes. <em>Foods:</em> fruits, vegetables, dairy, meat, eggs.</li>
+              <li><strong>Minerals</strong>: Structure & regulation (e.g., calcium, iron, iodine). <em>Foods:</em> leafy greens, dairy, nuts, seafood.</li>
+              <li><strong>Dietary fibre</strong>: Gut health & digestion. <em>Foods:</em> whole grains, pulses, fruits, vegetables.</li>
+              <li><strong>Water</strong>: Hydration and transport for all body processes.</li>
+            </ul>
+          </div>
+          <div class="callout ok">
+            Combine plant proteins (e.g., <em>cereals + pulses</em>) across the day to ensure a complete amino acid profile in vegetarian diets.
+          </div>
+        </div>
+      </section>
+
+      <!-- Food Groups Table -->
+      <section id="groups" class="card mt2">
+        <div class="label">Section 4</div>
+        <h2>Food Groups (with Examples)</h2>
+        <table>
+          <thead><tr><th>Group</th><th>Examples</th></tr></thead>
+          <tbody>
+            <tr><td>Grains</td><td>Rice, wheat, oats, quinoa</td></tr>
+            <tr><td>Vegetables</td><td>Broccoli, spinach, carrots</td></tr>
+            <tr><td>Fruits</td><td>Apples, bananas, oranges</td></tr>
+            <tr><td>Protein Foods</td><td>Fish, eggs, beans, tofu, nuts</td></tr>
+            <tr><td>Dairy/Alternatives</td><td>Milk, curd, cheese, soy milk</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Visual Guides -->
+      <section id="visuals" class="card mt2">
+        <div class="label">Section 5</div>
+        <h2>Visual Guides & Proportions</h2>
+        <div class="twocol">
+          <figure style="text-align:center">
+            <div class="plate" role="img" aria-label="MyPlate style plate: 40% vegetables, 30% grains, 20% protein, 10% fruits; side circle dairy.">
+              <div class="plate-label l-veg">Veg 40%</div>
+              <div class="plate-label l-grain">Grains 30%</div>
+              <div class="plate-label l-protein">Protein 20%</div>
+              <div class="plate-label l-fruit">Fruits 10%</div>
+              <div class="dairy" title="Small portion dairy"></div>
+            </div>
+            <figcaption class="mt" style="color:var(--muted)">MyPlate: ~40% vegetables, 30% grains, 20% protein, 10% fruits + small dairy.</figcaption>
+          </figure>
+          <figure>
+            <div class="pyramid">
+              <div class="pyr-row pyr-1">Grains (base)</div>
+              <div class="pyr-row pyr-2">Vegetables & Fruits</div>
+              <div class="pyr-row pyr-3">Proteins (legumes, eggs, fish, dairy)</div>
+              <div class="pyr-row pyr-4">Fats & Sugars (use least)</div>
+            </div>
+            <figcaption class="mt" style="color:var(--muted)">Food Pyramid: Emphasize variety with minimal fats/sugars.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Planning Steps -->
+      <section id="planning" class="card mt2">
+        <div class="label">Section 6</div>
+        <h2>Steps for Planning a Balanced Diet</h2>
+        <ol>
+          <li><strong>Assess needs</strong>: age, sex, physical activity, health status.</li>
+          <li><strong>Select foods</strong>: include all groups in the right amounts.</li>
+          <li><strong>Control portions</strong>: avoid overeating or excessive restriction.</li>
+          <li><strong>Include variety</strong>: rotate foods within groups for full nutrient spectrum.</li>
+          <li><strong>Limit discretionary foods</strong>: reduce high sugar/salt/unhealthy fats and alcohol.</li>
+        </ol>
+      </section>
+
+      <!-- Example Meal -->
+      <section id="example-meal" class="card mt2">
+        <div class="label">Section 7</div>
+        <h2>Example of a Balanced Meal</h2>
+        <div class="kpis">
+          <div class="card"><div class="label">Breakfast</div><strong>Oatmeal + fruit + nuts</strong><div class="mt" style="color:var(--muted)">Glass of milk/fortified alt.</div></div>
+          <div class="card"><div class="label">Lunch</div><strong>Brown rice + lentils</strong><div class="mt" style="color:var(--muted)">Mixed veg curry, salad, curd.</div></div>
+          <div class="card"><div class="label">Dinner</div><strong>Grilled fish/tofu + roti</strong><div class="mt" style="color:var(--muted)">Stir‑fried greens.</div></div>
+          <div class="card"><div class="label">Snacks</div><strong>Fruit, yogurt</strong><div class="mt" style="color:var(--muted)">Roasted chickpeas, nuts.</div></div>
+        </div>
+      </section>
+
+      <!-- Importance -->
+      <section id="importance" class="card mt2">
+        <div class="label">Section 8</div>
+        <h2>Importance of a Balanced Diet</h2>
+        <ul>
+          <li>Supports growth, immunity, cognitive and motor performance (vital for students).</li>
+          <li>Reduces risk of malnutrition and chronic diseases: obesity, diabetes, heart disease, anaemia.</li>
+          <li>Promotes healthy weight and overall well‑being.</li>
+        </ul>
+      </section>
+
+      <!-- Exam Notes -->
+      <section id="exam-notes" class="card mt2">
+        <div class="label">Section 9</div>
+        <h2>Exam Notes: Key Points to Remember</h2>
+        <ul>
+          <li>Definition and principles of a balanced diet.</li>
+          <li>Recall <em>proportions</em> and roles of all nutrient groups.</li>
+          <li>Explain functions and major sources for each nutrient.</li>
+          <li>Recognize pitfalls: excess/deficit of nutrients and health effects.</li>
+          <li>Recall portion sizes, examples for each food group, and sample menus.</li>
+          <li>Apply knowledge to different ages, activity levels, and special conditions.</li>
+        </ul>
+      </section>
+
+      <!-- References -->
+      <section id="references" class="card mt2">
+        <div class="label">Appendix</div>
+        <h2>References & Visual Aids</h2>
+        <p style="color:var(--muted)">For illustration and practical charts, refer to national guidelines (e.g., <em>Dietary Guidelines for Indians</em>) and resources like <em>MyPlate (USDA)</em>. Use the latest editions available in your region.</p>
+        <p>
+          <span class="tag">Carbohydrates 50–60%</span>
+          <span class="tag">Proteins 10–15%</span>
+          <span class="tag">Fats 20–30%</span>
+          <span class="tag">Fibre‑rich choices</span>
+          <span class="tag">Hydration</span>
+        </p>
+        <div class="foot">Last updated: <span id="updated"></span>. © Your Teaching Notes.</div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle with persistence
+    (function(){
+      const root=document.documentElement;
+      const btn=document.getElementById('themeBtn');
+      const saved=localStorage.getItem('bd_theme');
+      if(saved){ root.setAttribute('data-theme', saved); }
+      btn?.addEventListener('click',()=>{
+        const now=root.getAttribute('data-theme')==='dark'?'light':'dark';
+        root.setAttribute('data-theme', now);
+        localStorage.setItem('bd_theme', now);
+      });
+    })();
+
+    // Updated timestamp
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>

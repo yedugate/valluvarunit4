@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 4 Home — Food & Nutrition Teaching Notes</title>
+  <meta name="description" content="Homepage linking all sister notes: nutrition topics, life‑stage diets, food science & technology, plus extras (others1.html, others2.html)." />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --panel:#ffffff; --accent:#10b981; --shadow:0 10px 30px rgba(2,6,23,.08);
+      --found:#0ea5e9; --cond:#f97316; --people:#8b5cf6; --science:#22c55e; --misc:#94a3b8;
+    }
+    [data-theme="dark"]{
+      --bg:#0b0f14; --ink:#e5edf7; --muted:#9aa7bc; --line:#1f2937; --panel:#0f141b; --accent:#22c55e; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+    .wrapper{max-width:1200px;margin:0 auto;padding:24px}
+
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 80%,transparent);backdrop-filter:saturate(1.2) blur(2px);border-bottom:1px solid var(--line)}
+    .hero{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0}
+    .title{font-size:clamp(22px,2.6vw,32px);font-weight:800;letter-spacing:.2px}
+    .subtitle{color:var(--muted);font-weight:500}
+    .buttons{display:flex;gap:8px;flex-wrap:wrap}
+    button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 12px;border-radius:999px;cursor:pointer;box-shadow:var(--shadow)}
+    .btn-accent{background:var(--accent);color:white;border-color:transparent}
+
+    .grid{display:grid;grid-template-columns:280px 1fr;gap:24px}
+    nav{position:sticky;top:76px;align-self:start;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
+    nav h3{margin:.8rem 1rem .4rem;font-size:14px;color:var(--muted)}
+    nav a{display:block;padding:.55rem 1rem;color:var(--ink);text-decoration:none;border-top:1px dashed var(--line)}
+    nav a:first-of-type{border-top:none}
+    nav a:hover{background:rgba(2,6,23,.04)}
+
+    section{scroll-margin-top:84px}
+    .card{border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow);padding:18px}
+    .label{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .search{flex:1;min-width:220px}
+    input[type="search"]{width:100%;padding:.6rem .8rem;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink)}
+    .switch{display:inline-flex;align-items:center;gap:8px}
+
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .linkcard{display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--panel);text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+    .linkcard:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(2,6,23,.12)}
+    .tag{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:.14rem .5rem;font-size:12px;color:var(--muted)}
+    .t-found{border-color:var(--found);color:var(--found)}
+    .t-cond{border-color:var(--cond);color:var(--cond)}
+    .t-people{border-color:var(--people);color:var(--people)}
+    .t-science{border-color:var(--science);color:var(--science)}
+    .t-misc{border-color:var(--misc);color:var(--misc)}
+
+    .group h2{margin:.2rem 0 1rem}
+
+    @media (max-width: 1020px){ .cards{grid-template-columns:repeat(2,minmax(0,1fr));} }
+    @media (max-width: 640px){ .grid{grid-template-columns:1fr} nav{position:relative;top:0} .cards{grid-template-columns:1fr} }
+
+    .foot{margin-top:28px;color:var(--muted);font-size:13px}
+
+    @media print{ header,nav,.noprint{display:none!important} body{font-size:12pt} .wrapper{max-width:unset} .card{box-shadow:none} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper hero">
+      <div>
+        <div class="title">Unit 4 Food & Nutrition Teaching Notes — Home</div>
+        
+      </div>
+      <div class="buttons noprint">
+        <button id="themeBtn" title="Toggle theme">🌗 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper grid">
+    <nav class="noprint" aria-label="On this page">
+      <h3>Sections</h3>
+      <a href="#foundations">Foundations</a>
+      <a href="#conditions">Condition‑specific</a>
+      <a href="#people">Population groups</a>
+      <a href="#science">Food science & technology</a>
+      <a href="#misc">Extras</a>
+    </nav>
+
+    <main>
+      <section class="card">
+        <div class="toolbar">
+          <div class="search"><input id="search" type="search" placeholder="Search pages… (e.g., sports, emulsion, women)" /></div>
+          <div class="switch"><input id="newtab" type="checkbox" /> <label for="newtab">Open links in new tab</label></div>
+        </div>
+      </section>
+
+      <section id="foundations" class="card group">
+        <div class="label">Section A</div>
+        <h2>Foundations</h2>
+        <div id="cards-foundations" class="cards"></div>
+      </section>
+
+      <section id="conditions" class="card group">
+        <div class="label">Section B</div>
+        <h2>Condition‑specific</h2>
+        <div id="cards-conditions" class="cards"></div>
+      </section>
+
+      <section id="people" class="card group">
+        <div class="label">Section C</div>
+        <h2>Population groups</h2>
+        <div id="cards-people" class="cards"></div>
+      </section>
+
+      <section id="science" class="card group">
+        <div class="label">Section D</div>
+        <h2>Food science & technology</h2>
+        <div id="cards-science" class="cards"></div>
+      </section>
+
+      <section id="misc" class="card group">
+        <div class="label">Section E</div>
+        <h2>Extras</h2>
+        <div id="cards-misc" class="cards"></div>
+      </section>
+
+      <p class="foot">This home page auto‑generates local links; spaces and special characters are handled safely. Last updated: <span id="updated"></span>.</p>
+    </main>
+  </div>
+
+  <script>
+    // Pages registry
+    const PAGES = [
+      // Foundations
+      {title:"Nutrition & Healthy Eating", file:"Nutrition & Healthy Eating.html", desc:"Foundational overview of nutrients & healthy eating.", tag:"foundations"},
+      {title:"Balanced Diet", file:"Balanced Diet.html", desc:"Definition, proportions, visual guides, and menus.", tag:"foundations"},
+      {title:"Fiber‑Rich Foods", file:"FiberRichFoods.html", desc:"Soluble vs insoluble fiber, benefits, intake.", tag:"foundations"},
+      {title:"Fat‑Free Food", file:"FatFreeFood.html", desc:"Label claims, pros/cons, teaching points.", tag:"foundations"},
+
+      // Conditions
+      {title:"Food for Diabetic", file:"Food for Diabetic.html", desc:"Low‑GI patterns, carb quality, and examples.", tag:"conditions"},
+      {title:"Food for Blood Pressure", file:"Food for Blood Pressure.html", desc:"DASH/Med patterns, potassium & sodium balance.", tag:"conditions"},
+
+      // People
+      {title:"Food for Children", file:"Food for Children.html", desc:"Growth needs, school‑age nutrition, teaching ideas.", tag:"people"},
+      {title:"Food for Working Women", file:"Food for Working Women.html", desc:"Energy planning, iron, calcium, and snacks.", tag:"people"},
+      {title:"Food for Hard Working Men", file:"Food for Hard Working Men.html", desc:"High activity fueling, hydration, sample plan.", tag:"people"},
+      {title:"Nutrition for Sports Persons", file:"Nutrition for Sports Persons.html", desc:"Macros, hydration, timing, and sample day.", tag:"people"},
+
+      // Science & Tech
+      {title:"Emulsion", file:"Emulsion.html", desc:"Types, components, stabilisation, food uses.", tag:"science"},
+      {title:"Product Development", file:"Product Development.html", desc:"Stages, tools, and challenges.", tag:"science"},
+      {title:"Factors Affecting the Nutritive Value of Foods", file:"Factors Affecting the Nutritive Value of Foods .html", desc:"Physio, agri, processing & storage effects.", tag:"science"},
+      {title:"Importance of Water, Proteins, Carbohydrates & Lipids", file:"Importance of Water, Proteins, Carbohydrates & Lipids in Food Product Development.html", desc:"Functional roles in product design.", tag:"science"},
+
+      // Extras
+      {title:"Others 1", file:"others1.html", desc:"Additional resource page.", tag:"misc"},
+      {title:"Others 2", file:"others2.html", desc:"Additional resource page.", tag:"misc"}
+    ];
+
+    const TAG_CLASS = { foundations:'t-found', conditions:'t-cond', people:'t-people', science:'t-science', misc:'t-misc' };
+
+    function makeCard(p){
+      const a=document.createElement('a');
+      a.className='linkcard';
+      a.href=encodeURI(p.file);
+      a.innerHTML = `<span class="tag ${TAG_CLASS[p.tag]}">${p.tag.replace('-', ' ')}</span>
+                     <strong>${p.title}</strong>
+                     <span style="color:var(--muted);font-size:13px">${p.desc||''}</span>`;
+      if(document.getElementById('newtab').checked){ a.target='_blank'; a.rel='noopener'; }
+      return a;
+    }
+
+    function render(){
+      const sections={foundations: 'cards-foundations', conditions:'cards-conditions', people:'cards-people', science:'cards-science', misc:'cards-misc'};
+      for(const key of Object.keys(sections)){
+        const el=document.getElementById(sections[key]);
+        el.innerHTML='';
+      }
+      const q = document.getElementById('search').value.trim().toLowerCase();
+      PAGES
+        .filter(p=>!q || (p.title+" "+(p.desc||'')).toLowerCase().includes(q))
+        .sort((a,b)=>a.title.localeCompare(b.title))
+        .forEach(p=>{
+          const target=document.getElementById({foundations:'cards-foundations', conditions:'cards-conditions', people:'cards-people', science:'cards-science', misc:'cards-misc'}[p.tag]);
+          if(target) target.appendChild(makeCard(p));
+        });
+    }
+
+    // Theme toggle
+    (function(){
+      const root=document.documentElement; const btn=document.getElementById('themeBtn');
+      const saved=localStorage.getItem('notes_home_theme'); if(saved){ root.setAttribute('data-theme', saved); }
+      btn?.addEventListener('click',()=>{ const now=root.getAttribute('data-theme')==='dark'?'light':'dark'; root.setAttribute('data-theme', now); localStorage.setItem('notes_home_theme', now); });
+    })();
+
+    // Live behaviours
+    document.getElementById('search').addEventListener('input', render);
+    document.getElementById('newtab').addEventListener('change', render);
+
+    // Timestamp
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+
+    // Initial render
+    render();
+  </script>
+</body>
+</html>
+

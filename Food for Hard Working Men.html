@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food for Hard Working Men — Scientifically Curated Teaching & Exam Notes</title>
+  <meta name="description" content="Single‑file, print‑ready teaching notes for physically active men: energy/macros, micronutrients, hydration, foods, sample plan, tips, and exam points." />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --panel:#ffffff; --accent:#10b981; --accent-ink:#064e3b; --warn:#ef4444; --ok:#22c55e; --info:#0ea5e9; --shadow:0 10px 30px rgba(2,6,23,.08);
+      --carb:#eab308; --protein:#ef4444; --fat:#f97316; --veg:#22c55e; --grain:#eab308; --dairy:#60a5fa; --water:#38bdf8;
+    }
+    [data-theme="dark"]{
+      --bg:#0b0f14; --ink:#e5edf7; --muted:#9aa7bc; --line:#1f2937; --panel:#0f141b; --accent:#22c55e; --accent-ink:#052e1f; --warn:#f87171; --ok:#34d399; --info:#38bdf8; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+    .wrapper{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 80%,transparent);backdrop-filter:saturate(1.2) blur(2px);border-bottom:1px solid var(--line)}
+    .hero{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0}
+    .title{font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:.2px}
+    .subtitle{color:var(--muted);font-weight:500}
+    .buttons{display:flex;gap:8px;flex-wrap:wrap}
+    button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 12px;border-radius:999px;cursor:pointer;box-shadow:var(--shadow)}
+    .btn-accent{background:var(--accent);color:white;border-color:transparent}
+    .grid{display:grid;grid-template-columns:260px 1fr;gap:24px}
+    nav{position:sticky;top:76px;align-self:start;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
+    nav h3{margin:.8rem 1rem .4rem;font-size:14px;color:var(--muted)}
+    nav a{display:block;padding:.55rem 1rem;color:var(--ink);text-decoration:none;border-top:1px dashed var(--line)}
+    nav a:first-of-type{border-top:none}
+    nav a:hover{background:rgba(2,6,23,.04)}
+    section{scroll-margin-top:84px}
+    .card{border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow);padding:18px}
+    .card h2{margin:0 0 .5rem}
+    .label{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .callout{border-left:4px solid var(--info);padding:.6rem .9rem;border-radius:8px;background:linear-gradient(180deg,rgba(14,165,233,.08),transparent)}
+    .ok{border-left-color:var(--ok);background:linear-gradient(180deg,rgba(34,197,94,.08),transparent)}
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:12px;border:1px solid var(--line)}
+    thead th{background:linear-gradient(180deg,rgba(16,185,129,.12),transparent);text-align:left;padding:.7rem .8rem;border-bottom:1px solid var(--line)}
+    tbody td{padding:.7rem .8rem;border-top:1px solid var(--line)}
+    tbody tr:nth-child(odd){background:rgba(2,6,23,.03)}
+    .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .badge{display:inline-flex;align-items:center;gap:6px;padding:.18rem .5rem;border-radius:999px;border:1px dashed var(--line);font-size:12px;color:var(--muted)}
+    .foot{margin-top:28px;color:var(--muted);font-size:13px}
+    .tag{display:inline-block;margin:.15rem .25rem 0 0;padding:.1rem .5rem;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-size:12px}
+    .mt{margin-top:16px}
+    .mt2{margin-top:24px}
+    .mt3{margin-top:36px}
+
+    /* Visuals */
+    .donut{position:relative;width:280px;height:280px;border-radius:50%;margin:auto;background:
+      radial-gradient(closest-side,var(--panel) 76%,transparent 77%),
+      conic-gradient(var(--carb) 0 198deg, var(--protein) 198deg 270deg, var(--fat) 270deg 360deg);
+      box-shadow:var(--shadow);border:6px solid var(--line)}
+    .donut::after{content:"";position:absolute;inset:20px;border-radius:50%;border:1px dashed var(--line)}
+    .plate-label{position:absolute;font-size:12px;font-weight:800;text-shadow:0 1px 0 rgba(255,255,255,.6)}
+    .l-carb{top:18%;left:18%;color:#7c5e00}
+    .l-protein{top:58%;left:58%;color:#7f1d1d}
+    .l-fat{top:58%;left:16%;color:#7c2d12}
+
+    .legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .legend span{display:inline-flex;align-items:center;gap:6px}
+    .dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+    .energy{display:grid;place-items:center;border:1px dashed var(--line);border-radius:14px;padding:12px;background:linear-gradient(180deg,rgba(234,179,8,.12),transparent)}
+    .energy strong{font-size:22px}
+
+    .bottle{width:80px;height:160px;border:6px solid var(--line);border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:10px;border-top-right-radius:10px;margin:auto;position:relative;background:linear-gradient(180deg, var(--water) 0 65%, rgba(56,189,248,.2) 65% 100%)}
+    .bottle::before{content:"";position:absolute;top:-24px;left:22px;width:36px;height:24px;border:6px solid var(--line);border-bottom:0;border-top-left-radius:6px;border-top-right-radius:6px;background:var(--panel)}
+    .bottle .txt{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;color:#0b3b77;text-align:center}
+
+    /* Small screens */
+    @media (max-width: 920px){
+      .grid{grid-template-columns:1fr}
+      nav{position:relative;top:0}
+      .twocol{grid-template-columns:1fr}
+      .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+
+    /* Print */
+    @media print{
+      header,nav,.noprint{display:none!important}
+      body{font-size:12pt}
+      .wrapper{max-width:unset}
+      .card{box-shadow:none}
+      a[href]:after{content:" (" attr(href) ")";font-size:10pt;color:#666}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper hero">
+      <div>
+        <div class="title">Food for Hard Working Men</div>
+        <div class="subtitle">Scientifically Curated Teaching & Exam Notes — undergraduate level</div>
+      </div>
+      <div class="buttons noprint">
+        <button class="btn-accent" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button id="themeBtn" title="Toggle theme">🌗 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper grid">
+    <nav class="noprint" aria-label="On this page">
+      <h3>Contents</h3>
+      <a href="#overview">Overview</a>
+      <a href="#energy">Energy & Macronutrient Needs</a>
+      <a href="#micros">Micronutrient Needs</a>
+      <a href="#hydration">Hydration</a>
+      <a href="#foods">Recommended Food Choices</a>
+      <a href="#plan">Sample Meal Plan</a>
+      <a href="#tips">Nutrition Tips</a>
+      <a href="#exam">Exam Focus Points</a>
+      <a href="#refs">References & Notes</a>
+    </nav>
+
+    <main>
+      <!-- Overview -->
+      <section id="overview" class="card">
+        <div class="label">Section 1</div>
+        <h2>Overview</h2>
+        <p>Hard working men—especially those engaged in physical labour or intense work—require adequate nutrition to sustain energy, enhance performance, support muscle recovery, and maintain overall health.</p>
+        <div class="callout ok mt">Prioritise regular meals, quality carbohydrates, sufficient protein, healthy fats, and fluids—especially in hot/humid conditions.</div>
+      </section>
+
+      <!-- Energy & Macros -->
+      <section id="energy" class="card mt2">
+        <div class="label">Section 2</div>
+        <h2>Energy & Macronutrient Needs</h2>
+        <div class="twocol">
+          <div>
+            <div class="energy"><div class="label">Typical range</div><strong>2,500–3,500 kcal/day</strong><div class="mt" style="color:var(--muted)">Adjust for body size, workload, climate.</div></div>
+            <ul class="mt">
+              <li><strong>Carbohydrates</strong>: <em>45–65% of energy</em>. Primary fuel for prolonged activity. <span class="badge">Sources: whole grains, fruits, vegetables, legumes</span></li>
+              <li><strong>Protein</strong>: <em>1.2–2.0 g/kg body weight/day</em> for repair & synthesis. <span class="badge">Lean meat, fish, dairy, pulses, eggs</span></li>
+              <li><strong>Fats</strong>: <em>20–30% of energy</em>, emphasise unsaturated fats. <span class="badge">Plant oils, nuts, seeds</span></li>
+            </ul>
+            <details class="mt">
+              <summary><strong>Protein calculator</strong> — enter body weight (kg)</summary>
+              <div class="mt">
+                <input id="bw" type="number" min="30" max="200" step="0.5" placeholder="e.g., 70" style="padding:.5rem;border:1px solid var(--line);border-radius:8px;width:140px" />
+                <div id="proteinOut" class="mt" style="color:var(--muted)">Enter weight to see daily protein (g).</div>
+              </div>
+            </details>
+          </div>
+          <figure style="text-align:center">
+            <div class="donut" role="img" aria-label="Example macro split: ~55% carbs, ~20% protein, ~25% fat (within ranges)">
+              <div class="plate-label l-carb">Carbs</div>
+              <div class="plate-label l-protein">Protein</div>
+              <div class="plate-label l-fat">Fat</div>
+            </div>
+            <figcaption class="mt" style="color:var(--muted)">Illustrative macro pattern within recommended ranges.</figcaption>
+            <div class="legend">
+              <span><i class="dot" style="background:var(--carb)"></i>Carbs 45–65%</span>
+              <span><i class="dot" style="background:var(--protein)"></i>Protein 1.2–2.0 g/kg</span>
+              <span><i class="dot" style="background:var(--fat)"></i>Fat 20–30%</span>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Micronutrients -->
+      <section id="micros" class="card mt2">
+        <div class="label">Section 3</div>
+        <h2>Micronutrient Needs</h2>
+        <table>
+          <thead><tr><th>Nutrient</th><th>Role</th><th>Key Sources</th></tr></thead>
+          <tbody>
+            <tr><td>Iron</td><td>Oxygen transport; reduces fatigue</td><td>Lean meats, liver (moderation), legumes, leafy greens, fortified cereals</td></tr>
+            <tr><td>Calcium + Vitamin D</td><td>Bones, injury prevention</td><td>Dairy/fortified milks, small fish with bones; safe sun, eggs</td></tr>
+            <tr><td>Magnesium & Potassium</td><td>Muscle function, electrolyte balance</td><td>Nuts, seeds, bananas, potatoes, legumes, leafy greens</td></tr>
+            <tr><td>B‑Vitamins</td><td>Energy metabolism</td><td>Whole grains, pulses, eggs, dairy, meat, leafy greens</td></tr>
+            <tr><td>Antioxidants</td><td>Reduce oxidative stress from hard work/heat</td><td>Colourful fruits/veg, spices (turmeric, ginger)</td></tr>
+          </tbody>
+        </table>
+        <div class="callout mt">Pair iron sources with vitamin C‑rich foods (citrus, amla, capsicum) to enhance absorption; limit tea/coffee with iron‑rich meals.</div>
+      </section>
+
+      <!-- Hydration -->
+      <section id="hydration" class="card mt2">
+        <div class="label">Section 4</div>
+        <h2>Hydration</h2>
+        <div class="twocol">
+          <ul>
+            <li>Adequate fluids are critical to maintain performance and prevent heat stress, especially in hot/humid work.</li>
+            <li>Use <strong>water</strong> primarily; consider <strong>ORS/electrolyte drinks</strong> during heavy sweating or long shifts.</li>
+            <li>Rehydrate after work; include sodium and potassium foods if large sweat losses occur.</li>
+          </ul>
+          <figure>
+            <div class="bottle" role="img" aria-label="Hydration reminder"><div class="txt">Hydrate</div></div>
+            <figcaption class="mt" style="color:var(--muted)">Frequent small drinks are more effective than large infrequent gulps.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Food Choices -->
+      <section id="foods" class="card mt2">
+        <div class="label">Section 5</div>
+        <h2>Recommended Food Choices</h2>
+        <table>
+          <thead><tr><th>Category</th><th>Examples</th></tr></thead>
+          <tbody>
+            <tr><td>Complex carbohydrates</td><td>Brown rice, oats, whole wheat, millets, sweet potatoes</td></tr>
+            <tr><td>Lean proteins</td><td>Chicken, fish, eggs, paneer/tofu, lentils & beans, low‑fat dairy</td></tr>
+            <tr><td>Vegetables & fruits</td><td>Leafy greens, gourds, tomatoes, citrus, bananas, berries</td></tr>
+            <tr><td>Nuts & seeds</td><td>Almonds, walnuts, peanuts, pumpkin/chia/flax seeds</td></tr>
+            <tr><td>Healthy oils</td><td>Olive, mustard, groundnut, sunflower (avoid trans fats)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Sample Plan -->
+      <section id="plan" class="card mt2">
+        <div class="label">Section 6</div>
+        <h2>Sample Meal Plan</h2>
+        <div class="kpis">
+          <div class="card"><div class="label">Breakfast</div><strong>Oatmeal + nuts + fruit</strong><div class="mt" style="color:var(--muted)">+ boiled eggs or milk</div></div>
+          <div class="card"><div class="label">Mid‑morning</div><strong>Fresh fruit or nuts</strong></div>
+          <div class="card"><div class="label">Lunch</div><strong>Brown rice + lean meat/lentils</strong><div class="mt" style="color:var(--muted)">+ cooked vegetables</div></div>
+          <div class="card"><div class="label">Afternoon</div><strong>Yogurt or small lean sandwich</strong></div>
+          <div class="card"><div class="label">Dinner</div><strong>Whole‑wheat chapati + mixed veg</strong><div class="mt" style="color:var(--muted)">+ grilled fish or tofu</div></div>
+        </div>
+      </section>
+
+      <!-- Tips -->
+      <section id="tips" class="card mt2">
+        <div class="label">Section 7</div>
+        <h2>Nutrition Tips for Hard Working Men</h2>
+        <ul>
+          <li>Eat balanced meals at regular intervals to maintain energy.</li>
+          <li>Include protein in every meal to support recovery.</li>
+          <li>Limit ultra‑processed foods and sugary snacks.</li>
+          <li>Plan fluids during and after activity; replace electrolytes when needed.</li>
+          <li>Consider supplements only based on individual assessment with a healthcare professional.</li>
+        </ul>
+      </section>
+
+      <!-- Exam Focus -->
+      <section id="exam" class="card mt2">
+        <div class="label">Section 8</div>
+        <h2>Exam Focus Points</h2>
+        <ul>
+          <li>Define dietary needs for physically active/labour‑intensive work.</li>
+          <li>Explain roles of macros and key micros for performance and recovery.</li>
+          <li>Discuss hydration importance and meal timing.</li>
+          <li>Give examples of nutrient‑dense, work‑friendly foods.</li>
+          <li>Describe consequences of poor nutrition on capacity and health.</li>
+        </ul>
+      </section>
+
+      <!-- References -->
+      <section id="refs" class="card mt2">
+        <div class="label">Appendix</div>
+        <h2>References & Notes</h2>
+        <p style="color:var(--muted)">Notes synthesised from common sports/occupational nutrition guidance. Personalise plans with a qualified professional—especially in extreme heat, long shifts, or medical conditions.</p>
+        <p>
+          <span class="tag">Carbs 45–65%</span>
+          <span class="tag">Protein 1.2–2.0 g/kg</span>
+          <span class="tag">Fat 20–30%</span>
+          <span class="tag">Electrolyte balance</span>
+          <span class="tag">Meal timing</span>
+        </p>
+        <div class="foot">Last updated: <span id="updated"></span>. Educational resource; not a substitute for medical advice.</div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle with persistence
+    (function(){
+      const root=document.documentElement;
+      const btn=document.getElementById('themeBtn');
+      const saved=localStorage.getItem('hwm_theme');
+      if(saved){ root.setAttribute('data-theme', saved); }
+      btn?.addEventListener('click',()=>{
+        const now=root.getAttribute('data-theme')==='dark'?'light':'dark';
+        root.setAttribute('data-theme', now);
+        localStorage.setItem('hwm_theme', now);
+      });
+    })();
+
+    // Updated timestamp
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+
+    // Protein calculator
+    (function(){
+      const bw=document.getElementById('bw');
+      const out=document.getElementById('proteinOut');
+      if(!bw||!out) return;
+      const fmt=n=>Math.round(n);
+      const update=()=>{
+        const w=parseFloat(bw.value);
+        if(!w||w<=0){ out.textContent='Enter weight to see daily protein (g).'; return; }
+        const low=w*1.2, high=w*2.0, mid=w*1.6;
+        out.innerHTML = `Daily protein range: <strong>${fmt(low)}–${fmt(high)} g</strong> (≈ ${fmt(mid)} g typical).\n`+
+          `Per meal (3–5 meals): <em>${fmt(mid/3)}–${fmt(mid/5)} g</em>.`;
+      };
+      bw.addEventListener('input',update); update();
+    })();
+  </script>
+</body>
+</html>
+

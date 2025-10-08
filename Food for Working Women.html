@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food for Working Women — Scientifically Curated Teaching & Exam Notes</title>
+  <meta name="description" content="Single‑file, print‑ready teaching notes for working women: requirements, macro/micronutrients, guidelines, strategies, practical tips, exam focus, and references." />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --panel:#ffffff; --accent:#10b981; --accent-ink:#064e3b; --warn:#ef4444; --ok:#22c55e; --info:#0ea5e9; --shadow:0 10px 30px rgba(2,6,23,.08);
+      --carb:#eab308; --protein:#ef4444; --fat:#f97316; --veg:#22c55e; --dairy:#60a5fa; --water:#38bdf8;
+    }
+    [data-theme="dark"]{
+      --bg:#0b0f14; --ink:#e5edf7; --muted:#9aa7bc; --line:#1f2937; --panel:#0f141b; --accent:#22c55e; --accent-ink:#052e1f; --warn:#f87171; --ok:#34d399; --info:#38bdf8; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+    .wrapper{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 80%,transparent);backdrop-filter:saturate(1.2) blur(2px);border-bottom:1px solid var(--line)}
+    .hero{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0}
+    .title{font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:.2px}
+    .subtitle{color:var(--muted);font-weight:500}
+    .buttons{display:flex;gap:8px;flex-wrap:wrap}
+    button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 12px;border-radius:999px;cursor:pointer;box-shadow:var(--shadow)}
+    .btn-accent{background:var(--accent);color:white;border-color:transparent}
+    .grid{display:grid;grid-template-columns:260px 1fr;gap:24px}
+    nav{position:sticky;top:76px;align-self:start;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
+    nav h3{margin:.8rem 1rem .4rem;font-size:14px;color:var(--muted)}
+    nav a{display:block;padding:.55rem 1rem;color:var(--ink);text-decoration:none;border-top:1px dashed var(--line)}
+    nav a:first-of-type{border-top:none}
+    nav a:hover{background:rgba(2,6,23,.04)}
+    section{scroll-margin-top:84px}
+    .card{border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow);padding:18px}
+    .card h2{margin:0 0 .5rem}
+    .label{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .callout{border-left:4px solid var(--info);padding:.6rem .9rem;border-radius:8px;background:linear-gradient(180deg,rgba(14,165,233,.08),transparent)}
+    .ok{border-left-color:var(--ok);background:linear-gradient(180deg,rgba(34,197,94,.08),transparent)}
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:12px;border:1px solid var(--line)}
+    thead th{background:linear-gradient(180deg,rgba(16,185,129,.12),transparent);text-align:left;padding:.7rem .8rem;border-bottom:1px solid var(--line)}
+    tbody td{padding:.7rem .8rem;border-top:1px solid var(--line)}
+    tbody tr:nth-child(odd){background:rgba(2,6,23,.03)}
+    .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .badge{display:inline-flex;align-items:center;gap:6px;padding:.18rem .5rem;border-radius:999px;border:1px dashed var(--line);font-size:12px;color:var(--muted)}
+    .foot{margin-top:28px;color:var(--muted);font-size:13px}
+    .tag{display:inline-block;margin:.15rem .25rem 0 0;padding:.1rem .5rem;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-size:12px}
+    .mt{margin-top:16px}
+    .mt2{margin-top:24px}
+    .mt3{margin-top:36px}
+
+    /* Visuals */
+    .bar{height:14px;border-radius:10px;background:linear-gradient(90deg, var(--carb) 0 56%, var(--protein) 56% 70%, var(--fat) 70% 100%);} /* 56/14/30 within 45–60 / 10–15 / 20–30 */
+    .legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .legend span{display:inline-flex;align-items:center;gap:6px}
+    .dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+    .bottle{width:72px;height:150px;border:6px solid var(--line);border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:10px;border-top-right-radius:10px;margin:auto;position:relative;background:linear-gradient(180deg, var(--water) 0 60%, rgba(56,189,248,.2) 60% 100%)}
+    .bottle::before{content:"";position:absolute;top:-24px;left:18px;width:36px;height:24px;border:6px solid var(--line);border-bottom:0;border-top-left-radius:6px;border-top-right-radius:6px;background:var(--panel)}
+    .bottle .txt{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;color:#0b3b77;text-align:center}
+
+    /* Small screens */
+    @media (max-width: 920px){
+      .grid{grid-template-columns:1fr}
+      nav{position:relative;top:0}
+      .twocol{grid-template-columns:1fr}
+      .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+
+    /* Print */
+    @media print{
+      header,nav,.noprint{display:none!important}
+      body{font-size:12pt}
+      .wrapper{max-width:unset}
+      .card{box-shadow:none}
+      a[href]:after{content:" (" attr(href) ")";font-size:10pt;color:#666}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper hero">
+      <div>
+        <div class="title">Food for Working Women</div>
+        <div class="subtitle">Scientifically Curated Teaching & Exam Notes — undergraduate level</div>
+      </div>
+      <div class="buttons noprint">
+        <button class="btn-accent" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button id="themeBtn" title="Toggle theme">🌗 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper grid">
+    <nav class="noprint" aria-label="On this page">
+      <h3>Contents</h3>
+      <a href="#intro">Introduction</a>
+      <a href="#requirements">Nutritional Requirements</a>
+      <a href="#guidelines">Nutritional Guidelines & Best Practices</a>
+      <a href="#strategies">Specific Dietary Strategies</a>
+      <a href="#tips">Practical Tips</a>
+      <a href="#exam">Exam Focus Points</a>
+      <a href="#refs">References</a>
+      <a href="#summary">Summary</a>
+    </nav>
+
+    <main>
+      <!-- Introduction -->
+      <section id="intro" class="card">
+        <div class="label">Section 1</div>
+        <h2>Introduction</h2>
+        <p>Working women juggle multiple roles, making balanced nutrition essential for sustaining energy, health, and productivity. Needs vary by physiology, metabolism, activity, age, and life stage.</p>
+      </section>
+
+      <!-- Requirements -->
+      <section id="requirements" class="card mt2">
+        <div class="label">Section 2</div>
+        <h2>Nutritional Requirements</h2>
+        <div class="twocol">
+          <div>
+            <p><strong>Energy:</strong> Generally <strong>1800–2200 kcal/day</strong>, adjusted for activity, age, and physiological status.</p>
+            <table>
+              <thead><tr><th>Macronutrient</th><th>Role</th><th>Key Sources</th><th>Guideline</th></tr></thead>
+              <tbody>
+                <tr><td>Carbohydrates</td><td>Primary energy</td><td>Whole grains, fruits, vegetables</td><td><strong>45–60%</strong> of kcal</td></tr>
+                <tr><td>Proteins</td><td>Tissue repair; immune function</td><td>Pulses, dairy, lean meats, nuts</td><td><strong>10–15%</strong> of kcal</td></tr>
+                <tr><td>Fats</td><td>Energy; cell function</td><td>Unsaturated oils, nuts, seeds</td><td><strong>20–30%</strong> of kcal</td></tr>
+              </tbody>
+            </table>
+            <p class="mt"><strong>Micronutrients:</strong> Focus on iron, calcium, vitamin D, folate, vitamin C, and B‑vitamins. <em>Hydration:</em> Aim for ~8–10 glasses water/day.</p>
+          </div>
+          <figure>
+            <div class="bar" aria-label="Macronutrient guideline bar"></div>
+            <div class="legend">
+              <span><i class="dot" style="background:var(--carb)"></i>Carbs 45–60%</span>
+              <span><i class="dot" style="background:var(--protein)"></i>Protein 10–15%</span>
+              <span><i class="dot" style="background:var(--fat)"></i>Fat 20–30%</span>
+            </div>
+            <figcaption class="mt" style="color:var(--muted)">Distribute macros through the day for steady energy and satiety.</figcaption>
+            <div class="bottle mt" role="img" aria-label="Hydration reminder: 8–10 glasses/day"><div class="txt">8–10<br/>glasses</div></div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Guidelines & Best Practices -->
+      <section id="guidelines" class="card mt2">
+        <div class="label">Section 3</div>
+        <h2>Nutritional Guidelines & Best Practices</h2>
+        <ul>
+          <li><strong>Meal timing</strong>: Regular, frequent meals to maintain energy and focus.</li>
+          <li><strong>Portion control</strong>: Match intake to needs—avoid mindless eating during busy hours.</li>
+          <li><strong>Healthy snacks</strong>: Fruits, nuts, yogurt to prevent hunger and sugar spikes.</li>
+          <li><strong>Limit processed/fast foods</strong>: Reduce junk foods, sugary drinks, high‑salt and saturated‑fat items.</li>
+          <li><strong>Prioritise whole foods</strong>: Emphasise fruits, vegetables, whole grains, lean proteins.</li>
+          <li><strong>Meal prep & planning</strong>: Batch‑cook and pack balanced meals for consistency.</li>
+        </ul>
+      </section>
+
+      <!-- Specific Strategies -->
+      <section id="strategies" class="card mt2">
+        <div class="label">Section 4</div>
+        <h2>Specific Dietary Strategies</h2>
+        <ul>
+          <li>Include <strong>iron‑rich foods</strong> (leafy greens, whole grains, lean meats, legumes) to offset menstrual losses.</li>
+          <li>Ensure <strong>calcium + vitamin D</strong> (dairy/fortified plant milks + safe sun) to support bone density.</li>
+          <li>Use <strong>healthy oils</strong> (olive, mustard, groundnut, sunflower) instead of trans fats.</li>
+          <li>Avoid <strong>refined sugars</strong>; prefer fruit or small amounts of natural sweeteners.</li>
+          <li>Consider nutrient‑dense <strong>“superfoods”</strong> like berries, nuts, and seeds as add‑ins.</li>
+        </ul>
+        <div class="callout mt">
+          Pair iron sources with vitamin C‑rich foods (e.g., citrus, amla, capsicum) to enhance absorption; avoid tea/coffee immediately with iron‑rich meals.
+        </div>
+      </section>
+
+      <!-- Practical Tips -->
+      <section id="tips" class="card mt2">
+        <div class="label">Section 5</div>
+        <h2>Practical Tips</h2>
+        <ul>
+          <li>Hydrate with water or unsweetened herbal teas; keep a desk bottle as a cue.</li>
+          <li>Balance work and nutrition with quick, nutritious recipes (e.g., stir‑fried veggies with paneer/tofu; millet salad bowls).</li>
+          <li>Be mindful of emotional eating—pre‑portion snacks like nuts/roasted chana.</li>
+          <li>Use culturally familiar foods to improve adherence and enjoyment.</li>
+        </ul>
+      </section>
+
+      <!-- Exam Focus -->
+      <section id="exam" class="card mt2">
+        <div class="label">Section 6</div>
+        <h2>Exam Focus Points</h2>
+        <ul>
+          <li>Define key nutrients necessary for working women.</li>
+          <li>Explain the importance of balanced meals and meal timing.</li>
+          <li>List foods that boost energy and immunity.</li>
+          <li>Describe health risks of poor nutrition in working women.</li>
+          <li>Outline dietary guidelines for weight management and chronic disease prevention.</li>
+        </ul>
+      </section>
+
+      <!-- References -->
+      <section id="refs" class="card mt2">
+        <div class="label">Section 7</div>
+        <h2>References for Further Study</h2>
+        <ul>
+          <li>Dietary guidelines from WHO, FAO, and national health agencies.</li>
+          <li>Recent peer‑reviewed studies on nutritional needs of working women.</li>
+          <li>Practical diet planning and counselling resources.</li>
+        </ul>
+      </section>
+
+      <!-- Summary -->
+      <section id="summary" class="card mt2">
+        <div class="label">Summary</div>
+        <h2>Key Takeaway</h2>
+        <p>Proper nutritional intake tailored to working women’s busy lifestyles is vital for maintaining health, energy, and productivity. Emphasising whole foods, regular meals, mindful eating, and strategic planning forms the cornerstone of a sustainable, nutritious pattern.</p>
+        <div class="foot">Last updated: <span id="updated"></span>. Educational resource; not a substitute for medical advice.</div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle with persistence
+    (function(){
+      const root=document.documentElement;
+      const btn=document.getElementById('themeBtn');
+      const saved=localStorage.getItem('ww_theme');
+      if(saved){ root.setAttribute('data-theme', saved); }
+      btn?.addEventListener('click',()=>{
+        const now=root.getAttribute('data-theme')==='dark'?'light':'dark';
+        root.setAttribute('data-theme', now);
+        localStorage.setItem('ww_theme', now);
+      });
+    })();
+
+    // Updated timestamp
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>

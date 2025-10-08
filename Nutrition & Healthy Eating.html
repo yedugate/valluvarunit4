@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nutrition & Healthy Eating — Scientific Teaching & Exam Notes</title>
+  <meta name="description" content="Single‑file, print‑ready teaching notes and exam tips on Nutrition & Healthy Eating for undergraduate learners." />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --panel:#ffffff; --accent:#10b981; --accent-ink:#064e3b; --warn:#ef4444; --ok:#22c55e; --info:#0ea5e9; --shadow:0 10px 30px rgba(2,6,23,.08);
+    }
+    [data-theme="dark"]{
+      --bg:#0b0f14; --ink:#e5edf7; --muted:#9aa7bc; --line:#1f2937; --panel:#0f141b; --accent:#22c55e; --accent-ink:#052e1f; --warn:#f87171; --ok:#34d399; --info:#38bdf8; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+    .wrapper{max-width:1100px;margin:0 auto;padding:24px}
+    header{
+      position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 80%,transparent);
+      backdrop-filter:saturate(1.2) blur(2px);border-bottom:1px solid var(--line)
+    }
+    .hero{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0}
+    .title{font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:.2px}
+    .subtitle{color:var(--muted);font-weight:500}
+    .buttons{display:flex;gap:8px;flex-wrap:wrap}
+    button, .chip{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 12px;border-radius:999px;cursor:pointer;box-shadow:var(--shadow)}
+    .btn-accent{background:var(--accent);color:white;border-color:transparent}
+    .grid{display:grid;grid-template-columns:260px 1fr;gap:24px}
+    nav{position:sticky;top:76px;align-self:start;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
+    nav h3{margin:.8rem 1rem .4rem;font-size:14px;color:var(--muted)}
+    nav a{display:block;padding:.55rem 1rem;color:var(--ink);text-decoration:none;border-top:1px dashed var(--line)}
+    nav a:first-of-type{border-top:none}
+    nav a:hover{background:rgba(2,6,23,.04)}
+    section{scroll-margin-top:84px}
+    .card{border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow);padding:18px}
+    .card h2{margin:0 0 .5rem}
+    .label{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .callout{border-left:4px solid var(--info);padding:.6rem .9rem;border-radius:8px;background:linear-gradient(180deg,rgba(14,165,233,.08),transparent)}
+    .warn{border-left-color:var(--warn);background:linear-gradient(180deg,rgba(239,68,68,.08),transparent)}
+    .ok{border-left-color:var(--ok);background:linear-gradient(180deg,rgba(34,197,94,.08),transparent)}
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:12px;border:1px solid var(--line)}
+    thead th{background:linear-gradient(180deg,rgba(16,185,129,.12),transparent);text-align:left;padding:.7rem .8rem;border-bottom:1px solid var(--line)}
+    tbody td{padding:.7rem .8rem;border-top:1px solid var(--line)}
+    tbody tr:nth-child(odd){background:rgba(2,6,23,.03)}
+    .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .badge{display:inline-flex;align-items:center;gap:6px;padding:.18rem .5rem;border-radius:999px;border:1px dashed var(--line);font-size:12px;color:var(--muted)}
+    .foot{margin-top:28px;color:var(--muted);font-size:13px}
+    .toc-small{font-size:13px;color:var(--muted)}
+    .tag{display:inline-block;margin:.15rem .25rem 0 0;padding:.1rem .5rem;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-size:12px}
+    details{border:1px dashed var(--line);border-radius:12px;padding:.6rem .8rem}
+    details summary{cursor:pointer;font-weight:600}
+    .flex{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .pill{background:rgba(34,197,94,.12);color:#166534;border:1px solid rgba(34,197,94,.35);padding:.2rem .5rem;border-radius:999px;font-weight:600;font-size:12px}
+    .mt{margin-top:16px}
+    .mt2{margin-top:24px}
+    .mt3{margin-top:36px}
+
+    /* Print */
+    @media print{
+      header,nav,.noprint{display:none!important}
+      body{font-size:12pt}
+      .wrapper{max-width:unset}
+      .card{box-shadow:none}
+      a[href]:after{content:" (" attr(href) ")";font-size:10pt;color:#666}
+    }
+    /* Small screens */
+    @media (max-width: 920px){
+      .grid{grid-template-columns:1fr}
+      nav{position:relative;top:0}
+      .twocol{grid-template-columns:1fr}
+      .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper hero">
+      <div>
+        <div class="title">Nutrition & Healthy Eating</div>
+        <div class="subtitle">Scientific Teaching & Exam Notes — undergraduate level</div>
+      </div>
+      <div class="buttons noprint">
+        <button class="btn-accent" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button id="themeBtn" title="Toggle theme">🌗 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper grid">
+    <nav class="noprint" aria-label="On this page">
+      <h3>Contents</h3>
+      <a href="#key-concepts">Key Concepts</a>
+      <a href="#nutrients">Nutrients & Their Functions</a>
+      <a href="#principles">Principles of Healthy Eating</a>
+      <a href="#food-guides">Food Guides</a>
+      <a href="#life-stages">Nutrition Through Life Stages</a>
+      <a href="#prevention">Nutrition & Disease Prevention</a>
+      <a href="#food-safety">Food Safety</a>
+      <a href="#exam-tips">Study & Exam Tips</a>
+      <a href="#practice">Practice Prompts</a>
+      <a href="#glossary">Glossary</a>
+    </nav>
+
+    <main>
+      <!-- Key Concepts -->
+      <section id="key-concepts" class="card">
+        <div class="label">Section 1</div>
+        <h2>Key Concepts</h2>
+        <div class="twocol">
+          <div class="callout ok">
+            <strong>Nutrition</strong>: The science of nutrients in food, their digestion, absorption, metabolism, and impact on health.
+          </div>
+          <div class="callout info">
+            <strong>Healthy Eating</strong>: Consuming a balanced, varied diet that provides essential macro‑ and micro‑nutrients to maintain health and prevent disease.
+          </div>
+        </div>
+        <div class="kpis mt">
+          <div class="card"><div class="label">Goal</div><strong>Energy balance</strong><div class="toc-small">Match intake with expenditure.</div></div>
+          <div class="card"><div class="label">Quality</div><strong>Nutrient density</strong><div class="toc-small">More nutrients per kcal.</div></div>
+          <div class="card"><div class="label">Pattern</div><strong>Dietary diversity</strong><div class="toc-small">Colors, textures, sources.</div></div>
+          <div class="card"><div class="label">Safety</div><strong>Food hygiene</strong><div class="toc-small">Clean, separate, cook, chill.</div></div>
+        </div>
+      </section>
+
+      <!-- Nutrients & Functions -->
+      <section id="nutrients" class="card mt2">
+        <div class="label">Section 2</div>
+        <h2>Nutrients & Their Functions</h2>
+        <table aria-describedby="nutNote">
+          <thead>
+            <tr>
+              <th>Nutrient</th>
+              <th>Function</th>
+              <th>Sources</th>
+              <th>Deficiency Effects</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Carbohydrates</td>
+              <td>Primary energy source</td>
+              <td>Grains, fruits, vegetables</td>
+              <td>Fatigue, poor growth</td>
+            </tr>
+            <tr>
+              <td>Proteins</td>
+              <td>Body building & repair; enzymes & hormones</td>
+              <td>Pulses, dairy, meat, legumes</td>
+              <td>Kwashiorkor, marasmus</td>
+            </tr>
+            <tr>
+              <td>Fats/Lipids</td>
+              <td>Energy reserve; cell membranes; help absorb fat‑soluble vitamins</td>
+              <td>Oils, nuts, seeds, fish</td>
+              <td>Dry skin, poor immunity</td>
+            </tr>
+            <tr>
+              <td>Vitamins</td>
+              <td>Regulation of body functions (A, D, E, K, B‑complex, C)</td>
+              <td>Fruits, vegetables, dairy, meat</td>
+              <td>Specific to vitamin (e.g., scurvy, rickets)</td>
+            </tr>
+            <tr>
+              <td>Minerals</td>
+              <td>Bone health, oxygen transport, enzyme function</td>
+              <td>Dairy, meat, leafy greens, nuts</td>
+              <td>Anemia, osteoporosis</td>
+            </tr>
+            <tr>
+              <td>Water</td>
+              <td>Hydration; nutrient transport; temperature regulation</td>
+              <td>Fluids, fruits, vegetables</td>
+              <td>Dehydration; impaired function</td>
+            </tr>
+          </tbody>
+        </table>
+        <p id="nutNote" class="toc-small mt">Tip: Combine sources for <em>complete</em> amino acid profiles (e.g., cereals + pulses).</p>
+      </section>
+
+      <!-- Principles -->
+      <section id="principles" class="card mt2">
+        <div class="label">Section 3</div>
+        <h2>Principles of Healthy Eating</h2>
+        <ul>
+          <li><strong>Variety</strong>: Eat diverse foods from all food groups daily.</li>
+          <li><strong>Adequacy</strong>: Provide sufficient nutrients and energy for body needs.</li>
+          <li><strong>Balance</strong>: Proportionate intake of macronutrients and micronutrients.</li>
+          <li><strong>Moderation</strong>: Limit added sugars, salt, and saturated/trans fats.</li>
+          <li><strong>Nutrient Density</strong>: Prefer foods high in nutrients but lower in calories.</li>
+        </ul>
+        <details class="mt">
+          <summary>Quick check — is a meal balanced?</summary>
+          <div class="mt">
+            <span class="pill">½</span> plate vegetables & fruits, <span class="pill">¼</span> whole grains, <span class="pill">¼</span> protein foods + a small portion of healthy oils; include water or milk/fortified alternative.
+          </div>
+        </details>
+      </section>
+
+      <!-- Food Guides -->
+      <section id="food-guides" class="card mt2">
+        <div class="label">Section 4</div>
+        <h2>Food Guides</h2>
+        <p>Use models such as the <em>Food Pyramid</em> or <em>Healthy Eating Plate</em> to plan meals. Emphasize:</p>
+        <ul>
+          <li>Whole grains and fibre‑rich foods</li>
+          <li>Fruits and vegetables (rich in vitamins, minerals, antioxidants)</li>
+          <li>Lean proteins like fish, poultry, legumes</li>
+          <li>Healthy fats from vegetable oils, nuts, seeds</li>
+          <li>Dairy or calcium‑rich alternatives</li>
+        </ul>
+        <div class="callout warn mt">Limit red meat, processed foods, added sugars, and excess salt to reduce risk of obesity, cardiovascular diseases, and diabetes.</div>
+      </section>
+
+      <!-- Life Stages -->
+      <section id="life-stages" class="card mt2">
+        <div class="label">Section 5</div>
+        <h2>Nutrition Through Life Stages</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Key Needs</th>
+              <th>Focus Foods</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Infants/Children</td>
+              <td>High growth demands; quality protein; iron; vitamin A & D</td>
+              <td>Breastmilk/infant formula, eggs, pulses, fortified cereals, fruits & veg</td>
+              <td>Introduce complementary foods ~6 months; avoid added sugar & salt.</td>
+            </tr>
+            <tr>
+              <td>Adolescents</td>
+              <td>Increased energy, iron, calcium</td>
+              <td>Millets/whole grains, dairy, pulses, leafy greens</td>
+              <td>Address growth spurts; watch ultra‑processed snacks.</td>
+            </tr>
+            <tr>
+              <td>Adults</td>
+              <td>Weight maintenance; cardio‑metabolic health</td>
+              <td>Varied plate with whole grains, legumes, veg, fruit, lean proteins</td>
+              <td>Limit alcohol, sugar‑sweetened beverages; stay active.</td>
+            </tr>
+            <tr>
+              <td>Pregnancy/Lactation</td>
+              <td>Extra calories, protein, iron, folate, iodine</td>
+              <td>Pulses, dairy, eggs, fish (low‑mercury), nuts & seeds, leafy greens</td>
+              <td>Prenatal supplements as advised; food safety is critical.</td>
+            </tr>
+            <tr>
+              <td>Elderly</td>
+              <td>Nutrient density; hydration; bone & muscle health</td>
+              <td>Soft‑textured protein foods, dairy/fortified alternatives, fruits & veg</td>
+              <td>Small frequent meals; vitamin D & calcium focus; adequate fluids.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Prevention -->
+      <section id="prevention" class="card mt2">
+        <div class="label">Section 6</div>
+        <h2>Nutrition & Disease Prevention</h2>
+        <div class="twocol">
+          <div>
+            <ul>
+              <li><strong>Obesity</strong>: Energy balance; portion control; high fibre; limit ultra‑processed foods.</li>
+              <li><strong>Type 2 Diabetes</strong>: Choose low‑GI carbs; include legumes; consistent meal timing; active lifestyle.</li>
+              <li><strong>Hypertension</strong>: Reduce sodium; prefer fresh foods; increase potassium (fruits/vegetables).</li>
+              <li><strong>Cardiovascular disease</strong>: Emphasize unsaturated fats (nuts, seeds, fish); whole grains; soluble fibre.</li>
+              <li><strong>Certain cancers</strong>: More colourful vegetables & fruits; maintain healthy weight; avoid charred/processed meats.</li>
+            </ul>
+          </div>
+          <div class="callout mt">
+            <strong>Physical activity</strong> complements nutrition—combine aerobic + strength activities for best outcomes.
+          </div>
+        </div>
+      </section>
+
+      <!-- Food Safety -->
+      <section id="food-safety" class="card mt2">
+        <div class="label">Section 7</div>
+        <h2>Food Safety</h2>
+        <ul>
+          <li>Personal hygiene: wash hands; clean utensils & surfaces.</li>
+          <li>Separate raw and cooked foods to avoid cross‑contamination.</li>
+          <li>Cook foods thoroughly; reheat properly.</li>
+          <li>Refrigerate perishable foods promptly; follow <em>first‑in, first‑out</em>.</li>
+          <li>Use safe water & raw materials; avoid adulterated/contaminated foods.</li>
+        </ul>
+      </section>
+
+      <!-- Exam Tips -->
+      <section id="exam-tips" class="card mt2">
+        <div class="label">Section 8</div>
+        <h2>Study & Exam Tips</h2>
+        <ol>
+          <li>Master nutrient categories and roles (energy, structure, regulation).</li>
+          <li>Connect classic deficiency diseases to nutrients (e.g., vitamin C → scurvy).</li>
+          <li>Practice dietary planning by age/physiological state.</li>
+          <li>Know food guide models and how to apply them to a plate.</li>
+          <li>Use case studies to link diet patterns with health outcomes.</li>
+        </ol>
+        <div class="flex mt">
+          <span class="badge">📌 Make quick flashcards</span>
+          <span class="badge">🧠 Teach a friend</span>
+          <span class="badge">⏱️ Time your practice</span>
+          <span class="badge">🔁 Spaced repetition</span>
+        </div>
+      </section>
+
+      <!-- Practice Prompts -->
+      <section id="practice" class="card mt2">
+        <div class="label">Section 9</div>
+        <h2>Practice Prompts</h2>
+        <details open>
+          <summary>Short answer (2–3 marks)</summary>
+          <ul class="mt">
+            <li>Define <em>nutrient density</em> with one example.</li>
+            <li>List two functions of lipids in the body.</li>
+            <li>Name two iron‑rich plant foods and how to improve iron absorption.</li>
+          </ul>
+        </details>
+        <details class="mt">
+          <summary>10‑mark style</summary>
+          <p class="mt">“Explain the principles of healthy eating and illustrate how they guide a one‑day meal plan for an adolescent.”</p>
+        </details>
+        <details class="mt">
+          <summary>Case study</summary>
+          <p class="mt">A 55‑year‑old with newly diagnosed hypertension asks for diet advice. Outline 5 key dietary changes and justify each in 1–2 lines.</p>
+        </details>
+      </section>
+
+      <!-- Glossary -->
+      <section id="glossary" class="card mt2">
+        <div class="label">Appendix</div>
+        <h2>Glossary</h2>
+        <p>
+          <span class="tag">Macronutrients</span>
+          <span class="tag">Micronutrients</span>
+          <span class="tag">Glycaemic Index</span>
+          <span class="tag">Nutrient Density</span>
+          <span class="tag">Energy Balance</span>
+          <span class="tag">Complementary Foods</span>
+        </p>
+      </section>
+
+      <div class="foot">Last updated: <span id="updated"></span>. © Your Teaching Notes.</div>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle with persistence
+    (function(){
+      const root=document.documentElement;
+      const btn=document.getElementById('themeBtn');
+      const saved=localStorage.getItem('theme');
+      if(saved){ root.setAttribute('data-theme', saved); }
+      btn?.addEventListener('click',()=>{
+        const now=root.getAttribute('data-theme')==='dark'?'light':'dark';
+        root.setAttribute('data-theme', now);
+        localStorage.setItem('theme', now);
+      });
+    })();
+
+    // Updated timestamp
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fat‑Free Food — Scientifically Curated Teaching & Exam Notes</title>
+  <meta name="description" content="Single‑file, print‑ready teaching notes on fat‑free foods: definition, nutritional importance, examples, label reading, health considerations, and exam focus." />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --panel:#ffffff; --accent:#10b981; --accent-ink:#064e3b; --warn:#ef4444; --ok:#22c55e; --info:#0ea5e9; --shadow:0 10px 30px rgba(2,6,23,.08);
+      --fat:#f97316; --carb:#eab308; --protein:#ef4444; --veg:#22c55e; --dairy:#60a5fa; --sugar:#db2777;
+    }
+    [data-theme="dark"]{
+      --bg:#0b0f14; --ink:#e5edf7; --muted:#9aa7bc; --line:#1f2937; --panel:#0f141b; --accent:#22c55e; --accent-ink:#052e1f; --warn:#f87171; --ok:#34d399; --info:#38bdf8; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+    .wrapper{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 80%,transparent);backdrop-filter:saturate(1.2) blur(2px);border-bottom:1px solid var(--line)}
+    .hero{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0}
+    .title{font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:.2px}
+    .subtitle{color:var(--muted);font-weight:500}
+    .buttons{display:flex;gap:8px;flex-wrap:wrap}
+    button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 12px;border-radius:999px;cursor:pointer;box-shadow:var(--shadow)}
+    .btn-accent{background:var(--accent);color:white;border-color:transparent}
+    .grid{display:grid;grid-template-columns:260px 1fr;gap:24px}
+    nav{position:sticky;top:76px;align-self:start;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
+    nav h3{margin:.8rem 1rem .4rem;font-size:14px;color:var(--muted)}
+    nav a{display:block;padding:.55rem 1rem;color:var(--ink);text-decoration:none;border-top:1px dashed var(--line)}
+    nav a:first-of-type{border-top:none}
+    nav a:hover{background:rgba(2,6,23,.04)}
+    section{scroll-margin-top:84px}
+    .card{border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow);padding:18px}
+    .card h2{margin:0 0 .5rem}
+    .label{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .callout{border-left:4px solid var(--info);padding:.6rem .9rem;border-radius:8px;background:linear-gradient(180deg,rgba(14,165,233,.08),transparent)}
+    .warn{border-left-color:var(--warn);background:linear-gradient(180deg,rgba(239,68,68,.08),transparent)}
+    .ok{border-left-color:var(--ok);background:linear-gradient(180deg,rgba(34,197,94,.08),transparent)}
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:12px;border:1px solid var(--line)}
+    thead th{background:linear-gradient(180deg,rgba(16,185,129,.12),transparent);text-align:left;padding:.7rem .8rem;border-bottom:1px solid var(--line)}
+    tbody td{padding:.7rem .8rem;border-top:1px solid var(--line)}
+    tbody tr:nth-child(odd){background:rgba(2,6,23,.03)}
+    .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .foot{margin-top:28px;color:var(--muted);font-size:13px}
+    .tag{display:inline-block;margin:.15rem .25rem 0 0;padding:.1rem .5rem;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-size:12px}
+    .mt{margin-top:16px}
+    .mt2{margin-top:24px}
+    .mt3{margin-top:36px}
+
+    /* Visuals */
+    .ring{position:relative;width:180px;height:180px;border-radius:50%;margin:auto;background:
+      conic-gradient(var(--ok) 0 3%, #cbd5e1 3% 100%);
+      box-shadow:var(--shadow)}
+    .ring::before{content:"";position:absolute;inset:16px;border-radius:50%;background:var(--panel);border:1px dashed var(--line)}
+    .ring .txt{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
+    .ring .txt strong{font-size:18px}
+
+    .labelchip{display:inline-flex;align-items:center;gap:8px;border:1px dashed var(--line);border-radius:999px;padding:.25rem .6rem;font-size:12px;margin-right:8px}
+    .dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+    .nlabel{max-width:360px;margin:auto;border:6px solid #0f172a;border-radius:8px;padding:10px;background:#fff;color:#0f172a;box-shadow:var(--shadow)}
+    .nlabel h4{margin:.2rem 0;font-weight:900;border-bottom:4px solid #0f172a;padding-bottom:.2rem}
+    .row{display:flex;justify-content:space-between;border-top:1px solid #0f172a;padding:.3rem 0}
+    .indent{padding-left:10px;font-size:14px}
+
+    /* Small screens */
+    @media (max-width: 920px){
+      .grid{grid-template-columns:1fr}
+      nav{position:relative;top:0}
+      .twocol{grid-template-columns:1fr}
+      .kpis{grid-template-columns:1fr}
+    }
+
+    /* Print */
+    @media print{
+      header,nav,.noprint{display:none!important}
+      body{font-size:12pt}
+      .wrapper{max-width:unset}
+      .card{box-shadow:none}
+      a[href]:after{content:" (" attr(href) ")";font-size:10pt;color:#666}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper hero">
+      <div>
+        <div class="title">Fat‑Free Food</div>
+        <div class="subtitle">Scientifically Curated Teaching & Exam Notes — undergraduate level</div>
+      </div>
+      <div class="buttons noprint">
+        <button class="btn-accent" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button id="themeBtn" title="Toggle theme">🌗 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper grid">
+    <nav class="noprint" aria-label="On this page">
+      <h3>Contents</h3>
+      <a href="#definition">Definition</a>
+      <a href="#importance">Nutritional Importance</a>
+      <a href="#examples">Examples of Fat‑Free Foods</a>
+      <a href="#teaching">Teaching Points</a>
+      <a href="#health">Health Considerations</a>
+      <a href="#exam">Exam Focus Points</a>
+      <a href="#refs">References & Notes</a>
+    </nav>
+
+    <main>
+      <!-- Definition -->
+      <section id="definition" class="card">
+        <div class="label">Section 1</div>
+        <h2>Definition</h2>
+        <p><strong>Fat‑free foods</strong> are those containing <strong>less than 0.5 grams of fat per serving</strong> as defined by many food regulatory authorities. Some foods are naturally fat‑free (e.g., many fruits and vegetables), while others are processed to remove fat.</p>
+        <div class="twocol mt">
+          <figure>
+            <div class="ring" role="img" aria-label="Fat-free threshold: less than 0.5 g fat per serving">
+              <div class="txt"><strong>&lt; 0.5 g</strong><br/><small>fat / serving</small></div>
+            </div>
+            <figcaption class="mt" style="color:var(--muted)">Regulatory threshold for “fat‑free” claim.</figcaption>
+          </figure>
+          <div>
+            <div class="label">Related label terms</div>
+            <div class="mt">
+              <span class="labelchip"><i class="dot" style="background:var(--ok)"></i><strong>Fat‑free</strong>: &lt;0.5 g/serving</span>
+              <span class="labelchip"><i class="dot" style="background:#94a3b8"></i><strong>Low fat</strong>: ≤3 g/serving</span>
+              <span class="labelchip"><i class="dot" style="background:#c084fc"></i><strong>Reduced fat</strong>: ≥25% less vs reference</span>
+            </div>
+            <p class="mt" style="color:var(--muted);font-size:13px">Values reflect common regulatory definitions; always check local standards.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Nutritional Importance -->
+      <section id="importance" class="card mt2">
+        <div class="label">Section 2</div>
+        <h2>Nutritional Importance</h2>
+        <ul>
+          <li>Often <strong>lower in calories</strong>, helpful for weight management when used judiciously.</li>
+          <li>Provide <strong>vitamins, minerals, antioxidants, and fibre</strong> without added fat (especially fruits/vegetables).</li>
+        </ul>
+        <div class="callout warn mt">
+          <strong>Some fat is essential</strong> for:
+          <ul>
+            <li>Absorption of vitamins <strong>A, D, E, K</strong></li>
+            <li>Hormone production</li>
+            <li>Cell membrane integrity</li>
+            <li>Satiety and flavour</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Examples -->
+      <section id="examples" class="card mt2">
+        <div class="label">Section 3</div>
+        <h2>Examples of Fat‑Free Foods</h2>
+        <div class="kpis">
+          <div class="card"><div class="label">Fruits</div><strong>Apples, berries, citrus</strong></div>
+          <div class="card"><div class="label">Vegetables</div><strong>Lettuce, cucumbers, carrots</strong></div>
+          <div class="card"><div class="label">Dairy (fat‑free)</div><strong>Skim milk, fat‑free yogurt</strong></div>
+        </div>
+        <p class="mt" style="color:var(--muted)">Many <em>legumes and grains</em> are naturally very low in fat; whether a product qualifies as “fat‑free” depends on <em>serving size and labeling rules</em>.</p>
+      </section>
+
+      <!-- Teaching Points -->
+      <section id="teaching" class="card mt2">
+        <div class="label">Section 4</div>
+        <h2>Teaching Points</h2>
+        <ul>
+          <li><strong>“Fat‑free” ≠ “healthier”</strong> in every case—overall diet balance matters.</li>
+          <li>Distinguish <em>naturally fat‑free</em> vs <em>fat‑reduced</em> (processed) foods.</li>
+          <li><strong>Read labels carefully</strong> for <em>added sugars</em>, <em>sodium</em>, and serving sizes.</li>
+          <li>Encourage inclusion of <strong>healthy fats</strong> (e.g., nuts, seeds, olive oil, fish) elsewhere in the diet.</li>
+        </ul>
+        <div class="twocol mt">
+          <figure>
+            <div class="nlabel" aria-label="Example nutrition label">
+              <h4>Nutrition Facts</h4>
+              <div class="row"><span>Serving Size</span><strong>1 cup (240 mL)</strong></div>
+              <div class="row"><span>Calories</span><strong>90</strong></div>
+              <div class="row"><span>Total Fat</span><strong>0 g</strong></div>
+              <div class="row indent"><span>Saturated Fat</span><strong>0 g</strong></div>
+              <div class="row indent"><span>Trans Fat</span><strong>0 g</strong></div>
+              <div class="row"><span>Sodium</span><strong>120 mg</strong></div>
+              <div class="row"><span>Total Carbohydrate</span><strong>22 g</strong></div>
+              <div class="row indent"><span>Total Sugars</span><strong>15 g</strong></div>
+              <div class="row indent"><span>Includes Added Sugars</span><strong>10 g</strong></div>
+              <div class="row"><span>Protein</span><strong>3 g</strong></div>
+            </div>
+            <figcaption class="mt" style="color:var(--muted)">Illustrative label: fat‑free items can still contain <strong>added sugars</strong> or <strong>sodium</strong>.</figcaption>
+          </figure>
+          <div>
+            <table>
+              <thead><tr><th>Claim</th><th>What it means</th><th>Teaching cue</th></tr></thead>
+              <tbody>
+                <tr><td>Fat‑free</td><td>&lt;0.5 g fat/serving</td><td>Check sugars/sodium; portion size matters</td></tr>
+                <tr><td>Low fat</td><td>≤3 g fat/serving</td><td>Still not sugar‑free</td></tr>
+                <tr><td>Reduced fat</td><td>≥25% less fat than reference</td><td>May add sugars to compensate flavour</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Health Considerations -->
+      <section id="health" class="card mt2">
+        <div class="label">Section 5</div>
+        <h2>Health Considerations</h2>
+        <ul>
+          <li>Heavy reliance on fat‑free processed foods can increase <strong>added sugar/refined carb</strong> intake and affect metabolic health.</li>
+          <li>Ensure intake of <strong>essential fatty acids</strong> from other foods for heart, brain, skin, and vitamin absorption.</li>
+          <li>Build balanced meals: combine fat‑free fruits/veg with lean proteins, whole grains, and <em>small amounts</em> of healthy fats.</li>
+        </ul>
+      </section>
+
+      <!-- Exam Focus -->
+      <section id="exam" class="card mt2">
+        <div class="label">Section 6</div>
+        <h2>Exam Focus Points</h2>
+        <ul>
+          <li>Define “fat‑free” and state regulatory fat limits.</li>
+          <li>Give examples of fat‑free foods.</li>
+          <li>Discuss advantages and limitations of fat‑free diets.</li>
+          <li>Explain roles of dietary fat and the need for balance.</li>
+          <li>Interpret labels related to fat content and added sugars/sodium.</li>
+        </ul>
+      </section>
+
+      <!-- References -->
+      <section id="refs" class="card mt2">
+        <div class="label">Appendix</div>
+        <h2>References & Notes</h2>
+        <p style="color:var(--muted)">Based on scientific nutrition guidance and regulatory standards (e.g., national authorities such as the FDA) and public health bodies (e.g., WHO). Always consult the latest local regulations for labeling definitions.</p>
+        <p>
+          <span class="tag">Fat‑free &lt;0.5 g/serving</span>
+          <span class="tag">Label reading</span>
+          <span class="tag">Include healthy fats</span>
+          <span class="tag">Watch added sugars</span>
+        </p>
+        <div class="foot">Last updated: <span id="updated"></span>. Educational resource; not a substitute for medical advice.</div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle with persistence
+    (function(){
+      const root=document.documentElement;
+      const btn=document.getElementById('themeBtn');
+      const saved=localStorage.getItem('ff_theme');
+      if(saved){ root.setAttribute('data-theme', saved); }
+      btn?.addEventListener('click',()=>{
+        const now=root.getAttribute('data-theme')==='dark'?'light':'dark';
+        root.setAttribute('data-theme', now);
+        localStorage.setItem('ff_theme', now);
+      });
+    })();
+
+    // Updated timestamp
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>
+

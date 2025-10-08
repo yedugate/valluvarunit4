@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fiber‑Rich Foods — Scientifically Curated Teaching & Exam Notes</title>
+  <meta name="description" content="Single‑file, print‑ready teaching notes on dietary fiber: definition, types (soluble/insoluble), health benefits, intake, sources, teaching points, and exam focus." />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --panel:#ffffff; --accent:#10b981; --accent-ink:#064e3b; --warn:#ef4444; --ok:#22c55e; --info:#0ea5e9; --shadow:0 10px 30px rgba(2,6,23,.08);
+      --sol:#0ea5e9; --ins:#22c55e; --grain:#eab308; --fruit:#f97316; --leg:#7c3aed;
+    }
+    [data-theme="dark"]{
+      --bg:#0b0f14; --ink:#e5edf7; --muted:#9aa7bc; --line:#1f2937; --panel:#0f141b; --accent:#22c55e; --accent-ink:#052e1f; --warn:#f87171; --ok:#34d399; --info:#38bdf8; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+    .wrapper{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 80%,transparent);backdrop-filter:saturate(1.2) blur(2px);border-bottom:1px solid var(--line)}
+    .hero{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0}
+    .title{font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:.2px}
+    .subtitle{color:var(--muted);font-weight:500}
+    .buttons{display:flex;gap:8px;flex-wrap:wrap}
+    button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 12px;border-radius:999px;cursor:pointer;box-shadow:var(--shadow)}
+    .btn-accent{background:var(--accent);color:white;border-color:transparent}
+    .grid{display:grid;grid-template-columns:260px 1fr;gap:24px}
+    nav{position:sticky;top:76px;align-self:start;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
+    nav h3{margin:.8rem 1rem .4rem;font-size:14px;color:var(--muted)}
+    nav a{display:block;padding:.55rem 1rem;color:var(--ink);text-decoration:none;border-top:1px dashed var(--line)}
+    nav a:first-of-type{border-top:none}
+    nav a:hover{background:rgba(2,6,23,.04)}
+    section{scroll-margin-top:84px}
+    .card{border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow);padding:18px}
+    .card h2{margin:0 0 .5rem}
+    .label{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .callout{border-left:4px solid var(--info);padding:.6rem .9rem;border-radius:8px;background:linear-gradient(180deg,rgba(14,165,233,.08),transparent)}
+    .ok{border-left-color:var(--ok);background:linear-gradient(180deg,rgba(34,197,94,.08),transparent)}
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:12px;border:1px solid var(--line)}
+    thead th{background:linear-gradient(180deg,rgba(16,185,129,.12),transparent);text-align:left;padding:.7rem .8rem;border-bottom:1px solid var(--line)}
+    tbody td{padding:.7rem .8rem;border-top:1px solid var(--line)}
+    tbody tr:nth-child(odd){background:rgba(2,6,23,.03)}
+    .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .foot{margin-top:28px;color:var(--muted);font-size:13px}
+    .tag{display:inline-block;margin:.15rem .25rem 0 0;padding:.1rem .5rem;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-size:12px}
+    .mt{margin-top:16px}
+    .mt2{margin-top:24px}
+    .mt3{margin-top:36px}
+
+    /* Visuals */
+    .legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .legend span{display:inline-flex;align-items:center;gap:6px}
+    .dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+    .fiberbar{position:relative;height:16px;border-radius:10px;background:linear-gradient(90deg,#cbd5e1 0 62.5%, var(--accent) 62.5% 95%, #cbd5e1 95% 100%);border:1px solid var(--line)}
+    .fiberbar::before{content:"0 g";position:absolute;left:-2px;top:18px;font-size:12px;color:var(--muted)}
+    .fiberbar::after{content:"40 g";position:absolute;right:-2px;top:18px;font-size:12px;color:var(--muted)}
+    .tick20{position:absolute;left:50%;top:18px;transform:translateX(-50%);font-size:12px;color:var(--muted)}
+    .bracket{position:absolute;left:62.5%;right:5%;top:-6px;height:28px;border:2px solid var(--accent);border-left:none;border-right:none;border-radius:6px;pointer-events:none}
+
+    .split{position:relative;width:280px;height:280px;border-radius:50%;margin:auto;background:
+      radial-gradient(closest-side,var(--panel) 78%,transparent 79%),
+      conic-gradient(var(--sol) 0 180deg, var(--ins) 180deg 360deg);
+      box-shadow:var(--shadow);border:6px solid var(--line)}
+    .split::after{content:"";position:absolute;inset:20px;border-radius:50%;border:1px dashed var(--line)}
+    .plabel{position:absolute;font-size:12px;font-weight:800;text-shadow:0 1px 0 rgba(255,255,255,.6)}
+    .l-sol{top:20%;left:18%;color:#0b3b77}
+    .l-ins{top:60%;left:60%;color:#064e3b}
+
+    /* Small screens */
+    @media (max-width: 920px){
+      .grid{grid-template-columns:1fr}
+      nav{position:relative;top:0}
+      .twocol{grid-template-columns:1fr}
+      .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+
+    /* Print */
+    @media print{
+      header,nav,.noprint{display:none!important}
+      body{font-size:12pt}
+      .wrapper{max-width:unset}
+      .card{box-shadow:none}
+      a[href]:after{content:" (" attr(href) ")";font-size:10pt;color:#666}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper hero">
+      <div>
+        <div class="title">Fiber‑Rich Foods</div>
+        <div class="subtitle">Scientifically Curated Teaching & Exam Notes — undergraduate level</div>
+      </div>
+      <div class="buttons noprint">
+        <button class="btn-accent" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button id="themeBtn" title="Toggle theme">🌗 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper grid">
+    <nav class="noprint" aria-label="On this page">
+      <h3>Contents</h3>
+      <a href="#definition">Definition</a>
+      <a href="#types">Types of Dietary Fiber</a>
+      <a href="#benefits">Health Benefits</a>
+      <a href="#intake">Recommended Intake</a>
+      <a href="#sources">Sources of Fiber</a>
+      <a href="#teaching">Teaching Points</a>
+      <a href="#exam">Exam Focus</a>
+      <a href="#refs">References & Notes</a>
+    </nav>
+
+    <main>
+      <!-- Definition -->
+      <section id="definition" class="card">
+        <div class="label">Section 1</div>
+        <h2>Definition</h2>
+        <p><strong>Dietary fiber</strong> refers to indigestible carbohydrates from plant foods that pass through the gastrointestinal tract largely intact. It is commonly categorised into <strong>soluble</strong> and <strong>insoluble</strong> fiber, each with distinct physiological effects.</p>
+        <div class="twocol mt">
+          <figure style="text-align:center">
+            <div class="split" role="img" aria-label="Soluble and insoluble fiber segments">
+              <div class="plabel l-sol">Soluble</div>
+              <div class="plabel l-ins">Insoluble</div>
+            </div>
+            <figcaption class="mt" style="color:var(--muted)">Aim for a <em>mix</em> of soluble and insoluble fibers across the day.</figcaption>
+          </figure>
+          <div class="callout">
+            Increase fiber gradually and drink adequate fluids to minimise GI discomfort while the gut adapts.
+          </div>
+        </div>
+      </section>
+
+      <!-- Types -->
+      <section id="types" class="card mt2">
+        <div class="label">Section 2</div>
+        <h2>Types of Dietary Fiber</h2>
+        <table>
+          <thead><tr><th>Type</th><th>Characteristics</th><th>Examples</th></tr></thead>
+          <tbody>
+            <tr><td>Soluble Fiber</td><td>Dissolves in water to form a gel; slows digestion & glucose absorption</td><td>Oats, barley, apples, citrus, legumes</td></tr>
+            <tr><td>Insoluble Fiber</td><td>Does not dissolve; adds bulk & promotes bowel regularity</td><td>Whole‑wheat, nuts, seeds, vegetables, bran</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Benefits -->
+      <section id="benefits" class="card mt2">
+        <div class="label">Section 3</div>
+        <h2>Health Benefits</h2>
+        <ul>
+          <li><strong>Digestive health</strong>: Prevents constipation by increasing stool bulk & supporting regularity.</li>
+          <li><strong>Blood sugar regulation</strong>: Soluble fiber slows glucose absorption, aiding glycaemic control.</li>
+          <li><strong>Cholesterol lowering</strong>: Soluble fiber binds bile acids, helping reduce LDL‑C.</li>
+          <li><strong>Weight management</strong>: Enhances satiety and can reduce overall energy intake.</li>
+          <li><strong>Gut microbiota</strong>: Fermentation yields beneficial short‑chain fatty acids (SCFAs).</li>
+        </ul>
+      </section>
+
+      <!-- Intake -->
+      <section id="intake" class="card mt2">
+        <div class="label">Section 4</div>
+        <h2>Recommended Intake</h2>
+        <p>Adults should aim for <strong>25–38 g/day</strong> depending on age and sex. Another common guide is <strong>≈14 g per 1000 kcal</strong>.</p>
+        <div class="twocol mt">
+          <figure>
+            <div class="fiberbar" role="img" aria-label="Target bracket highlighting 25–38 g on a 0–40 g scale">
+              <div class="bracket" aria-hidden="true"></div>
+              <div class="tick20">20 g</div>
+            </div>
+            <figcaption class="mt" style="color:var(--muted)">Target range visualised on a simple 0–40 g scale.</figcaption>
+          </figure>
+          <div>
+            <details>
+              <summary><strong>Intake helper</strong> — enter your daily calories</summary>
+              <div class="mt">
+                <input id="kcal" type="number" min="1000" max="5000" step="50" placeholder="e.g., 2200" style="padding:.5rem;border:1px solid var(--line);border-radius:8px;width:160px" />
+                <div id="calcOut" class="mt" style="color:var(--muted)">Use 14 g per 1000 kcal to estimate your target.</div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sources -->
+      <section id="sources" class="card mt2">
+        <div class="label">Section 5</div>
+        <h2>Sources of Fiber</h2>
+        <div class="kpis">
+          <div class="card"><div class="label">Whole grains</div><strong>Brown rice, oats, whole‑wheat</strong></div>
+          <div class="card"><div class="label">Fruits</div><strong>Berries, apples, pears</strong></div>
+          <div class="card"><div class="label">Vegetables</div><strong>Broccoli, carrots, spinach</strong></div>
+          <div class="card"><div class="label">Legumes</div><strong>Beans, lentils, chickpeas</strong></div>
+          <div class="card"><div class="label">Nuts & seeds</div><strong>Almonds, flax, chia</strong></div>
+        </div>
+        <div class="legend">
+          <span><i class="dot" style="background:var(--grain)"></i>Grains</span>
+          <span><i class="dot" style="background:var(--fruit)"></i>Fruits</span>
+          <span><i class="dot" style="background:var(--ins)"></i>Vegetables</span>
+          <span><i class="dot" style="background:var(--leg)"></i>Legumes</span>
+        </div>
+      </section>
+
+      <!-- Teaching Points -->
+      <section id="teaching" class="card mt2">
+        <div class="label">Section 6</div>
+        <h2>Teaching Points</h2>
+        <ul>
+          <li>Differentiate <strong>soluble</strong> vs <strong>insoluble</strong> fiber and their functions.</li>
+          <li>Encourage <strong>whole, minimally processed</strong> plant foods daily.</li>
+          <li>Practical boosts: swap to whole grains; add a legume serving; include fruit/veg at every meal.</li>
+          <li>Recognise symptoms of inadequate fiber (constipation, irregularity) and the need for fluids.</li>
+        </ul>
+      </section>
+
+      <!-- Exam Focus -->
+      <section id="exam" class="card mt2">
+        <div class="label">Section 7</div>
+        <h2>Exam Focus</h2>
+        <ul>
+          <li>Define dietary fiber and list its <em>types</em>.</li>
+          <li>Explain key <em>health benefits</em> of fiber.</li>
+          <li>Identify <em>fiber‑rich sources</em> across food groups.</li>
+          <li>State <em>recommended intakes</em> (25–38 g/day; ≈14 g/1000 kcal).</li>
+          <li>Describe physiological roles of <em>soluble</em> vs <em>insoluble</em> fiber.</li>
+        </ul>
+      </section>
+
+      <!-- References -->
+      <section id="refs" class="card mt2">
+        <div class="label">Appendix</div>
+        <h2>References & Notes</h2>
+        <p style="color:var(--muted)">These notes reflect current nutrition science and guidance from bodies such as WHO, USDA, and the Academy of Nutrition & Dietetics, supporting undergraduate teaching and exam preparation.</p>
+        <p>
+          <span class="tag">Soluble + Insoluble</span>
+          <span class="tag">25–38 g/day</span>
+          <span class="tag">≈14 g / 1000 kcal</span>
+          <span class="tag">SCFA & gut health</span>
+        </p>
+        <div class="foot">Last updated: <span id="updated"></span>. Educational resource; not a substitute for medical advice.</div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle with persistence
+    (function(){
+      const root=document.documentElement;
+      const btn=document.getElementById('themeBtn');
+      const saved=localStorage.getItem('fiber_theme');
+      if(saved){ root.setAttribute('data-theme', saved); }
+      btn?.addEventListener('click',()=>{
+        const now=root.getAttribute('data-theme')==='dark'?'light':'dark';
+        root.setAttribute('data-theme', now);
+        localStorage.setItem('fiber_theme', now);
+      });
+    })();
+
+    // Updated timestamp
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+
+    // Intake helper: 14 g per 1000 kcal
+    (function(){
+      const kcal=document.getElementById('kcal');
+      const out=document.getElementById('calcOut');
+      if(!kcal||!out) return;
+      const update=()=>{
+        const v=parseFloat(kcal.value);
+        if(!v||v<=0){ out.textContent='Use 14 g per 1000 kcal to estimate your target.'; return; }
+        const grams=v*0.014;
+        out.innerHTML = `Estimated target: <strong>${Math.round(grams)} g/day</strong> (14 g/1000 kcal).`;
+      };
+      kcal.addEventListener('input',update); update();
+    })();
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nutrition for Sports Persons — Scientifically Curated Teaching & Exam Notes</title>
+  <meta name="description" content="Print‑ready single‑file notes for athletes: energy needs, macros, micros, hydration, fueling strategies, supplements, sample plan, and exam focus." />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --panel:#ffffff; --accent:#10b981; --accent-ink:#064e3b; --warn:#ef4444; --ok:#22c55e; --info:#0ea5e9; --shadow:0 10px 30px rgba(2,6,23,.08);
+      --carb:#eab308; --protein:#ef4444; --fat:#f97316; --veg:#22c55e; --dairy:#60a5fa; --water:#38bdf8;
+    }
+    [data-theme="dark"]{
+      --bg:#0b0f14; --ink:#e5edf7; --muted:#9aa7bc; --line:#1f2937; --panel:#0f141b; --accent:#22c55e; --accent-ink:#052e1f; --warn:#f87171; --ok:#34d399; --info:#38bdf8; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+    .wrapper{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 80%,transparent);backdrop-filter:saturate(1.2) blur(2px);border-bottom:1px solid var(--line)}
+    .hero{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0}
+    .title{font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:.2px}
+    .subtitle{color:var(--muted);font-weight:500}
+    .buttons{display:flex;gap:8px;flex-wrap:wrap}
+    button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 12px;border-radius:999px;cursor:pointer;box-shadow:var(--shadow)}
+    .btn-accent{background:var(--accent);color:white;border-color:transparent}
+    .grid{display:grid;grid-template-columns:260px 1fr;gap:24px}
+    nav{position:sticky;top:76px;align-self:start;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
+    nav h3{margin:.8rem 1rem .4rem;font-size:14px;color:var(--muted)}
+    nav a{display:block;padding:.55rem 1rem;color:var(--ink);text-decoration:none;border-top:1px dashed var(--line)}
+    nav a:first-of-type{border-top:none}
+    nav a:hover{background:rgba(2,6,23,.04)}
+    section{scroll-margin-top:84px}
+    .card{border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow);padding:18px}
+    .card h2{margin:0 0 .5rem}
+    .label{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .callout{border-left:4px solid var(--info);padding:.6rem .9rem;border-radius:8px;background:linear-gradient(180deg,rgba(14,165,233,.08),transparent)}
+    .ok{border-left-color:var(--ok);background:linear-gradient(180deg,rgba(34,197,94,.08),transparent)}
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:12px;border:1px solid var(--line)}
+    thead th{background:linear-gradient(180deg,rgba(16,185,129,.12),transparent);text-align:left;padding:.7rem .8rem;border-bottom:1px solid var(--line)}
+    tbody td{padding:.7rem .8rem;border-top:1px solid var(--line)}
+    tbody tr:nth-child(odd){background:rgba(2,6,23,.03)}
+    .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .badge{display:inline-flex;align-items:center;gap:6px;padding:.18rem .5rem;border-radius:999px;border:1px dashed var(--line);font-size:12px;color:var(--muted)}
+    .foot{margin-top:28px;color:var(--muted);font-size:13px}
+    .tag{display:inline-block;margin:.15rem .25rem 0 0;padding:.1rem .5rem;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-size:12px}
+    .mt{margin-top:16px}
+    .mt2{margin-top:24px}
+    .mt3{margin-top:36px}
+
+    /* Visuals */
+    .donut{position:relative;width:280px;height:280px;border-radius:50%;margin:auto;background:
+      radial-gradient(closest-side,var(--panel) 75%,transparent 76%),
+      conic-gradient(var(--carb) 0 234deg, var(--protein) 234deg 288deg, var(--fat) 288deg 360deg);
+      box-shadow:var(--shadow);border:6px solid var(--line)}
+    .donut::after{content:"";position:absolute;inset:20px;border-radius:50%;border:1px dashed var(--line)}
+    .plate-label{position:absolute;font-size:12px;font-weight:800;text-shadow:0 1px 0 rgba(255,255,255,.6)}
+    .l-carb{top:18%;left:18%;color:#7c5e00}
+    .l-protein{top:58%;left:58%;color:#7f1d1d}
+    .l-fat{top:58%;left:16%;color:#7c2d12}
+
+    .legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .legend span{display:inline-flex;align-items:center;gap:6px}
+    .dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+    .bottle{width:84px;height:170px;border:6px solid var(--line);border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:10px;border-top-right-radius:10px;margin:auto;position:relative;background:linear-gradient(180deg, var(--water) 0 65%, rgba(56,189,248,.2) 65% 100%)}
+    .bottle::before{content:"";position:absolute;top:-24px;left:24px;width:36px;height:24px;border:6px solid var(--line);border-bottom:0;border-top-left-radius:6px;border-top-right-radius:6px;background:var(--panel)}
+    .bottle .txt{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;color:#0b3b77;text-align:center}
+
+    .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .step{border:1px dashed var(--line);border-radius:12px;padding:12px;background:linear-gradient(180deg,rgba(16,185,129,.08),transparent)}
+    .step h4{margin:0 0 .35rem;font-size:14px}
+
+    /* Small screens */
+    @media (max-width: 920px){
+      .grid{grid-template-columns:1fr}
+      nav{position:relative;top:0}
+      .twocol{grid-template-columns:1fr}
+      .timeline{grid-template-columns:1fr}
+      .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+
+    /* Print */
+    @media print{
+      header,nav,.noprint{display:none!important}
+      body{font-size:12pt}
+      .wrapper{max-width:unset}
+      .card{box-shadow:none}
+      a[href]:after{content:" (" attr(href) ")";font-size:10pt;color:#666}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper hero">
+      <div>
+        <div class="title">Nutrition for Sports Persons</div>
+        <div class="subtitle">Scientifically Curated Teaching & Exam Notes — undergraduate level</div>
+      </div>
+      <div class="buttons noprint">
+        <button class="btn-accent" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button id="themeBtn" title="Toggle theme">🌗 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper grid">
+    <nav class="noprint" aria-label="On this page">
+      <h3>Contents</h3>
+      <a href="#overview">Overview</a>
+      <a href="#energy">Energy Requirements</a>
+      <a href="#macros">Macronutrients</a>
+      <a href="#micros">Micronutrients</a>
+      <a href="#hydration">Hydration</a>
+      <a href="#strategies">Nutritional Strategies</a>
+      <a href="#supplements">Supplements</a>
+      <a href="#plan">Sample Meal Plan</a>
+      <a href="#exam">Exam Focus Points</a>
+      <a href="#refs">References & Notes</a>
+    </nav>
+
+    <main>
+      <!-- Overview -->
+      <section id="overview" class="card">
+        <div class="label">Section 1</div>
+        <h2>Overview</h2>
+        <p>Nutrition plays a crucial role in optimising athletic performance, recovery, and overall health. Athletes require tailored diets to meet increased energy demands, support muscle repair, and maintain hydration.</p>
+      </section>
+
+      <!-- Energy Requirements -->
+      <section id="energy" class="card mt2">
+        <div class="label">Section 2</div>
+        <h2>Energy Requirements</h2>
+        <div class="twocol">
+          <div>
+            <p>Energy intake rises with training load. Typical energy needs for athletes range from <strong>2,500–4,500 kcal/day</strong> depending on sport, sex, body size, climate, and training phase.</p>
+            <div class="callout mt">Match intake to expenditure across heavy and light training days; prioritise nutrient‑dense foods.</div>
+          </div>
+          <figure class="energy">
+            <div class="label">Guide range</div>
+            <strong>2,500–4,500 kcal</strong>
+            <div class="mt" style="color:var(--muted)">Adjust per sport & phase</div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Macronutrients -->
+      <section id="macros" class="card mt2">
+        <div class="label">Section 3</div>
+        <h2>Macronutrients</h2>
+        <div class="twocol">
+          <div>
+            <ul>
+              <li><strong>Carbohydrates</strong>: <em>55–65% of total calories</em>. Primary fuel for high‑intensity and endurance work. <span class="badge">Sources: whole grains, fruits, vegetables, legumes</span></li>
+              <li><strong>Proteins</strong>: <em>1.2–2.0 g/kg body weight/day</em>. Supports repair, synthesis, and adaptation. <span class="badge">Lean meats, dairy, eggs, legumes, nuts</span></li>
+              <li><strong>Fats</strong>: <em>20–30% of total calories</em>. Energy for prolonged lower‑intensity activity; emphasise healthy fats (olive oil, nuts, seeds, fatty fish).</li>
+            </ul>
+            <details class="mt">
+              <summary><strong>Protein calculator</strong> — enter body weight (kg)</summary>
+              <div class="mt">
+                <input id="bw" type="number" min="30" max="200" step="0.5" placeholder="e.g., 68" style="padding:.5rem;border:1px solid var(--line);border-radius:8px;width:140px" />
+                <div id="proteinOut" class="mt" style="color:var(--muted)">Enter weight to see daily protein (g).</div>
+              </div>
+            </details>
+          </div>
+          <figure style="text-align:center">
+            <div class="donut" role="img" aria-label="Example macro split: 60% carbs, 15% protein, 25% fat">
+              <div class="plate-label l-carb">Carbs</div>
+              <div class="plate-label l-protein">Protein</div>
+              <div class="plate-label l-fat">Fat</div>
+            </div>
+            <figcaption class="mt" style="color:var(--muted)">Illustrative within-range macro pattern (adjust to sport & goals).</figcaption>
+            <div class="legend">
+              <span><i class="dot" style="background:var(--carb)"></i>Carbs 55–65%</span>
+              <span><i class="dot" style="background:var(--protein)"></i>Protein 1.2–2.0 g/kg</span>
+              <span><i class="dot" style="background:var(--fat)"></i>Fat 20–30%</span>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Micronutrients -->
+      <section id="micros" class="card mt2">
+        <div class="label">Section 4</div>
+        <h2>Micronutrients</h2>
+        <p>Micronutrients are important for energy metabolism, oxygen transport, and tissue repair. Key nutrients include:</p>
+        <table>
+          <thead><tr><th>Nutrient</th><th>Role</th><th>Key Sources</th></tr></thead>
+          <tbody>
+            <tr><td>Iron</td><td>Haemoglobin/myoglobin; oxygen delivery</td><td>Lean meats, legumes, leafy greens, fortified cereals</td></tr>
+            <tr><td>Calcium & Vitamin D</td><td>Bone health; injury prevention</td><td>Dairy/fortified milks, small fish; safe sun, eggs</td></tr>
+            <tr><td>Magnesium</td><td>Muscle/nerve function; energy enzymes</td><td>Nuts, seeds, whole grains, legumes</td></tr>
+            <tr><td>B‑Vitamins</td><td>Co‑factors in energy pathways</td><td>Whole grains, pulses, dairy, eggs, meat</td></tr>
+          </tbody>
+        </table>
+        <div class="callout mt">Pair iron foods with vitamin C sources (citrus, amla, capsicum) to enhance absorption; avoid tea/coffee immediately with iron‑rich meals.</div>
+      </section>
+
+      <!-- Hydration -->
+      <section id="hydration" class="card mt2">
+        <div class="label">Section 5</div>
+        <h2>Hydration</h2>
+        <div class="twocol">
+          <div>
+            <p>Hydration is critical for fluid balance, thermoregulation, and fatigue prevention. Hydrate <strong>before, during, and after</strong> sessions; replace electrolytes during prolonged or intense activity.</p>
+            <table class="mt">
+              <thead><tr><th>When</th><th>Focus</th></tr></thead>
+              <tbody>
+                <tr><td>Before</td><td>Start well‑hydrated; sip water in the hour pre‑exercise.</td></tr>
+                <tr><td>During</td><td>Regular small sips; consider electrolytes for long/hot sessions.</td></tr>
+                <tr><td>After</td><td>Rehydrate and include sodium/potassium sources with meals.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <figure>
+            <div class="bottle" role="img" aria-label="Hydration cue"><div class="txt">Hydrate</div></div>
+            <figcaption class="mt" style="color:var(--muted)">Consistent sipping beats big gulps for absorption.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Strategies -->
+      <section id="strategies" class="card mt2">
+        <div class="label">Section 6</div>
+        <h2>Nutritional Strategies</h2>
+        <div class="timeline">
+          <div class="step">
+            <h4>Pre‑Exercise (3–4 h before)</h4>
+            <p>High‑carbohydrate meal; avoid very heavy fat/fibre that may cause GI discomfort.</p>
+          </div>
+          <div class="step">
+            <h4>During Exercise (>60 min)</h4>
+            <p>Consume fluids and carbohydrates to maintain performance; add electrolytes in heat or long duration.</p>
+          </div>
+          <div class="step">
+            <h4>Post‑Exercise (within 30–60 min)</h4>
+            <p>Combine protein and carbohydrate to promote glycogen replenishment and muscle repair.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Supplements -->
+      <section id="supplements" class="card mt2">
+        <div class="label">Section 7</div>
+        <h2>Supplements</h2>
+        <ul>
+          <li>Use cautiously; prioritise whole foods first.</li>
+          <li>Common options: whey protein, creatine, caffeine, electrolytes.</li>
+          <li>Always consider safety and sport <strong>doping regulations</strong>.</li>
+        </ul>
+      </section>
+
+      <!-- Sample Plan -->
+      <section id="plan" class="card mt2">
+        <div class="label">Section 8</div>
+        <h2>Sample Meal Plan</h2>
+        <div class="kpis">
+          <div class="card"><div class="label">Breakfast</div><strong>Oatmeal + berries + nuts</strong><div class="mt" style="color:var(--muted)">+ eggs</div></div>
+          <div class="card"><div class="label">Snack</div><strong>Banana + yogurt</strong></div>
+          <div class="card"><div class="label">Lunch</div><strong>Brown rice + grilled chicken</strong><div class="mt" style="color:var(--muted)">+ mixed vegetables</div></div>
+          <div class="card"><div class="label">Snack (pre‑workout)</div><strong>Whole‑grain bread + peanut butter</strong></div>
+          <div class="card"><div class="label">Post‑workout</div><strong>Protein shake + fruit</strong></div>
+          <div class="card"><div class="label">Dinner</div><strong>Quinoa + fish</strong><div class="mt" style="color:var(--muted)">+ steamed greens</div></div>
+        </div>
+      </section>
+
+      <!-- Exam Focus -->
+      <section id="exam" class="card mt2">
+        <div class="label">Section 9</div>
+        <h2>Exam Focus Points</h2>
+        <ul>
+          <li>Describe macronutrient needs of athletes.</li>
+          <li>Explain timing and importance of hydration.</li>
+          <li>List key micronutrients and their roles.</li>
+          <li>Discuss pre‑, during‑, and post‑exercise strategies.</li>
+          <li>Understand safe supplement use and regulations.</li>
+        </ul>
+      </section>
+
+      <!-- References -->
+      <section id="refs" class="card mt2">
+        <div class="label">Appendix</div>
+        <h2>References & Notes</h2>
+        <p style="color:var(--muted)">These notes reflect current sports nutrition guidance from international bodies such as the ISSN, ADA, and ACSM to support effective undergraduate teaching and exam preparation.</p>
+        <p>
+          <span class="tag">Carbs 55–65%</span>
+          <span class="tag">Protein 1.2–2.0 g/kg</span>
+          <span class="tag">Fat 20–30%</span>
+          <span class="tag">Hydrate before/during/after</span>
+          <span class="tag">Fuel–Train–Recover</span>
+        </p>
+        <div class="foot">Last updated: <span id="updated"></span>. Educational resource; not a substitute for medical advice.</div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle with persistence
+    (function(){
+      const root=document.documentElement;
+      const btn=document.getElementById('themeBtn');
+      const saved=localStorage.getItem('sport_theme');
+      if(saved){ root.setAttribute('data-theme', saved); }
+      btn?.addEventListener('click',()=>{
+        const now=root.getAttribute('data-theme')==='dark'?'light':'dark';
+        root.setAttribute('data-theme', now);
+        localStorage.setItem('sport_theme', now);
+      });
+    })();
+
+    // Updated timestamp
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+
+    // Protein calculator
+    (function(){
+      const bw=document.getElementById('bw');
+      const out=document.getElementById('proteinOut');
+      if(!bw||!out) return;
+      const fmt=n=>Math.round(n);
+      const update=()=>{
+        const w=parseFloat(bw.value);
+        if(!w||w<=0){ out.textContent='Enter weight to see daily protein (g).'; return; }
+        const low=w*1.2, high=w*2.0, mid=w*1.6;
+        out.innerHTML = `Daily protein range: <strong>${fmt(low)}–${fmt(high)} g</strong> (≈ ${fmt(mid)} g typical).\n`+
+          `Per meal (3–5 meals): <em>${fmt(mid/3)}–${fmt(mid/5)} g</em>.`;
+      };
+      bw.addEventListener('input',update); update();
+    })();
+  </script>
+</body>
+</html>

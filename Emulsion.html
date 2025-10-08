@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emulsion — Teaching & Exam Notes</title>
+  <meta name="description" content="Print‑ready, single‑file teaching notes: definition, types, components, formation, stability/destabilisation, emulsifiers, food applications, summary table, and exam focus." />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --panel:#ffffff; --accent:#10b981; --warn:#ef4444; --ok:#22c55e; --info:#0ea5e9; --shadow:0 10px 30px rgba(2,6,23,.08);
+      --oil:#f59e0b; --water:#38bdf8; --prot:#a78bfa; --surf:#22c55e;
+    }
+    [data-theme="dark"]{
+      --bg:#0b0f14; --ink:#e5edf7; --muted:#9aa7bc; --line:#1f2937; --panel:#0f141b; --accent:#22c55e; --warn:#f87171; --ok:#34d399; --info:#38bdf8; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+    .wrapper{max-width:1150px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 80%,transparent);backdrop-filter:saturate(1.2) blur(2px);border-bottom:1px solid var(--line)}
+    .hero{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0}
+    .title{font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:.2px}
+    .subtitle{color:var(--muted);font-weight:500}
+    .buttons{display:flex;gap:8px;flex-wrap:wrap}
+    button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 12px;border-radius:999px;cursor:pointer;box-shadow:var(--shadow)}
+    .btn-accent{background:var(--accent);color:white;border-color:transparent}
+
+    .grid{display:grid;grid-template-columns:280px 1fr;gap:24px}
+    nav{position:sticky;top:76px;align-self:start;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
+    nav h3{margin:.8rem 1rem .4rem;font-size:14px;color:var(--muted)}
+    nav a{display:block;padding:.55rem 1rem;color:var(--ink);text-decoration:none;border-top:1px dashed var(--line)}
+    nav a:first-of-type{border-top:none}
+    nav a:hover{background:rgba(2,6,23,.04)}
+
+    section{scroll-margin-top:84px}
+    .card{border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow);padding:18px}
+    .card h2{margin:0 0 .5rem}
+    .label{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:12px;border:1px solid var(--line)}
+    thead th{background:linear-gradient(180deg,rgba(16,185,129,.12),transparent);text-align:left;padding:.7rem .8rem;border-bottom:1px solid var(--line)}
+    tbody td{padding:.7rem .8rem;border-top:1px solid var(--line)}
+    tbody tr:nth-child(odd){background:rgba(2,6,23,.03)}
+
+    .foot{margin-top:28px;color:var(--muted);font-size:13px}
+    .tag{display:inline-block;margin:.15rem .25rem 0 0;padding:.1rem .5rem;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-size:12px}
+    .mt{margin-top:16px}
+    .mt2{margin-top:24px}
+    .mt3{margin-top:36px}
+
+    /* Visuals */
+    .chip{display:inline-flex;align-items:center;gap:8px;border:1px dashed var(--line);border-radius:999px;padding:.18rem .6rem;font-size:12px;margin:.12rem .18rem}
+    .dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+    .cell{position:relative;display:grid;place-items:center;width:260px;height:260px;border-radius:50%;margin:auto;border:6px solid var(--line);box-shadow:var(--shadow);overflow:hidden}
+    .cell .phase{position:absolute;inset:0;transition:all .4s ease}
+    .phase.water{background:radial-gradient(circle at 30% 30%,#e0f2fe 0,var(--water) 50%,#0ea5e9 100%)}
+    .phase.oil{background:radial-gradient(circle at 70% 70%,#fff7ed 0,#fed7aa 50%,var(--oil) 100%)}
+    .drop{position:absolute;border-radius:50%;background:var(--oil);opacity:.95;box-shadow:inset 0 0 8px rgba(0,0,0,.15);transition:all .4s ease}
+    .drop.water{background:var(--water)}
+    .iface{position:absolute;border:1px dashed rgba(15,23,42,.35);inset:14px;border-radius:50%}
+
+    .legend{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+
+    .controls{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+    .controls button{padding:.35rem .7rem;border-radius:999px;border:1px solid var(--line)}
+    .controls .active{background:var(--accent);color:#fff;border-color:transparent}
+
+    .bar{height:12px;border-radius:8px;background:linear-gradient(90deg,#fecaca,#fdba74,#fde047,#bbf7d0);border:1px solid var(--line);position:relative}
+    .marker{position:absolute;top:-6px;width:2px;height:24px;background:#0f172a;border-radius:1px}
+    .note{font-size:12px;color:var(--muted)}
+
+    .warnbox{border-left:4px solid var(--warn);padding:.6rem .9rem;border-radius:8px;background:linear-gradient(180deg,rgba(239,68,68,.08),transparent)}
+
+    /* Small screens */
+    @media (max-width: 980px){
+      .grid{grid-template-columns:1fr}
+      nav{position:relative;top:0}
+      .twocol{grid-template-columns:1fr}
+    }
+
+    /* Print */
+    @media print{
+      header,nav,.noprint{display:none!important}
+      body{font-size:12pt}
+      .wrapper{max-width:unset}
+      .card{box-shadow:none}
+      a[href]:after{content:" (" attr(href) ")";font-size:10pt;color:#666}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper hero">
+      <div>
+        <div class="title">Emulsion</div>
+        <div class="subtitle">Teaching & Exam Notes — Food Science & Chemistry</div>
+      </div>
+      <div class="buttons noprint">
+        <button class="btn-accent" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button id="themeBtn" title="Toggle theme">🌗 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper grid">
+    <nav class="noprint" aria-label="On this page">
+      <h3>Contents</h3>
+      <a href="#definition">Definition</a>
+      <a href="#types">Types of Emulsions</a>
+      <a href="#components">Components</a>
+      <a href="#formation">Formation</a>
+      <a href="#stability">Stability & Destabilisation</a>
+      <a href="#emulsifiers">Role of Emulsifiers</a>
+      <a href="#applications">Applications in Food</a>
+      <a href="#summary">Summary Table</a>
+      <a href="#exam">Exam Focus</a>
+      <a href="#refs">References & Notes</a>
+    </nav>
+
+    <main>
+      <!-- Definition -->
+      <section id="definition" class="card">
+        <div class="label">Section 1</div>
+        <h2>Definition</h2>
+        <p>An <strong>emulsion</strong> is a mixture of two or more <em>immiscible liquids</em> (usually oil and water) where one liquid is dispersed as tiny droplets within the other. Emulsions are <strong>colloidal systems</strong> in which both the dispersed phase and the continuous phase are liquids.</p>
+        <div class="legend">
+          <span class="chip"><i class="dot" style="background:var(--oil)"></i>Oil phase</span>
+          <span class="chip"><i class="dot" style="background:var(--water)"></i>Water phase</span>
+          <span class="chip"><i class="dot" style="background:var(--surf)"></i>Emulsifier</span>
+        </div>
+      </section>
+
+      <!-- Types -->
+      <section id="types" class="card mt2">
+        <div class="label">Section 2</div>
+        <h2>Types of Emulsions</h2>
+        <div class="twocol">
+          <div>
+            <ul>
+              <li><strong>Oil‑in‑Water (O/W)</strong>: Oil droplets in water (e.g., milk, mayonnaise).</li>
+              <li><strong>Water‑in‑Oil (W/O)</strong>: Water droplets in oil (e.g., butter, margarine).</li>
+              <li><strong>Multiple emulsions</strong>: e.g., W/O/W for special release or fat reduction.</li>
+            </ul>
+            <div class="note mt">Rule of thumb: The phase in <em>greater volume</em> and/or with <em>more soluble emulsifier</em> tends to be the <strong>continuous phase</strong>.</div>
+          </div>
+          <figure>
+            <div class="cell" aria-label="Emulsion schematic">
+              <div id="phaseWater" class="phase water"></div>
+              <div id="phaseOil" class="phase oil" style="opacity:0"></div>
+              <div class="iface" aria-hidden="true"></div>
+              <!-- droplets will be injected by JS -->
+            </div>
+            <div class="controls">
+              <button id="btnOW" class="active">O/W</button>
+              <button id="btnWO">W/O</button>
+            </div>
+            <div class="legend">
+              <span class="chip">Droplet size ↓ → stability ↑ (kinetic)</span>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Components -->
+      <section id="components" class="card mt2">
+        <div class="label">Section 3</div>
+        <h2>Components</h2>
+        <ul>
+          <li><strong>Dispersed (internal) phase</strong>: liquid broken into droplets.</li>
+          <li><strong>Continuous (external) phase</strong>: liquid surrounding droplets.</li>
+          <li><strong>Emulsifiers</strong>: surface‑active agents (proteins, phospholipids, small‑molecule surfactants) that lower interfacial tension and form protective films.</li>
+        </ul>
+        <div class="twocol mt">
+          <div>
+            <table>
+              <thead><tr><th>Class</th><th>Examples</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><td>Proteins</td><td>Milk proteins, egg yolk</td><td>Thick interfacial films, good for aerated systems</td></tr>
+                <tr><td>Phospholipids</td><td>Lecithin</td><td>Common in mayonnaise (O/W)</td></tr>
+                <tr><td>Low‑MW surfactants</td><td>Polysorbates, mono‑/diglycerides</td><td>Tune HLB to match emulsion type</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <figure>
+            <div class="bar" aria-label="HLB guide for O/W vs W/O">
+              <div id="hlbMark" class="marker" style="left:66%"></div>
+            </div>
+            <div class="note">HLB guide: O/W ~ 8–18 • W/O ~ 3–6 (illustrative).</div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Formation -->
+      <section id="formation" class="card mt2">
+        <div class="label">Section 4</div>
+        <h2>Formation</h2>
+        <p>Formed by vigorous mixing or <strong>homogenisation</strong> to disperse one liquid into fine droplets within the other. Smaller droplets increase surface area and <em>kinetic stability</em>.</p>
+        <ul>
+          <li>Equipment: rotor–stator mixers, high‑pressure homogenisers, ultrasonicators, microfluidisers.</li>
+          <li>Viscosity and phase ratio affect energy input and final droplet size.</li>
+        </ul>
+        <div class="warnbox mt"><strong>Stokes' law (creaming velocity)</strong> ~ <code>v ∝ r²(ρ<sub>d</sub>−ρ<sub>c</sub>)/η</code> → halving droplet radius quarters the creaming rate; increasing continuous‑phase viscosity slows separation.</div>
+      </section>
+
+      <!-- Stability -->
+      <section id="stability" class="card mt2">
+        <div class="label">Section 5</div>
+        <h2>Stability & Destabilisation</h2>
+        <p>Emulsions are <strong>thermodynamically unstable</strong> but can be <em>kinetically stabilised</em> for long periods.</p>
+        <ul>
+          <li><strong>Creaming/Sedimentation</strong>: Droplets rise or settle due to density difference.</li>
+          <li><strong>Flocculation</strong>: Droplets aggregate without merging.</li>
+          <li><strong>Coalescence</strong>: Droplets merge → phase separation.</li>
+          <li><strong>Phase inversion</strong>: O/W ↔ W/O on composition/shear/temperature change.</li>
+        </ul>
+      </section>
+
+      <!-- Role of Emulsifiers -->
+      <section id="emulsifiers" class="card mt2">
+        <div class="label">Section 6</div>
+        <h2>Role of Emulsifiers</h2>
+        <ul>
+          <li>Amphiphilic molecules with <em>hydrophilic</em> and <em>hydrophobic</em> parts.</li>
+          <li>Adsorb at the oil–water interface → reduce interfacial tension, form barriers (electrostatic/steric) against coalescence.</li>
+          <li>Common choices: egg yolk lecithin, milk proteins, mustard mucilage, synthetic surfactants.</li>
+        </ul>
+      </section>
+
+      <!-- Applications -->
+      <section id="applications" class="card mt2">
+        <div class="label">Section 7</div>
+        <h2>Applications in Food</h2>
+        <p>Emulsions underpin products such as <strong>mayonnaise</strong>, <strong>cream</strong>, <strong>butter</strong>, <strong>salad dressings</strong>, and <strong>ice cream</strong>, influencing texture, mouthfeel, stability, and appearance.</p>
+      </section>
+
+      <!-- Summary Table -->
+      <section id="summary" class="card mt2">
+        <div class="label">Section 8</div>
+        <h2>Summary Table</h2>
+        <table>
+          <thead><tr><th>Aspect</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td>Dispersed phase</td><td>Droplets of one liquid dispersed in another</td></tr>
+            <tr><td>Continuous phase</td><td>Liquid medium surrounding dispersed droplets</td></tr>
+            <tr><td>Emulsifier</td><td>Stabilises mixture; prevents/coats against separation</td></tr>
+            <tr><td>Common Types</td><td>O/W (e.g., milk), W/O (e.g., butter), multiple (W/O/W)</td></tr>
+            <tr><td>Instability</td><td>Creaming, flocculation, coalescence, inversion</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Exam Focus -->
+      <section id="exam" class="card mt2">
+        <div class="label">Section 9</div>
+        <h2>Exam Focus Points</h2>
+        <ul>
+          <li>Define emulsion and list its <em>types</em>.</li>
+          <li>Describe roles of <em>dispersed phase</em>, <em>continuous phase</em>, and <em>emulsifiers</em>.</li>
+          <li>Explain mechanisms of formation and stabilisation (droplet size, viscosity, interfacial tension).</li>
+          <li>Discuss causes and types of destabilisation (creaming, flocculation, coalescence, inversion).</li>
+          <li>List common food emulsions and their importance.</li>
+        </ul>
+      </section>
+
+      <!-- References -->
+      <section id="refs" class="card mt2">
+        <div class="label">Appendix</div>
+        <h2>References & Notes</h2>
+        <p class="foot">Synthesised from food science texts and reviews (e.g., academic literature and reference sites). Last updated: <span id="updated"></span>. Educational resource; illustrative visuals not to scale.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle with persistence
+    (function(){
+      const root=document.documentElement;
+      const btn=document.getElementById('themeBtn');
+      const saved=localStorage.getItem('emulsion_theme');
+      if(saved){ root.setAttribute('data-theme', saved); }
+      btn?.addEventListener('click',()=>{
+        const now=root.getAttribute('data-theme')==='dark'?'light':'dark';
+        root.setAttribute('data-theme', now);
+        localStorage.setItem('emulsion_theme', now);
+      });
+    })();
+
+    // Updated timestamp
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+
+    // Emulsion schematic: generate droplets and toggle O/W vs W/O
+    (function(){
+      const cell=document.querySelector('.cell');
+      const btnOW=document.getElementById('btnOW');
+      const btnWO=document.getElementById('btnWO');
+      const phaseWater=document.getElementById('phaseWater');
+      const phaseOil=document.getElementById('phaseOil');
+
+      function makeDrops(type){
+        // remove existing
+        cell.querySelectorAll('.drop').forEach(d=>d.remove());
+        const N=18; // droplets
+        for(let i=0;i<N;i++){
+          const d=document.createElement('div');
+          d.className='drop '+(type==='OW'?'':'water');
+          const size=Math.random()*26+10; // 10–36px
+          d.style.width=size+'px';
+          d.style.height=size+'px';
+          // random pos within cell avoiding borders
+          const r=130 - size/2 - 8; // radius minus padding
+          const theta=Math.random()*Math.PI*2;
+          const rad=Math.sqrt(Math.random())*r; // favour centre
+          const x=rad*Math.cos(theta), y=rad*Math.sin(theta);
+          d.style.left=(130+x-size/2)+'px';
+          d.style.top=(130+y-size/2)+'px';
+          cell.appendChild(d);
+        }
+      }
+
+      function setType(t){
+        if(t==='OW'){
+          phaseWater.style.opacity=1; phaseOil.style.opacity=0; makeDrops('OW');
+          btnOW.classList.add('active'); btnWO.classList.remove('active');
+          document.getElementById('hlbMark').style.left='66%'; // O/W HLB hint
+        }else{
+          phaseWater.style.opacity=0; phaseOil.style.opacity=1; makeDrops('WO');
+          btnWO.classList.add('active'); btnOW.classList.remove('active');
+          document.getElementById('hlbMark').style.left='20%'; // W/O HLB hint
+        }
+      }
+
+      btnOW?.addEventListener('click',()=>setType('OW'));
+      btnWO?.addEventListener('click',()=>setType('WO'));
+      setType('OW');
+    })();
+  </script>
+</body>
+</html>

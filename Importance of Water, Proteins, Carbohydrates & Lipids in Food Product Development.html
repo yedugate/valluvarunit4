@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Importance of Water, Proteins, Carbohydrates & Lipids in Food Product Development — Teaching & Exam Notes</title>
+  <meta name="description" content="Single‑file, print‑ready notes covering the functional roles of water, proteins, carbohydrates, and lipids in food product development: quality, processing, shelf‑life, nutrition, and exam focus." />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --panel:#ffffff; --accent:#10b981; --warn:#ef4444; --ok:#22c55e; --info:#0ea5e9; --shadow:0 10px 30px rgba(2,6,23,.08);
+      --water:#38bdf8; --protein:#a78bfa; --carb:#eab308; --lipid:#f97316;
+    }
+    [data-theme="dark"]{
+      --bg:#0b0f14; --ink:#e5edf7; --muted:#9aa7bc; --line:#1f2937; --panel:#0f141b; --accent:#22c55e; --warn:#f87171; --ok:#34d399; --info:#38bdf8; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+    .wrapper{max-width:1150px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 80%,transparent);backdrop-filter:saturate(1.2) blur(2px);border-bottom:1px solid var(--line)}
+    .hero{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0}
+    .title{font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:.2px}
+    .subtitle{color:var(--muted);font-weight:500}
+    .buttons{display:flex;gap:8px;flex-wrap:wrap}
+    button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 12px;border-radius:999px;cursor:pointer;box-shadow:var(--shadow)}
+    .btn-accent{background:var(--accent);color:white;border-color:transparent}
+
+    .grid{display:grid;grid-template-columns:280px 1fr;gap:24px}
+    nav{position:sticky;top:76px;align-self:start;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
+    nav h3{margin:.8rem 1rem .4rem;font-size:14px;color:var(--muted)}
+    nav a{display:block;padding:.55rem 1rem;color:var(--ink);text-decoration:none;border-top:1px dashed var(--line)}
+    nav a:first-of-type{border-top:none}
+    nav a:hover{background:rgba(2,6,23,.04)}
+
+    section{scroll-margin-top:84px}
+    .card{border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow);padding:18px}
+    .card h2{margin:0 0 .5rem}
+    .label{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .threecol{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:12px;border:1px solid var(--line)}
+    thead th{background:linear-gradient(180deg,rgba(16,185,129,.12),transparent);text-align:left;padding:.7rem .8rem;border-bottom:1px solid var(--line)}
+    tbody td{padding:.7rem .8rem;border-top:1px solid var(--line)}
+    tbody tr:nth-child(odd){background:rgba(2,6,23,.03)}
+
+    .foot{margin-top:28px;color:var(--muted);font-size:13px}
+    .mt{margin-top:16px}
+    .mt2{margin-top:24px}
+    .mt3{margin-top:36px}
+
+    /* Visuals */
+    .chip{display:inline-flex;align-items:center;gap:8px;border:1px dashed var(--line);border-radius:999px;padding:.2rem .55rem;font-size:12px;margin-right:6px}
+    .dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+    .ring{position:relative;width:200px;height:200px;border-radius:50%;margin:auto;background:
+      radial-gradient(closest-side,var(--panel) 70%,transparent 71%),
+      conic-gradient(var(--water) 0 210deg,#cbd5e1 210deg 360deg);
+      border:6px solid var(--line);box-shadow:var(--shadow)}
+    .ring::after{content:"";position:absolute;inset:18px;border-radius:50%;border:1px dashed var(--line)}
+    .ring .txt{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
+
+    .therm{display:grid;grid-template-columns:140px 1fr;gap:12px;align-items:center}
+    .bar{height:12px;border-radius:8px;background:linear-gradient(90deg,#fecaca,#f59e0b,#86efac)}
+    .bar .pos{height:100%;width:40%;background:rgba(15,23,42,.15);border-radius:8px}
+    .note{font-size:12px;color:var(--muted)}
+
+    .warnbox{border-left:4px solid var(--warn);padding:.6rem .9rem;border-radius:8px;background:linear-gradient(180deg,rgba(239,68,68,.08),transparent)}
+    .okbox{border-left:4px solid var(--ok);padding:.6rem .9rem;border-radius:8px;background:linear-gradient(180deg,rgba(34,197,94,.08),transparent)}
+
+    .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.18rem .6rem;margin:.12rem .18rem;font-size:12px}
+
+    /* Small screens */
+    @media (max-width: 980px){
+      .grid{grid-template-columns:1fr}
+      nav{position:relative;top:0}
+      .twocol,.threecol{grid-template-columns:1fr}
+    }
+
+    /* Print */
+    @media print{
+      header,nav,.noprint{display:none!important}
+      body{font-size:12pt}
+      .wrapper{max-width:unset}
+      .card{box-shadow:none}
+      a[href]:after{content:" (" attr(href) ")";font-size:10pt;color:#666}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper hero">
+      <div>
+        <div class="title">Importance of Water, Proteins, Carbohydrates & Lipids in Food Product Development</div>
+        <div class="subtitle">Teaching & Exam Notes — Food Chemistry & Technology</div>
+      </div>
+      <div class="buttons noprint">
+        <button class="btn-accent" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button id="themeBtn" title="Toggle theme">🌗 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper grid">
+    <nav class="noprint" aria-label="On this page">
+      <h3>Contents</h3>
+      <a href="#overview">Overview</a>
+      <a href="#water">Water</a>
+      <a href="#proteins">Proteins</a>
+      <a href="#carbs">Carbohydrates</a>
+      <a href="#lipids">Lipids</a>
+      <a href="#summary">Summary Table</a>
+      <a href="#exam">Exam Focus</a>
+      <a href="#refs">References & Notes</a>
+    </nav>
+
+    <main>
+      <!-- Overview -->
+      <section id="overview" class="card">
+        <div class="label">Section 1</div>
+        <h2>Overview</h2>
+        <p>In food product development, understanding the roles of <strong>water</strong>, <strong>proteins</strong>, <strong>carbohydrates</strong>, and <strong>lipids</strong> is critical for achieving the desired quality, nutrition, processing behaviour, and shelf‑life.</p>
+        <div class="mt">
+          <span class="chip"><i class="dot" style="background:var(--water)"></i>Moisture / aw & preservation</span>
+          <span class="chip"><i class="dot" style="background:var(--protein)"></i>Structure & texture</span>
+          <span class="chip"><i class="dot" style="background:var(--carb)"></i>Sweetness / viscosity / gels</span>
+          <span class="chip"><i class="dot" style="background:var(--lipid)"></i>Mouthfeel & flavour carrier</span>
+        </div>
+      </section>
+
+      <!-- Water -->
+      <section id="water" class="card mt2">
+        <div class="label">Section 2</div>
+        <h2 style="display:flex;align-items:center;gap:8px"><span style="display:inline-block;width:10px;height:10px;background:var(--water);border-radius:3px"></span>Water</h2>
+        <div class="twocol">
+          <div>
+            <ul>
+              <li><strong>Role in formulation</strong>: Solvent and medium for ingredient interaction and dispersion.</li>
+              <li><strong>Texture & consistency</strong>: Governs moisture content, juiciness, and mouthfeel.</li>
+              <li><strong>Shelf life</strong>: <em>Water activity (aw)</em> drives microbial growth—control via humectants, dehydration, or solutes.</li>
+              <li><strong>Processing</strong>: Critical in mixing, heat transfer, and enzymatic/microbial reactions.</li>
+            </ul>
+          </div>
+          <figure style="text-align:center">
+            <div class="ring" role="img" aria-label="Water activity concept ring">
+              <div class="txt"><strong>aw</strong><br/><small>control = shelf‑life</small></div>
+            </div>
+            <div class="therm mt">
+              <div class="note">aw risk guide</div>
+              <div class="bar"><div id="awpos" class="pos"></div></div>
+            </div>
+            <div class="note">High risk ≥0.90 • Intermediate 0.60–0.85 • Low ≤0.60</div>
+          </figure>
+        </div>
+        <div class="okbox mt">Tip: Replace part of free water with <em>polyols</em> or <em>sugars/salts</em> to lower aw while maintaining softness.</div>
+      </section>
+
+      <!-- Proteins -->
+      <section id="proteins" class="card mt2">
+        <div class="label">Section 3</div>
+        <h2 style="display:flex;align-items:center;gap:8px"><span style="display:inline-block;width:10px;height:10px;background:var(--protein);border-radius:3px"></span>Proteins</h2>
+        <div class="twocol">
+          <div>
+            <ul>
+              <li><strong>Functional properties</strong>: <span class="pill">Emulsification</span><span class="pill">Gelation</span><span class="pill">Foaming</span><span class="pill">Water binding</span> → structure/texture.</li>
+              <li><strong>Nutrition</strong>: Provide essential amino acids and improve protein quality of the product.</li>
+              <li><strong>Shelf‑life impact</strong>: Denaturation/oxidation can affect texture and flavour.</li>
+              <li><strong>Reactions</strong>: Participation in <em>Maillard browning</em> contributes colour/flavour.</li>
+            </ul>
+          </div>
+          <figure>
+            <table>
+              <thead><tr><th>Function</th><th>Example Ingredients</th><th>Applications</th></tr></thead>
+              <tbody>
+                <tr><td>Emulsifier</td><td>Whey, caseinate, soy isolate</td><td>Dressings, beverages</td></tr>
+                <tr><td>Gel network</td><td>Egg, gelatin, myofibrillar proteins</td><td>Set desserts, meat analogues</td></tr>
+                <tr><td>Foaming</td><td>Egg white, milk proteins</td><td>Meringues, mousse</td></tr>
+                <tr><td>Water binding</td><td>Meat proteins, gluten</td><td>Sausages, bread</td></tr>
+              </tbody>
+            </table>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Carbohydrates -->
+      <section id="carbs" class="card mt2">
+        <div class="label">Section 4</div>
+        <h2 style="display:flex;align-items:center;gap:8px"><span style="display:inline-block;width:10px;height:10px;background:var(--carb);border-radius:3px"></span>Carbohydrates</h2>
+        <div class="twocol">
+          <div>
+            <ul>
+              <li><strong>Energy & sweetness</strong>: Contribute calories and sweetness to balance flavour.</li>
+              <li><strong>Texture</strong>: Provide viscosity, thickening, and gelling (e.g., starches, pectins, gums).</li>
+              <li><strong>Stability</strong>: Modulate water retention and freeze–thaw stability.</li>
+              <li><strong>Shelf‑life</strong>: Control crystallisation/retrogradation in confectionery and baked goods.</li>
+              <li><strong>Dietary fibre</strong>: Adds health appeal and glycaemic control benefits.</li>
+            </ul>
+          </div>
+          <figure>
+            <table>
+              <thead><tr><th>Class</th><th>Typical Role</th><th>Examples</th></tr></thead>
+              <tbody>
+                <tr><td>Starches</td><td>Gelation, thickening</td><td>Corn, tapioca, potato; modified starches</td></tr>
+                <tr><td>Hydrocolloids</td><td>Viscosity, stabilisation</td><td>Xanthan, guar, carrageenan</td></tr>
+                <tr><td>Pectins/Gelling fibres</td><td>Gels/jams set</td><td>HM & LM pectin, alginate</td></tr>
+                <tr><td>Sugars/Polyols</td><td>Sweetness, aw control</td><td>Sucrose, glucose, sorbitol, glycerol</td></tr>
+              </tbody>
+            </table>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Lipids -->
+      <section id="lipids" class="card mt2">
+        <div class="label">Section 5</div>
+        <h2 style="display:flex;align-items:center;gap:8px"><span style="display:inline-block;width:10px;height:10px;background:var(--lipid);border-radius:3px"></span>Lipids</h2>
+        <div class="twocol">
+          <div>
+            <ul>
+              <li><strong>Texture & mouthfeel</strong>: Provide creaminess, tenderness, lubrication.</li>
+              <li><strong>Flavour carrier</strong>: Dissolve and release lipophilic flavour compounds.</li>
+              <li><strong>Shelf‑life</strong>: Prone to <em>oxidation</em> → rancidity; manage with antioxidants and packaging (low O₂, opaque).</li>
+              <li><strong>Nutrition</strong>: Supply essential fatty acids; influence health claims and fat quality profile.</li>
+              <li><strong>Processing</strong>: Affect emulsification and aeration; melting profile controls crystallisation (chocolate, spreads).</li>
+            </ul>
+          </div>
+          <figure>
+            <div class="warnbox">
+              Oxidation control: choose stable fats (higher saturation/oleic), add <em>tocopherols/rosemary extract</em>, reduce oxygen/light, and control metals (chelators).
+            </div>
+            <div class="okbox mt">Aim for desired solid‑fat content curve to tune spreadability and snap.</div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Summary Table -->
+      <section id="summary" class="card mt2">
+        <div class="label">Section 6</div>
+        <h2>Summary Table</h2>
+        <table>
+          <thead><tr><th>Nutrient</th><th>Key Roles in Product Development</th><th>Impact on Product Quality</th></tr></thead>
+          <tbody>
+            <tr><td>Water</td><td>Solvent; affects texture; aw & microbial control; processing medium</td><td>Moisture, juiciness, shelf‑life</td></tr>
+            <tr><td>Protein</td><td>Structure (gel, foam); emulsification; nutrition</td><td>Texture, body, mouthfeel</td></tr>
+            <tr><td>Carbohydrates</td><td>Sweetness; viscosity/gels; stability; fibre addition</td><td>Consistency, appearance, freeze–thaw</td></tr>
+            <tr><td>Lipids</td><td>Flavour carrier; texture; energy; emulsification/aeration</td><td>Mouthfeel, shelf stability (oxidation)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Exam Focus -->
+      <section id="exam" class="card mt2">
+        <div class="label">Section 7</div>
+        <h2>Exam Focus</h2>
+        <ul>
+          <li>Explain functional roles of water, proteins, carbohydrates, and lipids in product development.</li>
+          <li>Link each nutrient to texture, flavour, processing behaviour, and shelf‑life outcomes.</li>
+          <li>Discuss challenges: controlling aw, retrogradation/crystallisation, protein denaturation, and lipid oxidation.</li>
+        </ul>
+      </section>
+
+      <!-- References -->
+      <section id="refs" class="card mt2">
+        <div class="label">Appendix</div>
+        <h2>References & Notes</h2>
+        <p class="foot">Aligned with principles of food chemistry and technology; consult current standards and specifications for your target market and category. Last updated: <span id="updated"></span>.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle with persistence
+    (function(){
+      const root=document.documentElement;
+      const btn=document.getElementById('themeBtn');
+      const saved=localStorage.getItem('wpcl_theme');
+      if(saved){ root.setAttribute('data-theme', saved); }
+      btn?.addEventListener('click',()=>{
+        const now=root.getAttribute('data-theme')==='dark'?'light':'dark';
+        root.setAttribute('data-theme', now);
+        localStorage.setItem('wpcl_theme', now);
+      });
+    })();
+
+    // Updated timestamp
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+
+    // aw bar simple demo (static midpoint; customise if you like)
+    (function(){
+      const pos=document.getElementById('awpos');
+      if(pos){ pos.style.width='70%'; }
+    })();
+  </script>
+</body>
+</html>

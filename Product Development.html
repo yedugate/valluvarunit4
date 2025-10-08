@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Development — Scientifically Curated Teaching & Exam Notes</title>
+  <meta name="description" content="Print‑ready single‑file notes: definition, stages, key considerations, tools & techniques, challenges, exam focus, and summary for food product development." />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --panel:#ffffff; --accent:#10b981; --accent-ink:#064e3b; --warn:#ef4444; --ok:#22c55e; --info:#0ea5e9; --shadow:0 10px 30px rgba(2,6,23,.08);
+      --stage:#6366f1; --market:#06b6d4; --science:#22c55e; --safety:#f59e0b;
+    }
+    [data-theme="dark"]{
+      --bg:#0b0f14; --ink:#e5edf7; --muted:#9aa7bc; --line:#1f2937; --panel:#0f141b; --accent:#22c55e; --accent-ink:#052e1f; --warn:#f87171; --ok:#34d399; --info:#38bdf8; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+    .wrapper{max-width:1150px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 80%,transparent);backdrop-filter:saturate(1.2) blur(2px);border-bottom:1px solid var(--line)}
+    .hero{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0}
+    .title{font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:.2px}
+    .subtitle{color:var(--muted);font-weight:500}
+    .buttons{display:flex;gap:8px;flex-wrap:wrap}
+    button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 12px;border-radius:999px;cursor:pointer;box-shadow:var(--shadow)}
+    .btn-accent{background:var(--accent);color:white;border-color:transparent}
+
+    .grid{display:grid;grid-template-columns:280px 1fr;gap:24px}
+    nav{position:sticky;top:76px;align-self:start;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
+    nav h3{margin:.8rem 1rem .4rem;font-size:14px;color:var(--muted)}
+    nav a{display:block;padding:.55rem 1rem;color:var(--ink);text-decoration:none;border-top:1px dashed var(--line)}
+    nav a:first-of-type{border-top:none}
+    nav a:hover{background:rgba(2,6,23,.04)}
+
+    section{scroll-margin-top:84px}
+    .card{border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow);padding:18px}
+    .card h2{margin:0 0 .5rem}
+    .label{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .threecol{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .callout{border-left:4px solid var(--info);padding:.6rem .9rem;border-radius:8px;background:linear-gradient(180deg,rgba(14,165,233,.08),transparent)}
+
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:12px;border:1px solid var(--line)}
+    thead th{background:linear-gradient(180deg,rgba(16,185,129,.12),transparent);text-align:left;padding:.7rem .8rem;border-bottom:1px solid var(--line)}
+    tbody td{padding:.7rem .8rem;border-top:1px solid var(--line)}
+    tbody tr:nth-child(odd){background:rgba(2,6,23,.03)}
+
+    .foot{margin-top:28px;color:var(--muted);font-size:13px}
+    .tag{display:inline-block;margin:.15rem .25rem 0 0;padding:.1rem .5rem;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-size:12px}
+    .mt{margin-top:16px}
+    .mt2{margin-top:24px}
+    .mt3{margin-top:36px}
+
+    /* Visuals */
+    .timeline{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;align-items:start}
+    .stage{position:relative;border:1px solid var(--line);border-radius:12px;background:var(--panel);box-shadow:var(--shadow);padding:10px}
+    .stage .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--stage);color:#fff;font-weight:800;margin-right:6px}
+    .stage .name{font-weight:700}
+    .stage:after{content:"";position:absolute;right:-7px;top:50%;transform:translateY(-50%);width:14px;height:14px;border-top:2px solid var(--line);border-right:2px solid var(--line);transform:translateY(-50%) rotate(45deg);background:var(--panel)}
+    .stage:last-child:after{display:none}
+
+    .legend{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{display:inline-flex;align-items:center;gap:8px;border:1px dashed var(--line);border-radius:999px;padding:.18rem .6rem;font-size:12px}
+    .dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+    .tri{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+    .tri .mini{border:1px dashed var(--line);border-radius:12px;padding:10px;text-align:center}
+
+    /* Small screens */
+    @media (max-width: 1100px){ .timeline{grid-template-columns:1fr 1fr 1fr;}} 
+    @media (max-width: 720px){ .timeline{grid-template-columns:1fr 1fr;} }
+    @media (max-width: 520px){ .timeline{grid-template-columns:1fr;} }
+
+    @media (max-width: 980px){
+      .grid{grid-template-columns:1fr}
+      nav{position:relative;top:0}
+      .twocol,.threecol{grid-template-columns:1fr}
+    }
+
+    /* Print */
+    @media print{
+      header,nav,.noprint{display:none!important}
+      body{font-size:12pt}
+      .wrapper{max-width:unset}
+      .card{box-shadow:none}
+      a[href]:after{content:" (" attr(href) ")";font-size:10pt;color:#666}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper hero">
+      <div>
+        <div class="title">Product Development</div>
+        <div class="subtitle">Scientifically Curated Teaching & Exam Notes — Food Science</div>
+      </div>
+      <div class="buttons noprint">
+        <button class="btn-accent" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button id="themeBtn" title="Toggle theme">🌗 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper grid">
+    <nav class="noprint" aria-label="On this page">
+      <h3>Contents</h3>
+      <a href="#definition">Definition</a>
+      <a href="#stages">Stages of Product Development</a>
+      <a href="#considerations">Key Considerations</a>
+      <a href="#tools">Tools & Techniques</a>
+      <a href="#challenges">Challenges</a>
+      <a href="#exam">Exam Focus Points</a>
+      <a href="#summary">Summary</a>
+    </nav>
+
+    <main>
+      <!-- Definition -->
+      <section id="definition" class="card">
+        <div class="label">Section 1</div>
+        <h2>Definition</h2>
+        <p><strong>Product development</strong> is the process of designing, creating, and bringing a new <em>food product</em> to market. It integrates consumer insight, food science, technology, safety, quality, economics, and marketing.</p>
+        <div class="legend mt">
+          <span class="chip"><i class="dot" style="background:var(--market)"></i>Market</span>
+          <span class="chip"><i class="dot" style="background:var(--science)"></i>Science & Process</span>
+          <span class="chip"><i class="dot" style="background:var(--safety)"></i>Safety & Regulatory</span>
+        </div>
+      </section>
+
+      <!-- Stages -->
+      <section id="stages" class="card mt2">
+        <div class="label">Section 2</div>
+        <h2>Stages of Product Development</h2>
+        <div class="timeline" role="list">
+          <div class="stage" role="listitem"><span class="num">1</span><span class="name">Idea Generation</span><div class="mt mini">Brainstorm from trends, consumer needs, scientific innovation.</div></div>
+          <div class="stage" role="listitem"><span class="num">2</span><span class="name">Concept Dev. & Screening</span><div class="mt mini">Refine ideas; feasibility; define attributes & benefits.</div></div>
+          <div class="stage" role="listitem"><span class="num">3</span><span class="name">Prototype Development</span><div class="mt mini">Formulate samples; select ingredients & processes.</div></div>
+          <div class="stage" role="listitem"><span class="num">4</span><span class="name">Product Testing</span><div class="mt mini">Sensory, shelf‑life, and nutritional analysis.</div></div>
+          <div class="stage" role="listitem"><span class="num">5</span><span class="name">Scale‑Up & Optimisation</span><div class="mt mini">Adjust for mass production: cost, stability, quality.</div></div>
+          <div class="stage" role="listitem"><span class="num">6</span><span class="name">Market Testing</span><div class="mt mini">Limited launch for feedback & acceptance.</div></div>
+          <div class="stage" role="listitem"><span class="num">7</span><span class="name">Commercialisation</span><div class="mt mini">Full‑scale production, marketing, and distribution.</div></div>
+        </div>
+        <table class="mt2">
+          <thead><tr><th>Stage</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td>1. Idea Generation</td><td>Brainstorm new product ideas based on market trends, consumer needs, and scientific innovation.</td></tr>
+            <tr><td>2. Concept Development & Screening</td><td>Refine ideas, perform feasibility analysis, and define product attributes and benefits.</td></tr>
+            <tr><td>3. Prototype Development</td><td>Formulate initial product samples using selected ingredients and processing methods.</td></tr>
+            <tr><td>4. Product Testing</td><td>Conduct sensory evaluation (taste, texture, appearance), shelf‑life testing, and nutritional analysis.</td></tr>
+            <tr><td>5. Scale‑Up & Process Optimisation</td><td>Adjust the formulation and process for mass production considering cost, stability, and quality.</td></tr>
+            <tr><td>6. Market Testing</td><td>Launch in a limited market to gather consumer feedback and acceptance.</td></tr>
+            <tr><td>7. Commercialisation</td><td>Full‑scale production and marketing launch with distribution strategies.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Key Considerations -->
+      <section id="considerations" class="card mt2">
+        <div class="label">Section 3</div>
+        <h2>Key Considerations in Product Development</h2>
+        <div class="threecol">
+          <div class="card">
+            <div class="label">Consumer Preferences</div>
+            <ul>
+              <li>Target demographics & cultural preferences</li>
+              <li>Health trends & claims relevance</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="label">Nutritional Profile</div>
+            <ul>
+              <li>Compliance with dietary guidelines</li>
+              <li>Claims (e.g., low fat, gluten‑free)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="label">Food Safety</div>
+            <ul>
+              <li>Hygiene & allergen management</li>
+              <li>Shelf stability & HACCP considerations</li>
+            </ul>
+          </div>
+        </div>
+        <div class="threecol mt">
+          <div class="card">
+            <div class="label">Sensory Attributes</div>
+            <ul>
+              <li>Flavour, texture, colour, aroma</li>
+              <li>Acceptance thresholds & reformulation</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="label">Cost & Economics</div>
+            <ul>
+              <li>Ingredient & packaging costs</li>
+              <li>Yield, throughput, & efficiency</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="label">Regulatory Compliance</div>
+            <ul>
+              <li>Labelling laws & standards</li>
+              <li>Approvals/notifications as required</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools & Techniques -->
+      <section id="tools" class="card mt2">
+        <div class="label">Section 4</div>
+        <h2>Tools & Techniques Used</h2>
+        <div class="twocol">
+          <div>
+            <ul>
+              <li><strong>Market Research</strong>: Surveys, focus groups, test markets.</li>
+              <li><strong>Food Science</strong>: Ingredient functionality, interactions, preservation methods.</li>
+              <li><strong>Sensory Evaluation</strong>: Trained panels and consumer testing.</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><strong>Shelf‑Life Studies</strong>: Microbial and chemical stability.</li>
+              <li><strong>Packaging Technology</strong>: Safety, convenience, branding.</li>
+              <li><strong>Process Engineering</strong>: Scale‑up, optimisation, and control.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="legend mt">
+          <span class="chip"><i class="dot" style="background:var(--market)"></i>Market</span>
+          <span class="chip"><i class="dot" style="background:var(--science)"></i>Science/Process</span>
+          <span class="chip"><i class="dot" style="background:var(--safety)"></i>Safety/Regulatory</span>
+        </div>
+      </section>
+
+      <!-- Challenges -->
+      <section id="challenges" class="card mt2">
+        <div class="label">Section 5</div>
+        <h2>Challenges in Food Product Development</h2>
+        <div class="tri">
+          <div class="mini"><strong>Diverse expectations</strong><br/><span class="mini">Balancing taste, trends, and dietary needs.</span></div>
+          <div class="mini"><strong>Taste ◀▶ Nutrition ◀▶ Shelf‑life</strong><br/><span class="mini">Trade‑offs require iterative optimisation.</span></div>
+          <div class="mini"><strong>Cost & Compliance</strong><br/><span class="mini">Stay viable while meeting regulations.</span></div>
+        </div>
+      </section>
+
+      <!-- Exam Focus -->
+      <section id="exam" class="card mt2">
+        <div class="label">Section 6</div>
+        <h2>Exam Focus Points</h2>
+        <ul>
+          <li>Define food product development.</li>
+          <li>List & describe the <strong>stages</strong> from idea to commercialisation.</li>
+          <li>Explain the role of <strong>sensory evaluation</strong> and <strong>shelf‑life</strong> testing.</li>
+          <li>Discuss the role of <strong>consumer research</strong> in development.</li>
+          <li>Outline <strong>regulatory</strong> and <strong>safety</strong> considerations.</li>
+        </ul>
+      </section>
+
+      <!-- Summary -->
+      <section id="summary" class="card mt2">
+        <div class="label">Summary</div>
+        <h2>Key Takeaway</h2>
+        <p>Food product development is a multidisciplinary endeavour combining consumer insight, science, engineering, safety, and marketing to deliver products that meet needs, comply with standards, and perform at scale.</p>
+        <p class="foot">Last updated: <span id="updated"></span>. Educational resource; not a substitute for regulatory or legal advice.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle with persistence
+    (function(){
+      const root=document.documentElement;
+      const btn=document.getElementById('themeBtn');
+      const saved=localStorage.getItem('proddev_theme');
+      if(saved){ root.setAttribute('data-theme', saved); }
+      btn?.addEventListener('click',()=>{
+        const now=root.getAttribute('data-theme')==='dark'?'light':'dark';
+        root.setAttribute('data-theme', now);
+        localStorage.setItem('proddev_theme', now);
+      });
+    })();
+
+    // Updated timestamp
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>
+

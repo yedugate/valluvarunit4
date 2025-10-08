@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit IV — Nutrition & Food: 25 Exam‑Ready FAQs</title>
+  <meta name="description" content="Clear, practical answers to 25 frequently asked questions spanning healthy eating, food groups, balanced diet, clinical nutrition, life stages, sports, fat‑free & fibre, nutritive value factors, product development, macros in formulation, and emulsions." />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --panel:#ffffff; --accent:#10b981; --shadow:0 10px 30px rgba(2,6,23,.08);
+      --pill:#0ea5e9; --warn:#ef4444; --ok:#22c55e;
+    }
+    [data-theme="dark"]{
+      --bg:#0b0f14; --ink:#e5edf7; --muted:#9aa7bc; --line:#1f2937; --panel:#0f141b; --accent:#22c55e; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+    .wrapper{max-width:1100px;margin:0 auto;padding:24px}
+
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 85%,transparent);backdrop-filter:saturate(1.2) blur(2px);border-bottom:1px solid var(--line)}
+    .hero{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0}
+    .title{font-size:clamp(22px,2.6vw,36px);font-weight:800;letter-spacing:.2px}
+    .subtitle{color:var(--muted);font-weight:500}
+    .buttons{display:flex;gap:8px;flex-wrap:wrap}
+    button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 12px;border-radius:999px;cursor:pointer;box-shadow:var(--shadow)}
+    .btn-accent{background:var(--accent);color:white;border-color:transparent}
+
+    .grid{display:grid;grid-template-columns:280px 1fr;gap:24px}
+    nav{position:sticky;top:92px;align-self:start;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
+    nav h3{margin:.8rem 1rem .4rem;font-size:14px;color:var(--muted)}
+    nav a{display:block;padding:.55rem 1rem;color:var(--ink);text-decoration:none;border-top:1px dashed var(--line)}
+    nav a:first-of-type{border-top:none}
+    nav a:hover{background:rgba(2,6,23,.04)}
+
+    section{scroll-margin-top:100px}
+    .card{border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow);padding:18px}
+    .label{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .search{flex:1;min-width:220px}
+    input[type="search"]{width:100%;padding:.6rem .8rem;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink)}
+
+    .faq{border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin:.6rem 0;background:var(--panel)}
+    .faq>summary{cursor:pointer;list-style:none;display:flex;align-items:flex-start;gap:10px}
+    .faq>summary::-webkit-details-marker{display:none}
+    .num{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;border-radius:50%;background:var(--pill);color:#fff;font-weight:800}
+    .q{font-weight:700}
+    .chips{display:flex;gap:6px;flex-wrap:wrap}
+    .chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:.12rem .5rem;font-size:12px;color:var(--muted)}
+    .meta{display:flex;align-items:center;gap:8px}
+
+    .foot{margin-top:28px;color:var(--muted);font-size:13px}
+
+    .pill-list span{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.1rem .5rem;margin:.1rem;font-size:12px}
+
+    @media (max-width: 980px){ .grid{grid-template-columns:1fr} nav{position:relative;top:0} }
+
+    @media print{ header,nav,.noprint{display:none!important} body{font-size:12pt} .wrapper{max-width:unset} .card{box-shadow:none} a[href]:after{content:" (" attr(href) ")";font-size:10pt;color:#666} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper hero">
+      <div>
+        <div class="title">Unit IV: Nutrition & Food — 25 Detailed FAQs</div>
+        <div class="subtitle">Clear, exam‑ready answers you can use in class, clinics, or product design.</div>
+      </div>
+      <div class="buttons noprint">
+        <button id="themeBtn" title="Toggle theme">🌗 Theme</button>
+        <button class="btn-accent" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button id="expandAll">＋ Expand all</button>
+        <button id="collapseAll">－ Collapse all</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper grid">
+    <nav class="noprint" aria-label="On this page">
+      <h3>Categories</h3>
+      <a href="#cat-healthy">Nutrition & Healthy Eating (1–2)</a>
+      <a href="#cat-groups">Five Food Groups (3–4)</a>
+      <a href="#cat-balanced">Balanced Diet (5–6)</a>
+      <a href="#cat-patients">Food for Patients (7–8)</a>
+      <a href="#cat-children">Children (9–10)</a>
+      <a href="#cat-women">Working Women (11–12)</a>
+      <a href="#cat-men">Hard‑Working Men (13–14)</a>
+      <a href="#cat-sport">Sportspersons (15–16)</a>
+      <a href="#cat-fatfiber">Fat‑Free & High‑Fibre (17–18)</a>
+      <a href="#cat-nutritive">Nutritive Value Factors (19–20)</a>
+      <a href="#cat-prod">Product Development (21–22)</a>
+      <a href="#cat-macros">Water/Proteins/Carbs/Lipids (23–24)</a>
+      <a href="#cat-emulsion">Emulsions (25)</a>
+    </nav>
+
+    <main>
+      <section class="card">
+        <div class="toolbar">
+          <div class="search"><input id="search" type="search" placeholder="Search FAQs… (e.g., sodium, emulsifier, aw, sports)" /></div>
+          <div class="meta"><span id="count"></span><span class="chip">Last updated: <span id="updated"></span></span></div>
+        </div>
+      </section>
+
+      <!-- 1–2 Nutrition & Healthy Eating -->
+      <section id="cat-healthy" class="card">
+        <div class="label">Section A</div>
+        <h2>Nutrition & Healthy Eating</h2>
+
+        <details class="faq"><summary><span class="num">1</span><span class="q">What are the key principles of healthy eating?</span></summary>
+          <ul>
+            <li><strong>Balance</strong>: all major food groups daily.</li>
+            <li><strong>Variety</strong>: rotate grains (incl. millets), mix colours, vary proteins.</li>
+            <li><strong>Proportion</strong>: ½ veg+fruit, ¼ whole grains/millets, ¼ protein; small healthy fats.</li>
+            <li><strong>Quality</strong>: minimally processed, high‑fibre, low added sugar/sodium.</li>
+            <li><strong>Portion & mindfulness</strong>; <strong>Hydration</strong> (water first); <strong>Food safety</strong>; <strong>Cultural fit & sustainability</strong>.</li>
+          </ul>
+        </details>
+
+        <details class="faq"><summary><span class="num">2</span><span class="q">How do the five food groups contribute to a balanced diet?</span></summary>
+          <ul>
+            <li><strong>Grains</strong> (whole/millets): energy, fibre, B‑vitamins.</li>
+            <li><strong>Vegetables</strong>: vitamins/minerals/antioxidants, fibre.</li>
+            <li><strong>Fruits</strong>: vitamin C, potassium, phytonutrients.</li>
+            <li><strong>Protein foods</strong>: amino acids; iron/zinc/B12/omega‑3 depending on source.</li>
+            <li><strong>Dairy/fortified alternatives</strong>: protein, calcium, vitamin D.</li>
+          </ul>
+        </details>
+      </section>
+
+      <!-- 3–4 Five Food Groups -->
+      <section id="cat-groups" class="card">
+        <div class="label">Section B</div>
+        <h2>Five Food Groups</h2>
+
+        <details class="faq"><summary><span class="num">3</span><span class="q">What are the five food groups and their nutritional functions?</span></summary>
+          <ul>
+            <li><strong>Grains</strong>: carbs for energy; fibre; B‑vitamins; iron (millets).</li>
+            <li><strong>Vegetables</strong>: micronutrients, fibre, phytochemicals.</li>
+            <li><strong>Fruits</strong>: vitamin C, potassium, antioxidants.</li>
+            <li><strong>Protein foods</strong>: growth/repair; iron, zinc, omega‑3.</li>
+            <li><strong>Dairy/alternatives</strong>: quality protein, calcium, vitamin D/B12.</li>
+          </ul>
+        </details>
+
+        <details class="faq"><summary><span class="num">4</span><span class="q">How can you incorporate all five food groups into daily meals?</span></summary>
+          <ul>
+            <li><strong>Breakfast</strong>: millet upma + curd + fruit; or egg + whole‑grain toast; or sprouted moong chilla + buttermilk.</li>
+            <li><strong>Lunch</strong>: ½ veg, ¼ whole grains/millet roti, ¼ dal/chicken/fish; curd.</li>
+            <li><strong>Snack</strong>: fruit + nuts; chana sundal; yogurt with flaxseed.</li>
+            <li><strong>Dinner</strong>: veg‑rich khichdi (dal+millet) + sautéed greens + milk/fortified alt.</li>
+          </ul>
+        </details>
+      </section>
+
+      <!-- 5–6 Balanced Diet -->
+      <section id="cat-balanced" class="card">
+        <div class="label">Section C</div>
+        <h2>Balanced Diet</h2>
+
+        <details class="faq"><summary><span class="num">5</span><span class="q">What defines a balanced diet and why is it important?</span></summary>
+          <p>A balanced diet supplies adequate energy and all essential nutrients in the right proportions across the day. Benefits include growth, immunity, hormone balance, cognition, digestive health, and prevention of chronic disease while maintaining a healthy body weight.</p>
+        </details>
+
+        <details class="faq"><summary><span class="num">6</span><span class="q">How do macronutrient proportions affect health in a balanced diet?</span></summary>
+          <ul>
+            <li>Typical adult ranges: <strong>Carb 45–65%</strong>, <strong>Fat 20–35%</strong>, <strong>Protein 10–35%</strong> of energy.</li>
+            <li><strong>Higher fibre/complex carbs</strong> → better glycaemic control/satiety.</li>
+            <li><strong>Adequate protein</strong> (~0.8–1.2 g/kg; higher for athletes/older adults) preserves lean mass.</li>
+            <li><strong>Healthy fats</strong> (MUFA/PUFA; limit trans/saturated) aid heart/brain and fat‑soluble vitamin absorption.</li>
+          </ul>
+        </details>
+      </section>
+
+      <!-- 7–8 Patients -->
+      <section id="cat-patients" class="card">
+        <div class="label">Section D</div>
+        <h2>Food for Patients</h2>
+
+        <details class="faq"><summary><span class="num">7</span><span class="q">What dietary considerations are important for diabetic patients?</span></summary>
+          <ul>
+            <li><strong>Carb quality/quantity</strong>: low‑GI, high fibre; portion control.</li>
+            <li><strong>Balanced plates</strong>; include healthy fats (nuts/seeds).</li>
+            <li><strong>Regular timing</strong>; protein with carbs to blunt spikes.</li>
+            <li><strong>Limit</strong> sugars/refined carbs; monitor response; coordinate with meds & activity.</li>
+            <li><strong>Heart health</strong>: MUFA/omega‑3; reduce sodium. <em>Individualise with clinician/dietitian.</em></li>
+          </ul>
+        </details>
+
+        <details class="faq"><summary><span class="num">8</span><span class="q">How does diet help manage blood pressure?</span></summary>
+          <ul>
+            <li><strong>DASH‑style</strong>: vegetables, fruits, pulses, nuts; low‑fat dairy; whole grains; lean proteins.</li>
+            <li><strong>Sodium</strong>: ~1,500–2,300 mg/day; read labels.</li>
+            <li><strong>Potassium, calcium, magnesium</strong>: from produce, pulses, dairy/greens.</li>
+            <li><strong>Healthy fats</strong>; weight control; alcohol moderation; activity; hydration.</li>
+          </ul>
+        </details>
+      </section>
+
+      <!-- 9–10 Children -->
+      <section id="cat-children" class="card">
+        <div class="label">Section E</div>
+        <h2>Food for Children</h2>
+
+        <details class="faq"><summary><span class="num">9</span><span class="q">What are the nutritional requirements of children for healthy growth?</span></summary>
+          <ul>
+            <li><strong>Energy</strong> for growth/play; <strong>Protein</strong> for tissues/immunity.</li>
+            <li>Key micronutrients: <strong>iron, calcium, vitamin D, iodine, zinc, vitamin A, B12/folate</strong>.</li>
+            <li><strong>Fibre & fluids</strong>; limit ultra‑processed snacks/sugary drinks/excess salt.</li>
+          </ul>
+        </details>
+
+        <details class="faq"><summary><span class="num">10</span><span class="q">How can balanced meals be planned for children?</span></summary>
+          <ul>
+            <li>Colourful plates (≥3 colours of veg/fruit).</li>
+            <li>Smart snacks: peanut chikki, fruit+nut mix, idli+sambar, curd+banana.</li>
+            <li>School tiffin: veg upma with sprouts; chapati roll with paneer/egg & salad; lemon rice + peanuts + fruit.</li>
+            <li>Picky eaters: involve them; frequent small portions; dips; fortify familiar foods (e.g., ragi dosa).</li>
+          </ul>
+        </details>
+      </section>
+
+      <!-- 11–12 Women -->
+      <section id="cat-women" class="card">
+        <div class="label">Section F</div>
+        <h2>Food for Working Women</h2>
+
+        <details class="faq"><summary><span class="num">11</span><span class="q">What are the unique nutritional needs of working women?</span></summary>
+          <ul>
+            <li><strong>Iron & B12</strong> for fatigue/anemia prevention.</li>
+            <li><strong>Calcium & vitamin D</strong> for bone health.</li>
+            <li><strong>Protein</strong> ~20–30 g per meal for satiety/lean mass.</li>
+            <li><strong>Omega‑3 & choline</strong> (fish, eggs, flax/chia).</li>
+            <li>Regular meals; magnesium‑rich foods; hydration; life‑stage tailoring.</li>
+          </ul>
+        </details>
+
+        <details class="faq"><summary><span class="num">12</span><span class="q">What dietary strategies support energy and health in working women?</span></summary>
+          <ul>
+            <li>Plan ahead (batch cook); healthy snacks (nuts, roasted chana, fruit, yogurt).</li>
+            <li>Desk kit: water bottle, herbal tea, high‑fibre low‑sugar bar, seeds mix.</li>
+            <li>Protein + fibre at each meal; moderate caffeine; mindful late‑dinner portions.</li>
+            <li>Movement breaks 2–3 min every 30–60 min.</li>
+          </ul>
+        </details>
+      </section>
+
+      <!-- 13–14 Men -->
+      <section id="cat-men" class="card">
+        <div class="label">Section G</div>
+        <h2>Food for Hard‑Working Men</h2>
+
+        <details class="faq"><summary><span class="num">13</span><span class="q">How does physical labour influence nutritional needs?</span></summary>
+          <ul>
+            <li>Higher energy & carbohydrate needs; time carbs around shifts.</li>
+            <li><strong>Protein</strong> ~1.0–1.6 g/kg/day for repair.</li>
+            <li>Replace <strong>electrolytes</strong> (sodium, potassium) with sweat losses.</li>
+            <li>Micronutrients: iron, B‑vitamins, magnesium.</li>
+          </ul>
+        </details>
+
+        <details class="faq"><summary><span class="num">14</span><span class="q">Which nutrients are critical for maintaining strength and endurance?</span></summary>
+          <ul>
+            <li><strong>Carbohydrates</strong> (whole grains/millets, potatoes, fruits).</li>
+            <li><strong>Protein & leucine</strong> (dal, dairy, eggs, fish, soy).</li>
+            <li><strong>Creatine</strong> from meat/fish (or supplement when appropriate).</li>
+            <li><strong>Omega‑3</strong> (fish; flax/chia); <strong>Electrolytes & fluids</strong>.</li>
+          </ul>
+        </details>
+      </section>
+
+      <!-- 15–16 Sports -->
+      <section id="cat-sport" class="card">
+        <div class="label">Section H</div>
+        <h2>Food for Sportspersons</h2>
+
+        <details class="faq"><summary><span class="num">15</span><span class="q">What role do carbohydrates, proteins, and fats play in sports nutrition?</span></summary>
+          <ul>
+            <li><strong>Carbs</strong>: ~3–12 g/kg/day by training load for performance & recovery.</li>
+            <li><strong>Protein</strong>: ~1.2–2.0 g/kg/day; 20–40 g post‑exercise; distribute over 3–5 feedings.</li>
+            <li><strong>Fats</strong>: 20–35% energy; include MUFA/PUFA; avoid very high fat just before intense sessions.</li>
+          </ul>
+        </details>
+
+        <details class="faq"><summary><span class="num">16</span><span class="q">How should hydration be managed during athletic activity?</span></summary>
+          <ul>
+            <li><strong>Before</strong>: ~5–10 ml/kg 2–4 h pre‑event (top‑up 2–3 ml/kg if needed).</li>
+            <li><strong>During</strong>: ~0.4–0.8 L/h; for long/hot sessions <strong>6–8% carb</strong> + <strong>~300–600 mg Na/L</strong>.</li>
+            <li><strong>After</strong>: replace 125–150% of losses (1 kg ≈ 1 L); include sodium to aid retention.</li>
+          </ul>
+        </details>
+      </section>
+
+      <!-- 17–18 Fat‑Free & Fibre -->
+      <section id="cat-fatfiber" class="card">
+        <div class="label">Section I</div>
+        <h2>Fat‑Free & High‑Fibre Foods</h2>
+
+        <details class="faq"><summary><span class="num">17</span><span class="q">What constitutes a fat‑free food and what are its implications?</span></summary>
+          <ul>
+            <li>Label claim typically means <strong>< 0.5 g fat/serving</strong> (jurisdiction dependent).</li>
+            <li>May still be high in sugar/sodium; fat removal can reduce satiety/flavour.</li>
+            <li>Do not eliminate healthy fats: nuts, seeds, olive/mustard/groundnut oil, fatty fish.</li>
+          </ul>
+        </details>
+
+        <details class="faq"><summary><span class="num">18</span><span class="q">What are the health benefits of a high‑fibre diet?</span></summary>
+          <ul>
+            <li>Metabolic: better glycaemic control; cholesterol lowering (soluble fibre).</li>
+            <li>Digestive: regularity; microbiome (SCFAs).</li>
+            <li>Weight: satiety; lower energy density.</li>
+            <li>Targets: ~25–38 g/day; increase gradually & hydrate.</li>
+            <li>Sources: whole grains/millets, pulses, vegetables, fruits, nuts/seeds.</li>
+          </ul>
+        </details>
+      </section>
+
+      <!-- 19–20 Nutritive Value Factors -->
+      <section id="cat-nutritive" class="card">
+        <div class="label">Section J</div>
+        <h2>Factors Affecting Nutritive Value of Food</h2>
+
+        <details class="faq"><summary><span class="num">19</span><span class="q">How do cooking methods impact nutritive value?</span></summary>
+          <ul>
+            <li>Water‑soluble vitamins (C, B) lost with prolonged boiling; prefer steam/microwave/pressure‑cook with minimal water.</li>
+            <li>Avoid repeated deep‑frying; oxidation/trans fats.</li>
+            <li>Soaking/sprouting/fermentation: reduce phytates; improve B‑vitamins/digestibility.</li>
+            <li>Cut size, lids, and reusing cooking water (soups/dals) help retention; safe cooling/refrigeration for quality.</li>
+          </ul>
+        </details>
+
+        <details class="faq"><summary><span class="num">20</span><span class="q">What environmental factors influence nutrient content?</span></summary>
+          <ul>
+            <li>Soil & variety (incl. biofortification) drive micronutrient levels.</li>
+            <li>Climate/season affect phytonutrients; seasonal, field‑grown often higher.</li>
+            <li>Post‑harvest: time, temperature, bruising; storage vs light/oxygen/heat.</li>
+          </ul>
+        </details>
+      </section>
+
+      <!-- 21–22 Product Development -->
+      <section id="cat-prod" class="card">
+        <div class="label">Section K</div>
+        <h2>Product Development</h2>
+
+        <details class="faq"><summary><span class="num">21</span><span class="q">What are the key stages of food product development?</span></summary>
+          <ol>
+            <li>Opportunity & concept (consumer insight, nutrition brief, claims).</li>
+            <li>Screening & regulatory check (standards, categories, allergens, claims).</li>
+            <li>Bench formulation (ingredients, target nutrition, cost‑in‑use).</li>
+            <li>Prototype & sensory (triangle tests, hedonic, texture profiling).</li>
+            <li>Shelf‑life & safety (microbial, <em>water activity</em>, oxidation, packaging fit).</li>
+            <li>Process design & scale‑up (unit operations; HACCP).</li>
+            <li>Packaging (barriers: OTR/MVTR; format; labelling).</li>
+            <li>Costing & supply chain (specs, vendors, QA).</li>
+            <li>Pilot launch & iteration (consumer feedback; stability tracking).</li>
+            <li>Commercialisation & post‑launch QA (complaints, CAPA, improvement).</li>
+          </ol>
+        </details>
+
+        <details class="faq"><summary><span class="num">22</span><span class="q">How do water, protein, carbohydrates, and lipids affect product formulation?</span></summary>
+          <ul>
+            <li><strong>Water</strong>: texture (crisp vs soft), <em>aw</em> (microbial risk), freezing point, glass transition; hydration times & processing.</li>
+            <li><strong>Proteins</strong>: emulsification, gelling, foaming, water‑binding; structure (paneer, yogurt, nuggets).</li>
+            <li><strong>Carbohydrates</strong>: sweetness (sugars), bulk/viscosity (starch/soluble fibre), gelatinisation/retrogradation, Maillard with proteins.</li>
+            <li><strong>Lipids</strong>: mouthfeel, lubrication, flavour release, oxidation stability; crystals (tempering), emulsions/aeration.</li>
+          </ul>
+        </details>
+      </section>
+
+      <!-- 23–24 Macros in foods -->
+      <section id="cat-macros" class="card">
+        <div class="label">Section L</div>
+        <h2>Water, Proteins, Carbohydrates, Lipids</h2>
+
+        <details class="faq"><summary><span class="num">23</span><span class="q">Why is water vital in food product quality and nutrition?</span></summary>
+          <ul>
+            <li>Medium for reactions & heat transfer; defines texture (juicy vs dry).</li>
+            <li><strong>Water activity</strong> controls microbes & reaction rates—lower aw extends shelf life.</li>
+            <li>Hydration of macromolecules: protein functionality, starch gelatinisation, fibre swelling.</li>
+            <li>Consumer perception: freshness/succulence; contributes to satiety.</li>
+          </ul>
+        </details>
+
+        <details class="faq"><summary><span class="num">24</span><span class="q">What are the functional roles of proteins, carbohydrates, and lipids in foods?</span></summary>
+          <ul>
+            <li><strong>Proteins</strong>: gluten networks; gels (egg/soy/dairy); foams (whipped egg/cream); emulsifiers (casein/soy); Maillard browning.</li>
+            <li><strong>Carbohydrates</strong>: energy; textures from starch gels→caramels; fibres for water‑holding/fat‑mimicry; prebiotic effects.</li>
+            <li><strong>Lipids</strong>: energy density; carry fat‑soluble vitamins; aeration (baked goods); flavour carrier; creaminess; moisture barriers (coatings).</li>
+          </ul>
+        </details>
+      </section>
+
+      <!-- 25 Emulsions -->
+      <section id="cat-emulsion" class="card">
+        <div class="label">Section M</div>
+        <h2>Emulsions</h2>
+
+        <details class="faq"><summary><span class="num">25</span><span class="q">What are emulsions and how do they affect food texture and stability?</span></summary>
+          <ul>
+            <li><strong>Definition</strong>: dispersions of immiscible liquids (oil/water) with one phase as droplets in the other (O/W like milk, W/O like butter).</li>
+            <li><strong>Emulsifiers</strong>: proteins, phospholipids (lecithin), mono/diglycerides reduce interfacial tension and protect droplets.</li>
+            <li><strong>Processing</strong>: shear/homogenisation ↓ droplet size → smoother mouthfeel, opacity, improved kinetic stability.</li>
+            <li><strong>Stability</strong>: aim for small, uniform droplets; correct HLB; adequate viscosity. Watch for creaming/sedimentation, flocculation, coalescence, Ostwald ripening.</li>
+            <li><strong>Texture</strong>: controls thickness, creaminess, spreadability; vital in mayonnaise, dressings, dairy beverages, ice cream.</li>
+          </ul>
+        </details>
+      </section>
+
+      <section class="card">
+        <div class="label">Quick Reference</div>
+        <h2>Adult Plate — General Guidance</h2>
+        <ul>
+          <li><strong>½ plate</strong>: vegetables & fruits (≥3 colours/day)</li>
+          <li><strong>¼ plate</strong>: whole grains/millets</li>
+          <li><strong>¼ plate</strong>: protein foods (pulses/eggs/fish/lean meats/soy)</li>
+          <li><strong>Small add‑ons</strong>: nuts/seeds/healthy oils; dairy or fortified alternative</li>
+          <li><strong>Hydration</strong>: water first; limit sugar‑sweetened beverages</li>
+        </ul>
+      </section>
+
+      <p class="foot">These notes align with principles of food chemistry and technology. Educational use only.</p>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle with persistence
+    (function(){
+      const root=document.documentElement; const btn=document.getElementById('themeBtn');
+      const saved=localStorage.getItem('faqs_theme'); if(saved){ root.setAttribute('data-theme', saved); }
+      btn?.addEventListener('click',()=>{ const now=root.getAttribute('data-theme')==='dark'?'light':'dark'; root.setAttribute('data-theme', now); localStorage.setItem('faqs_theme', now); });
+    })();
+
+    // Timestamp
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+
+    // Expand / collapse all
+    document.getElementById('expandAll').addEventListener('click',()=>{ document.querySelectorAll('details.faq').forEach(d=>d.open=true); });
+    document.getElementById('collapseAll').addEventListener('click',()=>{ document.querySelectorAll('details.faq').forEach(d=>d.open=false); });
+
+    // Live search across FAQs
+    const search = document.getElementById('search');
+    const count = document.getElementById('count');
+    const allFaqs = Array.from(document.querySelectorAll('details.faq'));
+    function filter(){
+      const q = search.value.trim().toLowerCase();
+      let shown = 0;
+      allFaqs.forEach(d=>{
+        const text = d.textContent.toLowerCase();
+        const hit = !q || text.includes(q);
+        d.style.display = hit ? '' : 'none';
+        if(hit) shown++;
+      });
+      count.textContent = `${shown} / ${allFaqs.length} shown`;
+    }
+    search.addEventListener('input', filter); filter();
+  </script>
+</body>
+</html>
+
